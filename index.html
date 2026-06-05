@@ -7,14 +7,369 @@
   <meta name="description" content="SISFO SPPD KPU Jawa Barat — Sistem informasi pengajuan & pertanggungjawaban perjalanan dinas yang paperless, mobile-first, dan akuntabel." />
   <title>SISFO SPPD — KPU Jawa Barat</title>
 
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjoiU0lTRk8gU1BQRCDigJQgS1BVIEphd2EgQmFyYXQiLCJzaG9ydF9uYW1lIjoiU1BQRCBLUFUgSmFiYXIiLCJkZXNjcmlwdGlvbiI6IlBlbmdhanVhbiAmIHBlcnRhbmdndW5namF3YWJhbiBwZXJqYWxhbmFuIGRpbmFzIChwYXBlcmxlc3MsIG1vYmlsZS1maXJzdCwgYWt1bnRhYmVsKS4iLCJsYW5nIjoiaWQiLCJzdGFydF91cmwiOiIuLyIsInNjb3BlIjoiLi8iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsIm9yaWVudGF0aW9uIjoicG9ydHJhaXQtcHJpbWFyeSIsImJhY2tncm91bmRfY29sb3IiOiIjMGIyNDQ3IiwidGhlbWVfY29sb3IiOiIjMGIyNDQ3IiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUFBQUFEQUNBSUFBQURkdnZ0UUFBQUdtVWxFUVZSNDJ1M2QzWElVVlJTRzRYMHVFRVFFempnUkJFRkIvcndFUXd3eFJFTUlNY1JidGNvYjhzQ3l5aU03TTFXVUI5TTl1M3Z2dmZiNmVhdStDNWhlMzFPcnUyYTZlOUpuWC8xSXlPSWtSa0FBUkFCRUFFUUFSQWlBQ0lDSUlVQzdaSjIvL3R6SkQrTmFKd0dsYnVJQnVyZnJQazNGYlBIa2ZiWUpOMGdDa0ZJMEVUQWwzQ0NwQ05DVmU3dW1ZNVRPLzJONi9nT2cxeGJqd00wbVNmYUtTTkNCVVJSQTd1bFlaSlNnQXlQUGdNTFNzY0lvWGJuL1dtMEV1dm43bjMvTEkyRklhMGNwR3AwcVlucDVBbEFmT2dKb0pERnBBN1NuSjI3Y3RKYWtwN0xrajQ0cU4wMGxBYWltSHVWdUdra0MwRjVBT25VWnhRVVVuSTRQUnVucS9iMHVnVTUxUmwxNlRGZS8zcE1QZEJveGtxOXlBUFNUY0tEVGxKRndtd2s5R0RJRENEcGlqQndDUW85TFEwbXRIdHlVTTNJQ0NEMk9EU1gwWUtnUTBINjdRRWNKbzNZVkovUmdxQXpRZy8wV1FZOUdRdzJLVHVqQmtDNUE2QWxsS0YxN3NGODM2RkZ1cUc3ZENUMFkwZ0lJUFFFTkRZRGVWQWw2REJxcTBIc0hRTlNzeEpBaVFPZ0pheWhkZS9pbU1KeThiSi9JeXRvWEJVUzFHcGRRWDBEb0NXNUlDQkIxYWpaVUNPaGdjVmcvanBiUVFnTUpQUmdxTWRRY0VCWGFPWkV0QXJUejhHQkJXRDh1bDlBQ0NXMEJVWjR0UTBLQUhPajU0OGJkaVdCb0RxQnZEdWJHTHFCcE43NFo1UUthaVNHaEp3NmpGb1lHUUQvUGlrVkF5K2o0TTVRTmFJYUhoQjRNbFJoeURxaUtIaytHREFCeXFTZWFvU2FBYksyZjZucmNHS3E3aEpMTDlkTklUeWhEbFFFWldqOU45Zmd3VkhFSkRZQU9jNEtlZ0laeVlLU2RSNGM1TVFGSVRJOERRMW1BTW1DazY0OE90OGJFK1V0WWozVkRtWjF1dFZFTlVFQTlFUXo1QjlTUkRvRE1BK3F1eDdRaElVRG93ZEEwb0xmVDBRbElsUjY3aHZJQVRmRXdDVWloSHFPR21nTkNENGFtRGFYcmo5OU9SQnNnNVhvc0dzb0NOQzdFRWlBVGVzd1ppZ0xJa0I1Ymhqb0RRazhFUXdzQktWay9SdlVZTWxTeWhBWkFSMlBSQU1pMEhsK0FOaU5Kbno4K0drdDNRTmIxV0RHVVUvUVlFcjJBZk9neFlhZ2JJUFRFTVdRSmtEODkrZzBWQVByMmFDd0FpbU5vTzZBUkpBRENVQ21nWHphbTF4VzBiejFxRFdWZFIyOXlBaUFNQVFoREFBb0lTSlVoSjRCQzZRRVFnUHdZQWhDR09nRzY4ZDJ2R3hQa0draUpXaE9BTmpvSkRValY1Z09RN2ZlekJEY0VvQXBWUlRia0I1QkFrY3F2NGdGayt3MkhNUTI1QXRUOUhhc0JEUUdvWmlVQW1nWG9lQ3llN3FpMytKV21La0JqU1BRQ3F0aWkzYS9GTFFCNmNqd1dIMDhWV3Y5cFJRdWdFU1RhQVJXMjZPUG5PYmVBTkJ0eTloTnYveXRvMDRCbUZlbjFOamVsZ0w1NGNqd1dXMi8zamZDVWZrZEFZMGdHUU8vR3doOTdCekdVQjJnemtpbEFPWVpDQWZKcWFMR2VDb0JZUXRZQmxhd2ZBR0VJUVB4QlIyZEFUOTlOQkVEdURXVUJHaGV5QlJDRzFCclNvQWRBaGczcEFYUXlIUURwTkNRSWFJckhka0FZOG1xb1hBK0FiQnNDRUlZQWhLR3V6MlUzMVpNRjZPYlRrNXdBU08xejJlMEE1Y0JJTjc4L3lRbUFsRCthM1FSUUJvd0IwUHVjY0JZejhYUjIzZk5YRG94Y1FKbUcwQ05tcVAzNmVkOEJFSWFVUEtBdHMzN21BV0lKNlRHa1pQMDBBWVFoUGM5b3QxNC9BREpweURBZ0RIVTNwRXJQR3REcHJBQ29veUdCNzM1V2dHWjRtQTBJUTcwTUtkU3pBdlRzZEc0QUpHOUk1dGFmUzBBek1Td0JoQ0ZKUm1JM2ppM1EweHdRaGtvWVNkNDJ2eHpRbDg5T2x3VkFWcExaMURJR3pRRmh5SVNlRG9Bd2hKNDFvQThsQVpDTGs5ZHlBRUtBTUtSNy9mUURoS0hJZWxhQW5uOG9UUDVueFpBMlBaZUF5dHF2QUdpV0lkclZ0WDZLcTY4RENFTXg5ZlFCaENFZko2OVBnTTVxQlVPbTlOUXB2U1lnREVYVFV4OFFoa0xwdVFSMDYvbFozY3c2R0F3SjZ4bFN0Kzc2Z0RBVVIwOHJRQmdLb21jRjZNVlpvMkJJbDU0MkxUY0VoQ0gzZXRhQWZtdWF1WWNLbzdwMFZub2E5dHNjRUlZYzZ4RUNoQ0d2ZXVRQUxUTUVvOFYwWlBTSUFzS1FQejNTZ0JZYmlzbG84YXdrQzVVR2hDRlBldGFBenVXemVEb1JHSlVNUjc3S2RPdmxlWmVVak1rcm84S1pkT2t4M1g1NTNpdUY4L0xFcUh3VXZVcnNDUWhHcHVsb0FWVEZrRVZHVlk2NmUzY3FBTlV5WkVKU3hTUFZVSndXUU5VWmFaTlU5OUQwVkRZQStxZ3FkUWZkWFZLTHcxSFZsenBBN1JpSllXcjM0UlUycFJSUWEwWjFQUWw4VHJVZHBkdXZQbXFPUURmNm83a2c3WUNDTTlKZmpRMUFBUmxaS2NVU29DQ01iTlZoRDVCalJoYUxHQUJkbUk0TE40Ym5uKzY4dW5BUW8zUWNUTjRKSUZ1U1BBM2NHeUMxbUx3TzJUTWdEWkxjenpiZCtlRWlXdHFLQ1RiTWlJQ3F3R0pjbndEOVRzamlBSWdBaUFDSUFJZ0FpQkFBRWNuOEIyQXFVODZER0pvWUFBQUFBRWxGVGtTdVFtQ0MiLCJzaXplcyI6IjE5MngxOTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIiwicHVycG9zZSI6ImFueSJ9LHsic3JjIjoiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FJQUFBQjdHa090QUFBUXpVbEVRVlI0MnUzYnk2NFZWUmlGMGRWWFFCRFVuaDFCRUJRRXdVY1FFQkJRUUVEQVZ6WGhoV3dZRTFzZWFCQzh4YjFQM2Y2MTVraStGN0JPMVJ5MWFtTjc1NU52SkVtQk5aZEFrZ0FnU1FLQUpBa0FraVFBU0pJQUlFa0NnQ1FKQUpJa0FFaVNBQ0JKQW9Ba0NRQ1NKQUJJa2dBZ1NRS0FKQWtBa2lRQVNKSUFJRWtDZ0NUcEVBQmNseVFGQmdDTjFxOHZqeTJYeXlzQVNHUHVPeUVFQU1uUWcwRUFrTXc5RWdRQXllTHpRR01CY1BxNnRFSW1majhQM0ROYVBnREk0dk5BQUpDTVBnd0VBTW51azBBQWtJdytEQVFBeWU2VFFBQ1EzUmNKQkFEWmZaRkFBSkRkRndrRUFObDlrVUFBa04wWENWUVNnSGRQWDFkc0ZsQUhlUkJpQTREZGwwZ0FBSmwrQ1FOaEFOeFFRblpOZXpMZ3FSay9BTmg5aVFRQWtPbVhNQUFBbVg0SkF3Q1E2WmN3QUFDWmZna0RBSkRwbHpBQUFKbCtZY0R6Q0FDWmZtRkFBSkRwRndZRUFKbCtZVUFBa1BVWEExUUlnRE0zVkRrN3NtTy8vZjdIbXJuZ3V6TGdLUzRjQUV5L2xXY0RCZ0FnMDIvdWtZQUJBTWo2bTNza01BQUFNdjBXbndjWUFJQ3N2OUdIQVFNQUlOTnY5R0dBQVFESTlOdDlFbUNnVndCdWFwT012bUR3bGdFMllZTUFZUHJ0UGdrd0FBQlpmN3RQQWdZQVFOYmY3cE9BQVFDUTZiZjdKTUFBQUpTNi92WVVBd3dBZ0xLbTM0Q1NBQU1BVU56Nlcwd01NQUFBeWxwL0Uwa0NCZ0JBcGw4WXdBQUFOUHI2MjBFTU1BQUFpbHQvMjZkT0dUQTFBREQ5cGw4WUVBQ3N2K2xYSkFQR1p5b0FSODdjMUpSTXZ6Q3dZU1pvU2dBWWYvMXRtY1ptd0JBQndQcWJmdVV5WUk0T0M4Q25ON1Z2cGw4WXFNaUFkZG96QUl5Mi9uWkt5UXdZcUgwQitGYTdaL3FsNGd5WXFkMERnUFdYR0FBQTlibitsa2dZWUFBQTR0YmYrZ2dEREFDQTlaY1l3QUFBQkt5L3JSRUdHQUFBNnk4eGdBRUFNUDBTQmpBQUFPc3ZNWUFCQUJoaC9lMklNTUFBQUZoL2lRRU1BSUQxbHhqQUFBQU11ZjcyUWhoZ0FBQ3N2OFFBQmdEQStrc01ZQUFBaGdUQUxnZ0RBQUNBOVpjWXdBQUFXSCtKQVF3QXdKRHI3L21YaWpBQUFPdHYvU1VHWkFGd0t5M3JMekhnUHd6SUdzTm0vYTIveElCTUE1cjF0LzRTQXpJTmFOYmY5RXNZeURTZ0hUbDdLeUhyTHpGZ1B3TUNoaEVBMWw5aUFBQ3N2L1dYR0pCa1FMUCsxbDlpUUtZQnpmcGJmNGtCbVFZMDYyLzlKUVprR3RDc3YvV1hHSkJwUUR0Njl0YVFXWCtKQVRNMjVFNDI2Mi85SlFaa0d0Q3N2L1dYR0pCcFFMUCsxbDlpUUtZQkFMRCtFZ01BWVAydHY4U0FKQU9hOWJmK0VnTXlEV2pXMy9wTERNZzBBQURXWDJKQUxnQzNlOC82UzlySWdMN0hzMWwvNnk4eElOTUFBRmgvaVFFQXNQNEFrQUNRWkVDei90WmZZa0NtQWMzNlczK0pBWmtHQU1ENlN3d0FnUFczL2hJRGtneG8xdC82U3d6SU5LQWRQWGU3cndBZ3FTNEFYYzFwcy83V1gySkFwZ0VBc1A0U0F3QmcvYTIveElBa0E1cjFCNEFFZ0V3REFHRDlKUVlBd1BwYmY0a0JTUVkwNjIvOUpRWmtHZ0FBQUVnQUFJRDF0LzRTQTVJTU9BRGdUdVdzdjZTdURhZzhzTTM2VzMrSkFaa0dBQUFBRWdBQVlQMGxNU0RKZ0diOVBRWVNBeklOQUFBQUpBQUF3UHBMWWtDU0FkRUF1UFVscldrQUFMeitTM0lJcUFIQXNYTjNTbVg5SlExc1FLbTliZFpma2pJTkFJQWtBY0Q2UzJKQWtnRUFVUFYrT2ZIeExybFFBa0N2QUZoLzdidjRQQkFEQUdEOTdUNEoxSjhCTlFENDdNN21lZjIzKzB2bk9xdmlJV0RyN1EwQ3dHMmRPZjBrVU4xREFBQzgvcHQrRE1naEFBRFczL296UUE0QnF3THczWVo1L1RmOUdGRDhJV0N6Qlk0QXdLMXMvUm1nd29lQVNBQzgvcHQrREFnQUd4clF2UDdMK2pOQW1ZY0FBTWo2TTBBQXNQN0tYbjhHS00wQUFNajZNMEFBc1A2eS9neFFrZ0VBa1BWbmdBQmcvV1g5R2FBa0F3QWc2ODhBQVdBZ0FOeXNwaDhBNnRHQXdRSHcrbS85R1NBQUZER2dlZjJYOVdlQU1nOEJ6ZXUvckQ4RGxIa0lhRjcvWmYwWm9NeERBQUJrL1JrZ0FGaC9XWDhHS01rQUFNajZNMEFBQUlDc1B3TVVCc0RkRmJMKzFwOEJZc0NlQml5K3pBQ1E5V2VBWWdFNGYzZUZyTC8xQjRBWXNCOEF5eTl6RzJEOUFXRDlHYUF4RHdFQUFJRDFaNEFBc0FnQTc1Mi91M1RXMy9RelFBdzRSRXVQYyt0OS9RRmcvUm1nZ1E4QkFMRCsxcDhCY2dnQUFBQ3NQd01FZ0M0QThQM0grak5BQUNoclFQUDZMK3ZQQUdVZUFnQWc2ODhBQWNEM0grc3ZBQ2pwSzFEeittLzl4UUJsSGdJQVlQM0ZBQUVBQU5aZkRCQUFyTC8xRndNMHZBRUFzUDVpZ0FBQUFPc3ZCaWdNZ0h1elovMU52eGpBZ0FVTW1IbXJBV0Q5eFFBQkFBRFdYd3dRQUFCZy9jVUFBY0Q2VzM4QlFHTWFBQURyTHdZSUFBQ3cvbUtBQUZBV0FMZVg5V2VBa2cyWUc0QUw5K1lOQU5aZkRBREFVZ0RNT3RldG8vVUhnUFZuZ0h3RkFvQ3NQd01FZ0NRQTNGaldud0ZpQUFCay9Sa2dBQUJBMXA4QkFzRG1BUGdCd1BTTEFlcm9aNERtOWQvNkN3REtQQVFBd1BxTEFRSUFBS3kvR0NBQUFNRDZpd0VDZ0YrQXJiOFlvREYvQno0QTRQNHNXWC9yTHdab3hVUEFETHNOQU9zdkJnZ0FBTEQrWW9DaUFEaCs0ZjRzQWNENml3RmFEWUJaZGhzQTFsOE1FQUNxcm44eUFQWk9BQURBY2dZMHIvL1dYd3hRNWlFQUFOWmZEQkFBQUdEOXhRQUJBQUFBRUFNRUFBQllmekZBQUFDQTlSY0RCSURWQVBENkx6R0FBWFVCOFBwdi9jVUE5WGdJYU1jL3Z6OHhBQUJBRE5BMkFFeGJid0JZZnpGQUFBQUFBQVFBQVFBQTFsOE1FQUFBQUFBeFFBQUFnUFVYQXpRV0FOOVBEQUFBRUFPMEVRQ1QxcnMwQUw3L1NBeGdBQUNzdjhRQUFBQUFBQklEQUZBQkFEOEFBRUFNVUtjL0F3REErb3NCQWdBQUFDQUdDQUFBQUlBQUlBQUFBQUJpZ0FBQUFBQ0lBUUlBQUFBZ0JnZ0FBQUNBR0NBQUFBQUFZb0FBQUFEckx3WUlBQUFBZ0JnQUFBQUFBQUJpQUFBQUFBQzdJd1lBQUFCK0JKWUFBQUFBQUVCaUFBQldBK0RFRno5TUNRQUFFQU8wSVFCVEJod0FBT2hzbmx3SEJnQUFBQURJSFNaWGd3RUFBQUFBY2lmSk5XRUFBQUFBZ05BeGNsa1lBQUFBTUNCM2cxd2ZCZ0FBQUFESVhSOVhpUUVBQUFBQWNuZkh0V0lBQUFBQWdOekZjY1VZQUFBQU1DQjNhMXczQUFBQUFBRElIUnBYandFQUFBQUFjaWZHTldRQUFBREFnTnh4Y1NVWkFBQUFBQ0IzVnN3MEF3QUFBQWJrRG9xWlpnQUFBQUNBMENteDBRd0F3Qm9BTEdwQTJsMWlSRnhNZno0QXJMYitBQURBeVBOaG94a0FBQUF3SUhjNGJEUURBTkFyQUE0QjlzSWw5VGUxL29zQzhHQmlBREJZeFpmQ1JnTmdYQUFtclRjQUdCQXhFMmFhQVFBQUFBTnlCOEpNTXdBQUFBQkE3alNZYVFZQUFBQU15QjBGTTgwQUFBQ0FBYUZ6WUtNWkFJQzNBTGo0WUdJQU1GaDlEWUdOWnNBNEFFeGI3eGtBV05RQWQwK25nK1dTTWtDTC8xOWdrNmU3T2dBTTZIR3dYRkl4b1A3clB3QVlFUDNZMjJnM0F3QUFnSUhjcDkxR3V5VUFBQUNibGZ1b20yazNCZ0FBWUxOeUgzSXo3ZllBQUFETVZ1NnpiYWJkSndDb0NBQURhaTZYS3lrR2JMaitoUUJ3Q0lnYUw1ZFI3cHdCWHY4QllMODh3QUJnUURBQTcxOThNRXNBR0hqSVhEcTVuYW9CTU10dUE4Q2lHWDBHTUFBQUFKQVl3SUF3QUI3T2tuOElKQWFJQWF2OUU2QlpkbnMyQUpZMndCNkpBUUFBd0l6ckR3Q0pBUXdBQUFBa0JqQUFBQUNRR01BQUFQZ2RXR0lBQU1iOEJYaG1BQndDeEFBeG9KZlhmd0JJQUdBQUFBQWdNUUFBQVBBemdNUUFCZ3ovQXdBQUpBWUFBQUMrQWtrTVlFRFM5NS9YQUZ4Nk9HOEFFQU1FZ0tVQW1IV3VPd09BQVdJQUE2Sy8vd0JBWWdBQUFBQUFpUUVBQUVBWkFCZ2dCaWpUZ0w3V0h3QVNBQUFBQUFCSURBQUFBQUFnTVlBQklRQThXaUlHaUFHS0FtRDU5WjkvcUFFZ01RQUFBQUNBeEFBQUFJQUJFZ01BTVBiNkEwQmlBQUFBQUFDSkFRd0FRQzhBTUVBTUFFREMrbmNKZ0VPQXhBQUFsRjEvQUVnQUFBQUFmQVdTR0FDQXBPOC9pd1BnRUNBeEFBQTExeDhBRWdNQUFBQmZnU1FHQUNEcCs4OGFBRGdFU0F3QVFNSDFmd1hBeVV1UGxzNGhRR0tBOVQ5RVM0OHpBQ1FHQUFBQVBSdGdUY1FBQUF3R3dBckwzRTUrK1dpRkhBSWtCb3dFd0Jxdi84c3ZNd0FrQmdBZ0Y0QWYxNGtCRWdER0FHQ1Y5VjlqbGdFZ01jRDZBd0FBRWdNQUFBQUdTQXdBd05qckR3Q0pBZFlmQUtNQXdBQXhBQUJkci8rd0FEZ0VTQXdBUUpIMUh4TUFCb2dCMXQvcmYwVUFIQUlrQmdDZ3d2b1BDd0FEeEFEcjcvVWZBQklBQUFDQU1nQXdRR0tBOWQ5OC9RRWdNUUFBQUdDQXhBRHJuN1QrQUpBWUFBQUFNRUJpZ1BWUFduOEFTQXl3L2dBWUZ3QUdpQUhXdi9MNmh3TGdFQ0NGR3dDQURkYy9CUUFHaUFIVzMrdi92d0x3ZU5zQUlBVWFVUC95cnJYK1c4NXZDZ0FNRUFPc2Y4blgvMndBSEFLa0tBTzZ1S29KNjU4RkFBUEVBT3Z2OWYrdkFGeCtYQ0VBU01NYjBNdkZYR245Q3d4dkZnQU1FQU5NZjVYWGZ3QXdRQnFlQWV0ZmMvMEJJREhBOUFPQUFSSUdySC9TK2dOQXdvRHBCd0FESkF5a1RuL20rcjhDNE5UbHg2VmE3Yy9BQUdIQTdxKzgvZ2VWMnR0eUFKeHlDSkE2a1dDWUM1SzUvdWtBTUVEYTE0UHgvdk5qWC8rTEFzQUFTZFlmQUFDUUJJQXdBQmdneWZybkFzQUFTZFlmQUFDUUJJQXdBQmdneWZvdkNzQ1R5cTM1ZDJLQVpQMFhBS0R1d0ZZSGdBR1NyRDhBQUNBSkFHRUFNRUNTOWM4RmdBR1NyRDhBR0NDcCt2b0R3Q0ZBa3RkL0FEQkFrdlVIZ0E5QmtuejhLUVBBbFNkOXhRQkpkZGUvcXprRkFBQWtBQUNBQVF5UXJIL00rdmNLQUFNa1dYOEFNRURTOXVzUEFBWklzdjRBWUlBazZ3OEFQd1pJOHVrZkFBNEJrcnorQTRBQmtxeC9BUUNlRGhBREpPdS8rdnAzdjV3QVlJQmsvUUhBQUFaSTFqOW0vWWNDZ0FHUzliZit1UUF3UUxMKzFoOEFESkNzUHdEQ0FHQ0FaUDJ0Znk0QURKQ3N2L1hQQllBQmt2VzMvdjhQd0FkWG5nN1poamNLQTZUQjF2K2dJWGR5V0FBWUlGbC82NThMQUFNazYyLzljd0ZnZ0dUOXJYOHVBQXlRckwvMXp3V0FBWkwxdC80QVlJQmsvUUh3Qm9Ddm5vYkVBTW42NzdyK0dhc1lCRUFGQXpBZ0ZaLytuUFdQQTRBQmt2VzMvcmtBTUVDeS90Yi9EUUEvQmNZQXlmci9ZLzNqbGpBVUFBWkkxajk4L2FNQktHSUFCbVQ2clQ4QUdDQlpmK3NQQUFaSTF0LzZBeUFIQUF6STlBTUFBQXl3RWJMKzFoOEFESkNzdi9VSFFKb0JHSkRwdC80QVlJQmsvYTAvQUJnZ1dYL3JENEFvQXpBZzAyLzlBY0FBeWZwYmZ3QmdRREw5cGg4QURKQ3N2L1VIUUlvQkdKRHB0LzRBWUlCay9hMC9BQ0lOd0lCTXYvVUhRTFFCR0pEcHQvNEFZSUJrL1MzVkhnQTgwMTVWdnZVeG9PVHBmNzMrTm1xUEFEQ2dBUmhRNFBSYi8wTUJjUFdaRGhjR1pQcXJUTDlGT2xRQUdOd0FER2pzNmJmK0FHQUFCcFE0L2RaL0tnQWZYbjJtaWZYeXFHQkFJMDMvUWNabllnQ0lNd0FER21ENnJUOEFNSUFCbVg0QmdBRVlVTUQwVzM4QU1BQURTcHgrNnc4QURHQkFwbDhBWUFBSk5QcnVXMzhBTUFBRENwMSs2dzhBREpCQWNidHYrZ0hBQUF3b2NmcXRQd0F3UUFMRjdiN3BCd0FEU0tDNDNiZitBR0FBQ1pTNCs5WWZBQmdnZ1JKMzMvUnZDTUJ6YmRXUVR6SU1qUDcrNjI4TnRna0FHQ0NCM1RmOUFCQUdZR0QwVFQ4QXhBQVlHSDNyRHdCaGdBY1czL1FEUUF4QWdybTMvZ0FRQnBCZzdrMC9BSVNCUkJ0Y2NOTS9CQURYbnF0K2RrVDlUYjhudDN3QVlJQmsvUUVnREVpbUh3RENnR1Q2QVNBTVNLWWZBTUtBWlBvQklBekk5QXNBd29CTXZ3QWdETWowQ3dEQ2dFeS9BQ0FNeVBRTEFDS0I3TDRxQWZCQ09kazE3VEQ5bnBTVUFJQUJ5ZlFEUUNTUTNWY1VBQjlkZTZId0xHQnNidjd3QUNBUzJIMEJRQ0tCM1JjQUpCTFlmUUZBSW9IZEZ3QWtFdGg5QVVBeXRYWmZBSkJnWVBRRkFKSEFMdHQ5QVVDeTFFWmZBSkI0WVBGVkU0Q3ZYMGpyWitML3Z2anVDcTBlQU1RRGl5OEFTRWd3OXdLQUJBWkRMd0JJaExEdkFvQWthU3dBZnBZa0JRWUFTUUtBSkFrQWtpUUFTSklBSUVrQ2dDUUpBSklrQUVpU0FDQkpBb0FrQ1FDU0pBQklrZ0FnU1FLQUpBa0FraVFBU0pJQUlFa0NnQ1JwU244Q1FXd2JzNUxobTBnQUFBQUFTVVZPUks1Q1lJST0iLCJzaXplcyI6IjUxMng1MTIiLCJ0eXBlIjoiaW1hZ2UvcG5nIiwicHVycG9zZSI6ImFueSBtYXNrYWJsZSJ9XX0=" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAGmUlEQVR42u3d3XIUVRSG4X0uEEQEzjgRBEFB/rwEQwwxREMIMcRbtcob8sCyyiM7M1WUB9M9u3vvvfb6eau+C5he31Oru2a6e9JnX/1IyOIkRkAARABEAEQARAiACICIIUC7ZJ2//tzJD+NaJwGlbuIBurfrPk3FbPHkfbYJN0gCkFI0ETAl3CCpCNCVe7umY5TO/2N6/gOg1xbjwM0mSfaKSNCBURRA7ulYZJSgAyPPgMLSscIoXbn/Wm0Euvn7n3/LI2FIa0cpGp0qYnp5AlAfOgJoJDFpA7SnJ27ctJakp7Lkj44qN00lAaimHuVuGkkC0F5AOnUZxQUUnI4PRunq/b0ugU51Rl16TFe/3pMPdBoxkq9yAPSTcKDTlJFwmwk9GDIDCDpijBwCQo9LQ0mtHtyUM3ICCD2ODSX0YKgQ0H67QEcJo3YVJ/RgqAzQg/0WQY9GQw2KTujBkC5A6AllKF17sF836FFuqG7dCT0Y0gIIPQENDYDeVAl6DBqq0HsHQNSsxJAiQOgJayhde/imMJy8bJ/IytoXBUS1GpdQX0DoCW5ICBB1ajZUCOhgcVg/jpbQQgMJPRgqMdQcEBXaOZEtArTz8GBBWD8ul9ACCW0BUZ4tQ0KAHOj548bdiWBoDqBvDubGLqBpN74Z5QKaiSGhJw6jFoYGQD/PikVAy+j4M5QNaIaHhB4MlRhyDqiKHk+GDAByqSeaoSaAbK2f6nrcGKq7hJLL9dNITyhDlQEZWj9N9fgwVHEJDYAOc4KegIZyYKSdR4c5MQFITI8DQ1mAMmCk648Ot8bE+UtYj3VDmZ1utVENUEA9EQz5B9SRDoDMA+qux7QhIUDowdA0oLfT0QlIlR67hvIATfEwCUihHqOGmgNCD4amDaXrj99ORBsg5XosGsoCNC7EEiATeswZigLIkB5bhjoDQk8EQwsBKVk/RvUYMlSyhAZAR2PRAMi0Hl+ANiNJnz8+Gkt3QNb1WDGUU/QYEr2AfOgxYagbIPTEMWQJkD89+g0VAPr2aCwAimNoO6ARJADCUCmgXzam1xW0bz1qDWVdR29yAiAMAQhDAAoISJUhJ4BC6QEQgPwYAhCGOgG68d2vGxPkGkiJWhOANjoJDUjV5gOQ7fezBDcEoApVRTbkB5BAkcqv4gFk+w2HMQ25AtT9HasBDQGoZiUAmgXoeCye7qi3+JWmKkBjSPQCqtii3a/FLQB6cjwWH08VWv9pRQugESTaARW26OPnObeANBty9hNv/yto04BmFen1NjelgL54cjwWW2/3jfCUfkdAY0gGQO/Gwh97BzGUB2gzkilAOYZCAfJqaLGeCoBYQtYBlawfAGEIQPxBR2dAT99NBEDuDWUBGheyBRCG1BrSoAdAhg3pAXQyHQDpNCQIaIrHdkAY8mqoXA+AbBsCEIYAhKGuz2U31ZMF6ObTk5wASO1z2e0A5cBIN78/yQmAlD+a3QRQBowB0PuccBYz8XR23fNXDoxcQJmG0CNmqP36ed8BEIaUPKAts37mAWIJ6TGkZP00AYQhPc9ot14/ADJpyDAgDHU3pErPGtDprACooyGB735WgGZ4mA0IQ70MKdSzAvTsdG4AJG9I5tafS0AzMSwBhCFJRmI3ji3Q0xwQhkoYSd42vxzQl89OlwVAVpLZ1DIGzQFhyISeDoAwhJ41oA8lAZCLk9dyAEKAMKR7/fQDhKHIelaAnn8oTP5nxZA2PZeAytqvAGiWIdrVtX6Kq68DCEMx9fQBhCEfJ69PgM5qBUOm9NQpvSYgDEXTUx8QhkLpuQR06/lZ3cw6GAwJ6xlSt+76gDAUR08rQBgKomcF6MVZo2BIl542LTcEhCH3etaAfmuauYcKo7p0Vnoa9tscEIYc6xEChCGveuQALTMEo8V0ZPSIAsKQPz3SgBYbislo8awkC5UGhCFPetaAzuWzeDoRGJUMR77KdOvleZeUjMkro8KZdOkx3X553iuF8/LEqHwUvUrsCQhGpuloAVTFkEVGVY66e3cqANUyZEJSxSPVUJwWQNUZaZNU99D0VDYA+qgqdQfdXVKLw1HVlzpA7RiJYWr34RU2pRRQa0Z1PQl8TrUdpduvPmqOQDf6o7kg7YCCM9JfjQ1AARlZKcUSoCCMbNVhD5BjRhaLGABdmI4LN4bnn+68unAQo3QcTN4JIFuSPA3cGyC1mLwO2TMgDZLczzbd+eEiWtqKCTbMiICqwGJcnwD9TsjiAIgAiACIAIgAiBAAEcn8B2AqU86DGJoYAAAAAElFTkSuQmCC" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAGLUlEQVR42u3dyW4VSRAF0Ng3boY2w44N0NCMjRk+AWOMGwzGGDeYX0Xih1ggJFYUeAOi6lVWZmSMV7r79yrvUWTpyZmmPy49QpDREJYAAQ4EOBDgQIADAQ7EKo5NBBlNLhyfPp5sTyYclzejhoVCEZegC0gAASjBcaibCKmEYAJKJnGcuLzpLi5M/B536zzgeOwoTln8SsTNahNMQIlXHCFZeCFCYAEi0ziuPDYYrZI+f/mq5sNeC5SKxdB9e/IQodgsWDTIW7GDY8tCfIEQgGKhFArDQtFEPyWpcQQz0UNJUhyxWTASyYUjDwvXRGjtypZwErLgIiLcFK39vSWZzCxYiEiWNeB4IhawYCEi1hdZlhGYRSORODgwMJyOEMLAwAjRwQEZrn0QZMCHdRww0UKkH47tHoEMcR/8JdLa1W32QIaOD+4eCTLgQwgHZETyQX9e3eYKZBjxwVWoDg6U3dWHORyQEc/HgONpeyDDpI/WWgky4EMfB0qV99GM49rTlkCGdR8N5ZKADOBQ3lws40CRTocHQQZ8rMCxUxfIcOSjrmLqJwM4jA0PERyQkcQHnby2szSQ4dTH0qKphwybOD6cufh7sg2PhTj+2VkUdzJGTYRUUoRjSdfELsMOjkIWYYiUDo8lOP4rT2wZSXyU1x0TR7UM7z7UcCSRAR8xcbCw8O5DAUc2GfARB0cPGX59mMMRUkZgH2U4rj+bjeWx0VuGUx9Fw2Oudx4csWWEHR6zOE5dfzYbmzjEZEQdHrO9U7sMFRzCMjz6KCmuO44kMkL6iIZDUYY7H31xWNtT1GX48tG4sww4nq8IZIT3saJ9NzhMyXDkow3HjecrYgSHQRlefMzjmG6fWmQI4DDLwouPoteOHjggI4YPfzi8yAAOaRyOZNj30YJjdypaONzJMO6jAMc4ADp9Y3cqKjicyrDsY7bHKQAEGfAx5QM4UvioxXFzdzTyOGLIsOljHseYAeBI4cM3jmAyrPmoxvFiNMARyUcBjhEDwJHCB3AAR0QcgWUY8QEc8AEc8CGG48ytl6OJ+iNH2pMNqwsdNVCJw+kLadqTL7NtZseR+WQUcCzrI9X7h28cKhew5PEBHDUdJPHhHkePqnAsuxHH3mgC4MCx/SU4RgzYwsHYE6514MBxe280fs8l4NqPGhxjBiziULy5PKqPUDjqqsK1QUI4fPnAtVLsMr7j+Ov23lTs39yCa8dYcEwBGHC8mkrmf+QW6cexAhzjAIAjvg/gwOZiDAd82PdRUuI0jjuvVgQ4FH0IjY3p9oEjuA/gwG3rvXDsrwheO3R9SLxwTLc/g6PERx4c7v6PR4sM4LDuwz0ODA+bOBr3lCIcGB66R7C0xsZ3HOt39mcDHOqnsHrgmO2d1v/dnw12FiMHsXj3lNneBxyvSwIcRs5isY2NgtLZcMCHHRxlYwM4PPvovKfw4YAPeR+6MoAjwoksEzjgw+yJrB4ygMOoDzs4DspT8tnwYVnGDxylddP63YNFAQ6zJ/aKZCzpugsO+JA/rlc6NrriwPBgJyL2h8RLi6azdw+WBsODRYnk4YPjLC26Bgd8mEonGfU4zmJzcYWjruIBx5u6YHi4Ghs1FdfjgI/YMoRwwIeijDYcG29aAhzWx0ZDua044COqDFEc8KGwoajjgI+QMo5xHLIEPozJYOiUDQd8BJOhhgM++sngxHFu45Ax8KEug7FNZhzwEUbGDxz3DtkDHzoyuHvsggM+Asg4xvF/p8CHoIwuDVrBASJ1LLzigA/XMrrjgA+/MiRw1PnIRqRuiXoXJ4EDI8TXwFDAgRHiZWD8hOP+W8nULUc8ItXrIFmWNI4WHzGItDy+cFN0/v5b+bQskF8ijU8tX5MOjmxE3LHQx9Huwz6R9gdUbEcZB4sPg0q4Hkq3Gn0cvER0lTA+hYVSBhzvjIRxZSWh9PjaRhoxhKMfEV4rXb+hqS7o/IN3BtO1gNV6tD7aYAtGcSj6gAwHOJIQsbz41nEEJmJ/2X3giKTE0WoPOI7cxS0LZ+tMFx4c+Y0LE36X1zcOy0oCrGoQHHaURFpMuvDwKGrkQARdwMg4OnHJs1y5cCBLcbxHkNEABwIcCHAgwIEAB6Kab+tm9dnlrvMfAAAAAElFTkSuQmCC" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="SPPD KPU Jabar" />
 
-  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+/* ===========================================================================
+   SISFO SPPD KPU Jawa Barat — Stylesheet
+   Tema: navy (#0b2447) · emas (#f1c40f) · merah (#c1121f) · putih
+   Mobile-first, responsif, tanpa framework.
+   ========================================================================= */
+
+:root {
+  --navy: #0b2447;
+  --navy-2: #143a6b;
+  --navy-3: #1d4e89;
+  --gold: #f1c40f;
+  --gold-d: #d4ac0d;
+  --red: #c1121f;
+  --green: #1e8449;
+  --green-bg: #e8f6ee;
+  --orange: #b9770e;
+  --orange-bg: #fdf3e2;
+  --red-bg: #fdeaea;
+  --blue-bg: #e9f0fb;
+  --gray-bg: #eef1f5;
+
+  --bg: #f4f6fa;
+  --surface: #ffffff;
+  --line: #e2e8f0;
+  --text: #1f2a37;
+  --muted: #64748b;
+
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 1px 2px rgba(16,24,40,.06), 0 6px 18px rgba(16,24,40,.08);
+  --shadow-sm: 0 1px 2px rgba(16,24,40,.08);
+
+  --sidebar-w: 248px;
+  --topbar-h: 58px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--navy-3); text-decoration: none; }
+h1,h2,h3,h4 { margin: 0 0 .4em; line-height: 1.25; }
+p { margin: 0 0 .6em; }
+img { max-width: 100%; }
+
+/* ---------- Boot splash ---------- */
+.boot { min-height: 100vh; display: grid; place-content: center; gap: 14px; text-align: center; color: var(--muted); }
+.boot-logo {
+  width: 64px; height: 64px; margin: 0 auto; border-radius: 16px;
+  background: radial-gradient(circle at 50% 42%, #fff 0 33%, var(--gold) 34% 42%, var(--navy) 43% 100%);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { transform: scale(1); opacity: .85; } 50% { transform: scale(1.07); opacity: 1; } }
+
+/* ---------- App layout ---------- */
+.layout { display: grid; grid-template-columns: var(--sidebar-w) 1fr; min-height: 100vh; }
+
+/* Sidebar (desktop) */
+.sidebar {
+  background: linear-gradient(180deg, var(--navy) 0%, #0a1f3d 100%);
+  color: #dbe4f3; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+  display: flex; flex-direction: column;
+}
+.brand { display: flex; align-items: center; gap: 11px; padding: 16px 16px 14px; }
+.brand .mark {
+  width: 38px; height: 38px; border-radius: 10px; flex: none;
+  background: radial-gradient(circle at 50% 42%, #fff 0 33%, var(--gold) 34% 42%, var(--navy-3) 43% 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.15);
+}
+.brand .name { font-weight: 800; font-size: 15px; color: #fff; letter-spacing: .2px; }
+.brand .sub { font-size: 11px; color: #9fb3d1; }
+.nav { padding: 6px 10px; display: flex; flex-direction: column; gap: 2px; }
+.nav-group-label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .8px; color: #7e93b5; padding: 12px 12px 4px; }
+.nav a {
+  display: flex; align-items: center; gap: 11px; padding: 9px 12px; border-radius: 10px;
+  color: #cdd9ee; font-weight: 600; font-size: 14px; position: relative;
+}
+.nav a .ico { width: 20px; text-align: center; font-size: 16px; opacity: .92; }
+.nav a:hover { background: rgba(255,255,255,.07); color: #fff; }
+.nav a.active { background: var(--navy-3); color: #fff; }
+.nav a.active::before { content: ""; position: absolute; left: -10px; top: 8px; bottom: 8px; width: 3px; border-radius: 3px; background: var(--gold); }
+.nav .pill { margin-left: auto; background: var(--red); color: #fff; font-size: 11px; font-weight: 800; padding: 1px 7px; border-radius: 999px; }
+.sidebar-foot { margin-top: auto; padding: 12px; font-size: 11px; color: #8aa0c2; border-top: 1px solid rgba(255,255,255,.08); }
+
+/* Main */
+.main { display: flex; flex-direction: column; min-width: 0; }
+.topbar {
+  height: var(--topbar-h); background: var(--surface); border-bottom: 1px solid var(--line);
+  display: flex; align-items: center; gap: 12px; padding: 0 16px; position: sticky; top: 0; z-index: 30;
+}
+.topbar .page-title { font-weight: 800; font-size: 16px; color: var(--navy); }
+.topbar .spacer { flex: 1; }
+.hamburger { display: none; background: none; border: 0; font-size: 22px; color: var(--navy); cursor: pointer; }
+.userchip { display: flex; align-items: center; gap: 9px; cursor: pointer; padding: 5px 8px; border-radius: 999px; }
+.userchip:hover { background: var(--gray-bg); }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--navy-3); color: #fff; display: grid; place-content: center; font-weight: 700; font-size: 13px; flex: none; }
+.userchip .u-name { font-size: 13px; font-weight: 700; line-height: 1.15; }
+.userchip .u-role { font-size: 11px; color: var(--muted); }
+@media (max-width: 560px) { .userchip .u-meta { display: none; } }
+
+.content { padding: 18px; max-width: 1180px; width: 100%; margin: 0 auto; }
+@media (max-width: 640px) { .content { padding: 14px 13px 84px; } }
+
+/* Mobile bottom nav */
+.bottomnav { display: none; }
+
+@media (max-width: 920px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar {
+    position: fixed; z-index: 60; width: 270px; left: 0; top: 0; transform: translateX(-100%);
+    transition: transform .25s ease; box-shadow: var(--shadow);
+  }
+  .sidebar.open { transform: translateX(0); }
+  .scrim { position: fixed; inset: 0; background: rgba(8,15,30,.5); z-index: 55; display: none; }
+  .scrim.show { display: block; }
+  .hamburger { display: inline-flex; }
+}
+
+@media (max-width: 640px) {
+  .bottomnav {
+    display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 40;
+    background: var(--surface); border-top: 1px solid var(--line);
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); justify-content: space-around;
+  }
+  .bottomnav a {
+    display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10.5px;
+    color: var(--muted); font-weight: 700; flex: 1; padding: 3px 2px; border-radius: 9px; position: relative;
+  }
+  .bottomnav a .ico { font-size: 19px; }
+  .bottomnav a.active { color: var(--navy); }
+  .bottomnav a .dot { position: absolute; top: 2px; right: 22%; width: 8px; height: 8px; border-radius: 50%; background: var(--red); border: 2px solid #fff; }
+}
+
+/* ---------- Page header ---------- */
+.page-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.page-head h1 { font-size: 21px; color: var(--navy); }
+.page-head .desc { color: var(--muted); font-size: 13.5px; margin: 0; }
+.page-head .actions { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  padding: 9px 15px; border-radius: 10px; font-weight: 700; font-size: 14px; cursor: pointer;
+  transition: filter .15s, background .15s, box-shadow .15s; line-height: 1; font-family: inherit;
+}
+.btn:hover { background: var(--gray-bg); }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+.btn-primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+.btn-primary:hover { background: var(--navy-2); }
+.btn-gold { background: var(--gold); color: #3a2e00; border-color: var(--gold-d); }
+.btn-gold:hover { filter: brightness(1.04); }
+.btn-success { background: var(--green); color: #fff; border-color: var(--green); }
+.btn-danger { background: var(--red); color: #fff; border-color: var(--red); }
+.btn-ghost { background: transparent; border-color: transparent; }
+.btn-sm { padding: 6px 11px; font-size: 13px; border-radius: 9px; }
+.btn-block { width: 100%; }
+
+/* ---------- Cards & grid ---------- */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.card-pad { padding: 16px; }
+.card + .card { margin-top: 14px; }
+.card-title { font-size: 15px; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+.card-title .ico { font-size: 17px; }
+.grid { display: grid; gap: 14px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2,1fr);} }
+@media (max-width: 560px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+/* Stat cards */
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 15px 16px; box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+.stat .ico { position: absolute; right: 12px; top: 12px; font-size: 26px; opacity: .14; }
+.stat .label { font-size: 12.5px; color: var(--muted); font-weight: 700; }
+.stat .value { font-size: 26px; font-weight: 800; color: var(--navy); margin-top: 2px; }
+.stat .value.sm { font-size: 19px; }
+.stat .delta { font-size: 12px; margin-top: 3px; }
+.stat.accent-gold { border-top: 3px solid var(--gold); }
+.stat.accent-red { border-top: 3px solid var(--red); }
+.stat.accent-green { border-top: 3px solid var(--green); }
+.stat.accent-navy { border-top: 3px solid var(--navy-3); }
+
+/* ---------- Badges ---------- */
+.badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 800; padding: 3px 9px; border-radius: 999px; white-space: nowrap; line-height: 1.4; }
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.badge-gray { background: var(--gray-bg); color: #475569; }
+.badge-blue { background: var(--blue-bg); color: var(--navy-3); }
+.badge-amber { background: var(--orange-bg); color: var(--orange); }
+.badge-green { background: var(--green-bg); color: var(--green); }
+.badge-red { background: var(--red-bg); color: var(--red); }
+.badge-gold { background: #fdf6d6; color: #8a6d00; }
+
+/* ---------- Tables ---------- */
+.table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow-sm); }
+table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
+table.tbl th, table.tbl td { padding: 11px 13px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+table.tbl th { background: #f8fafc; font-size: 11.5px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); font-weight: 800; position: sticky; top: 0; }
+table.tbl tbody tr:hover { background: #f9fbfe; }
+table.tbl tbody tr.clickable { cursor: pointer; }
+table.tbl .num { text-align: right; font-variant-numeric: tabular-nums; }
+.empty { text-align: center; padding: 38px 16px; color: var(--muted); }
+.empty .big { font-size: 34px; opacity: .35; }
+
+/* Card list (mobile alternative) */
+.list { display: flex; flex-direction: column; gap: 10px; }
+.list-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 13px 14px; box-shadow: var(--shadow-sm); cursor: pointer; }
+.list-item:hover { border-color: var(--navy-3); }
+.list-item .li-top { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.list-item .li-title { font-weight: 800; color: var(--navy); font-size: 14.5px; }
+.list-item .li-meta { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+.list-item .li-foot { display: flex; gap: 10px; align-items: center; margin-top: 9px; flex-wrap: wrap; font-size: 12.5px; }
+
+/* ---------- Forms ---------- */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field.col-2 { grid-column: 1 / -1; }
+label.lbl { font-size: 12.5px; font-weight: 700; color: #334155; }
+label.lbl .req { color: var(--red); }
+.input, .select, .textarea {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px;
+  font-size: 14px; font-family: inherit; color: var(--text); background: #fff; transition: border-color .15s, box-shadow .15s;
+}
+.input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--navy-3); box-shadow: 0 0 0 3px rgba(29,78,137,.14); }
+.textarea { resize: vertical; min-height: 84px; }
+.hint { font-size: 11.5px; color: var(--muted); }
+.field-error { font-size: 11.5px; color: var(--red); font-weight: 600; }
+.input.invalid, .select.invalid, .textarea.invalid { border-color: var(--red); box-shadow: 0 0 0 3px var(--red-bg); }
+
+/* File upload */
+.dropzone { border: 1.5px dashed #c7d2e0; border-radius: 12px; padding: 16px; text-align: center; color: var(--muted); cursor: pointer; background: #fbfdff; }
+.dropzone:hover { border-color: var(--navy-3); color: var(--navy-3); }
+.dropzone .big { font-size: 26px; }
+.file-chip { display: flex; align-items: center; gap: 8px; padding: 7px 10px; background: var(--blue-bg); border-radius: 9px; font-size: 12.5px; margin-top: 6px; }
+.file-chip .x { margin-left: auto; cursor: pointer; color: var(--red); font-weight: 800; }
+.thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.thumb { width: 76px; height: 76px; border-radius: 9px; object-fit: cover; border: 1px solid var(--line); position: relative; }
+
+/* ---------- Timeline / stepper ---------- */
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { position: relative; padding: 0 0 16px 28px; }
+.timeline li::before { content: ""; position: absolute; left: 7px; top: 18px; bottom: -2px; width: 2px; background: var(--line); }
+.timeline li:last-child::before { display: none; }
+.timeline .tl-dot { position: absolute; left: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: #cbd5e1; border: 3px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+.timeline .tl-dot.done { background: var(--green); }
+.timeline .tl-dot.reject { background: var(--red); }
+.timeline .tl-dot.current { background: var(--gold); }
+.timeline .tl-title { font-weight: 700; font-size: 13.5px; }
+.timeline .tl-meta { font-size: 12px; color: var(--muted); }
+.timeline .tl-note { font-size: 12.5px; margin-top: 3px; background: var(--gray-bg); padding: 6px 9px; border-radius: 8px; }
+
+/* Progress bar */
+.progress { height: 9px; background: var(--gray-bg); border-radius: 999px; overflow: hidden; }
+.progress > span { display: block; height: 100%; background: linear-gradient(90deg, var(--navy-3), var(--gold)); border-radius: 999px; }
+
+/* Definition list */
+.dl { display: grid; grid-template-columns: 168px 1fr; gap: 8px 14px; font-size: 13.5px; }
+.dl dt { color: var(--muted); font-weight: 600; }
+.dl dd { margin: 0; font-weight: 600; }
+@media (max-width: 560px) { .dl { grid-template-columns: 130px 1fr; } }
+
+/* ---------- Tabs ---------- */
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 14px; overflow-x: auto; }
+.tabs button { background: none; border: 0; padding: 10px 14px; font-weight: 700; font-size: 13.5px; color: var(--muted); cursor: pointer; border-bottom: 2.5px solid transparent; white-space: nowrap; font-family: inherit; }
+.tabs button.active { color: var(--navy); border-color: var(--gold); }
+
+/* Filter bar */
+.toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
+.toolbar .search { flex: 1; min-width: 180px; }
+.seg { display: inline-flex; background: var(--gray-bg); border-radius: 10px; padding: 3px; }
+.seg button { border: 0; background: none; padding: 6px 11px; border-radius: 8px; font-weight: 700; font-size: 12.5px; color: var(--muted); cursor: pointer; font-family: inherit; }
+.seg button.active { background: #fff; color: var(--navy); box-shadow: var(--shadow-sm); }
+
+/* ---------- Modal ---------- */
+.modal-host { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 16px; background: rgba(8,15,30,.5); }
+.modal { background: #fff; border-radius: 16px; max-width: 560px; width: 100%; max-height: 90vh; overflow: auto; box-shadow: var(--shadow); }
+.modal-head { padding: 16px 18px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 10px; }
+.modal-head h3 { margin: 0; font-size: 16px; color: var(--navy); }
+.modal-head .x { margin-left: auto; background: none; border: 0; font-size: 22px; cursor: pointer; color: var(--muted); }
+.modal-body { padding: 18px; }
+.modal-foot { padding: 14px 18px; border-top: 1px solid var(--line); display: flex; gap: 8px; justify-content: flex-end; }
+
+/* ---------- Toast ---------- */
+.toast-host { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 100; display: flex; flex-direction: column; gap: 8px; width: min(420px, calc(100% - 28px)); }
+.toast { background: #0f172a; color: #fff; padding: 11px 14px; border-radius: 11px; box-shadow: var(--shadow); font-size: 13.5px; display: flex; gap: 9px; align-items: center; animation: toastin .2s ease; }
+.toast.ok { background: #14532d; } .toast.err { background: #7f1d1d; } .toast.warn { background: #7c5400; }
+@keyframes toastin { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* ---------- Documents (Surat Tugas / SPPD) ---------- */
+.doc { background: #fff; color: #111; max-width: 800px; margin: 0 auto; padding: 38px 44px; font-family: "Times New Roman", Georgia, serif; font-size: 13.5px; line-height: 1.45; }
+.doc .kop { display: flex; align-items: center; gap: 14px; border-bottom: 3px double #000; padding-bottom: 8px; }
+.doc .kop .garuda { width: 64px; height: 64px; flex: none; background: radial-gradient(circle at 50% 42%, #fff 0 33%, var(--gold) 34% 42%, var(--navy) 43% 100%); border-radius: 8px; }
+.doc .kop .kop-txt { text-align: center; flex: 1; }
+.doc .kop .kop-txt .l1 { font-size: 14px; font-weight: 700; } .doc .kop .kop-txt .l2 { font-size: 17px; font-weight: 800; } .doc .kop .kop-txt .l3 { font-size: 11px; }
+.doc h2.doc-title { text-align: center; text-decoration: underline; font-size: 15px; margin: 18px 0 2px; }
+.doc .doc-no { text-align: center; margin-bottom: 16px; }
+.doc table.doc-tbl { width: 100%; border-collapse: collapse; }
+.doc table.doc-tbl td { padding: 3px 6px; vertical-align: top; }
+.doc .ttd-grid { display: flex; justify-content: flex-end; margin-top: 26px; }
+.doc .ttd { text-align: center; min-width: 260px; }
+.doc .qr-box { display: flex; gap: 14px; align-items: center; border: 1px solid #bbb; padding: 10px; border-radius: 8px; margin-top: 16px; }
+.doc .qr-box canvas, .doc .qr-box img, .doc .qr-box .qr-fallback { width: 96px; height: 96px; flex: none; }
+.qr-fallback { display: grid; place-content: center; background: #f1f5f9; border: 1px dashed #94a3b8; font-size: 10px; text-align: center; color: #475569; border-radius: 6px; padding: 4px; }
+.doc-actions { max-width: 800px; margin: 0 auto 12px; display: flex; gap: 8px; justify-content: flex-end; }
+
+/* ---------- Login ---------- */
+.auth { min-height: 100vh; display: grid; grid-template-columns: 1.1fr .9fr; }
+@media (max-width: 860px) { .auth { grid-template-columns: 1fr; } .auth .auth-hero { display: none; } }
+.auth-hero { background: linear-gradient(150deg, var(--navy) 0%, #0a1f3d 60%, #122b52 100%); color: #fff; padding: 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+.auth-hero .badge-line { display: inline-flex; gap: 8px; align-items: center; color: var(--gold); font-weight: 800; letter-spacing: .5px; }
+.auth-hero h1 { font-size: 30px; line-height: 1.2; }
+.auth-hero ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 9px; }
+.auth-hero ul li { display: flex; gap: 10px; align-items: flex-start; color: #cdd9ee; font-size: 14px; }
+.auth-hero ul li .c { color: var(--gold); }
+.auth-card { display: flex; align-items: center; justify-content: center; padding: 28px; }
+.auth-inner { width: 100%; max-width: 400px; }
+.auth-inner h2 { color: var(--navy); }
+.role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 12px; }
+.role-pick { border: 1px solid var(--line); border-radius: 12px; padding: 11px; cursor: pointer; background: #fff; text-align: left; transition: border-color .15s, box-shadow .15s; font-family: inherit; }
+.role-pick:hover { border-color: var(--navy-3); }
+.role-pick.active { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(11,36,71,.12); }
+.role-pick .r-name { font-weight: 800; font-size: 13px; color: var(--navy); }
+.role-pick .r-sub { font-size: 11.5px; color: var(--muted); }
+
+/* ---------- Utilities ---------- */
+.flex { display: flex; } .between { justify-content: space-between; } .center { align-items: center; }
+.gap-6 { gap: 6px; } .gap-8 { gap: 8px; } .gap-12 { gap: 12px; }
+.wrap { flex-wrap: wrap; }
+.mt-0{margin-top:0}.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mb-0{margin-bottom:0}
+.muted { color: var(--muted); } .small { font-size: 12.5px; } .bold { font-weight: 800; }
+.text-right { text-align: right; } .text-center { text-align: center; }
+.nowrap { white-space: nowrap; }
+.tag-akun { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px; background: var(--gray-bg); padding: 1px 6px; border-radius: 6px; }
+.divider { height: 1px; background: var(--line); margin: 14px 0; }
+.kbd { font-family: ui-monospace, monospace; background:#0f172a;color:#fff;padding:1px 6px;border-radius:6px;font-size:12px;}
+.offline-banner { background: var(--orange-bg); color: var(--orange); text-align: center; font-size: 12.5px; font-weight: 700; padding: 6px; }
+.update-banner { position: fixed; bottom: 16px; left: 16px; z-index: 90; background: var(--navy); color: #fff; padding: 10px 14px; border-radius: 12px; box-shadow: var(--shadow); display: flex; gap: 12px; align-items: center; font-size: 13px; }
+
+@media print {
+  .sidebar, .topbar, .bottomnav, .doc-actions, .toast-host { display: none !important; }
+  .layout { display: block; }
+  .content { padding: 0; max-width: none; }
+  body { background: #fff; }
+  .doc { box-shadow: none; }
+}
+
+</style>
 </head>
 <body>
   <noscript>
@@ -33,6 +388,2551 @@
   <div id="toast-host" class="toast-host" aria-live="polite"></div>
   <div id="modal-host" class="modal-host" hidden></div>
 
-  <script type="module" src="js/app.js"></script>
+  <script>
+
+(function(){
+  var __cache = {}, __modules = {};
+  function __require(id){
+    if (__cache[id]) return __cache[id];
+    var ex = __modules[id]();
+    __cache[id] = ex;
+    return ex;
+  }
+  function __requireAsync(id){ return Promise.resolve(__require(id)); }
+__modules["app"] = function(){
+/* ===========================================================================
+   app.js — Titik masuk aplikasi: seed data, registrasi Service Worker,
+   kerangka tampilan (shell), navigasi berbasis peran, dan routing.
+   ========================================================================= */
+
+const { seedIfEmpty, ORG } = __require("seed");
+const { store } = __require("store");
+const { currentUser, logout, ROLES, roleLabel } = __require("auth");
+const { startRouter, go, currentPath } = __require("router");
+const { inboxFor, mySppd } = __require("domain");
+const { esc, initials, toast } = __require("ui");
+
+const { renderLogin } = __require("views/login");
+const { renderDashboard } = __require("views/dashboard");
+const { renderPengajuan } = __require("views/pengajuan");
+const { renderDaftar } = __require("views/daftar");
+const { renderDetail } = __require("views/detail");
+const { renderApproval } = __require("views/approval");
+const { renderSpj } = __require("views/spj");
+const { renderPembayaran } = __require("views/pembayaran");
+const { renderAnggaran } = __require("views/anggaran");
+const { renderArsip } = __require("views/arsip");
+const { renderAudit } = __require("views/audit");
+const { renderMasterData } = __require("views/masterdata");
+
+/* ----- Konfigurasi rute & navigasi ----- */
+const ROUTES = [
+  { path: 'dashboard',  title: 'Dashboard',                  icon: '📊', nav: true,  roles: '*', render: renderDashboard, primary: true },
+  { path: 'pengajuan',  title: 'Ajukan Perjalanan Dinas',    icon: '➕', nav: true,  roles: ['pegawai'], render: renderPengajuan, primary: true },
+  { path: 'daftar',     title: 'Perjalanan Dinas',           icon: '🧳', nav: true,  roles: '*', render: renderDaftar, primary: true },
+  { path: 'approval',   title: 'Kotak Persetujuan',          icon: '✅', nav: true,  roles: ['atasan', 'keuangan', 'ppk', 'kpa', 'bendahara'], render: renderApproval, badge: 'inbox', primary: true },
+  { path: 'spj',        title: 'Pertanggungjawaban (SPJ)',   icon: '🧾', nav: true,  roles: ['pegawai'], render: renderSpj, badge: 'spj' },
+  { path: 'pembayaran', title: 'Pembayaran & Pencairan',     icon: '💳', nav: true,  roles: ['bendahara'], render: renderPembayaran },
+  { path: 'anggaran',   title: 'Anggaran (DIPA)',            icon: '📁', nav: true,  roles: ['keuangan', 'ppk', 'kpa', 'bendahara', 'auditor'], render: renderAnggaran },
+  { path: 'arsip',      title: 'Arsip Digital',              icon: '🗄️', nav: true,  roles: '*', render: renderArsip, primary: true },
+  { path: 'audit',      title: 'Audit Trail',                icon: '🛡️', nav: true,  roles: ['kpa', 'auditor'], render: renderAudit },
+  { path: 'master',     title: 'Master Data',                icon: '⚙️', nav: true,  roles: ['keuangan', 'kpa'], render: renderMasterData },
+  { path: 'sppd',       title: 'Detail Perjalanan Dinas',    icon: '', nav: false, roles: '*', render: renderDetail },
+];
+
+function roleAllowed(route, user) {
+  return route.roles === '*' || (user && route.roles.includes(user.role));
+}
+
+function badgeCount(route, user) {
+  if (route.badge === 'inbox') return inboxFor(user).length;
+  if (route.badge === 'spj') return mySppd(user).filter((s) => ['TERBIT', 'PELAKSANAAN', 'SPJ_REVISI'].includes(s.status)).length;
+  return 0;
+}
+
+/* ----- Render shell ----- */
+let contentEl = null;
+
+function buildShell(user) {
+  const app = document.getElementById('app');
+  app.removeAttribute('aria-busy');
+
+  const navItems = ROUTES.filter((r) => r.nav && roleAllowed(r, user));
+  const navHTML = navItems.map((r) => {
+    const c = badgeCount(r, user);
+    return `<a href="#/${r.path}" data-path="${r.path}">
+      <span class="ico">${r.icon}</span><span>${esc(r.title)}</span>
+      ${c ? `<span class="pill">${c}</span>` : ''}</a>`;
+  }).join('');
+
+  // Navigasi bawah (mobile): ambil item utama + tombol menu.
+  const primary = navItems.filter((r) => r.primary).slice(0, 4);
+  const bottomHTML = primary.map((r) => {
+    const c = badgeCount(r, user);
+    return `<a href="#/${r.path}" data-path="${r.path}"><span class="ico">${r.icon}</span>${esc(ROLES[user.role] && r.title.length > 12 ? r.title.split(' ')[0] : r.title)}${c ? '<span class="dot"></span>' : ''}</a>`;
+  }).join('') + `<a href="#" data-menu><span class="ico">☰</span>Menu</a>`;
+
+  app.innerHTML = `
+    <div class="scrim" id="scrim"></div>
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="mark"></div>
+          <div><div class="name">SISFO SPPD</div><div class="sub">${esc(ORG.satker)}</div></div>
+        </div>
+        <nav class="nav">${navHTML}</nav>
+        <div class="sidebar-foot">
+          v1.0.0 · PWA Paperless<br>© ${new Date().getFullYear()} ${esc(ORG.satker)}
+        </div>
+      </aside>
+      <div class="main">
+        <header class="topbar">
+          <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+          <div class="page-title" id="page-title">Dashboard</div>
+          <div class="spacer"></div>
+          <div id="net-pill"></div>
+          <div class="userchip" id="userchip" title="Akun & keluar">
+            <div class="avatar">${esc(initials(user.nama))}</div>
+            <div class="u-meta"><div class="u-name">${esc(user.nama.split(',')[0])}</div><div class="u-role">${esc(roleLabel(user.role))}</div></div>
+          </div>
+        </header>
+        <main class="content" id="content"></main>
+      </div>
+    </div>
+    <nav class="bottomnav">${bottomHTML}</nav>`;
+
+  contentEl = document.getElementById('content');
+
+  // Interaksi shell
+  const sidebar = document.getElementById('sidebar');
+  const scrim = document.getElementById('scrim');
+  const closeSidebar = () => { sidebar.classList.remove('open'); scrim.classList.remove('show'); };
+  document.getElementById('hamburger').onclick = () => { sidebar.classList.add('open'); scrim.classList.add('show'); };
+  scrim.onclick = closeSidebar;
+  app.querySelectorAll('.nav a, .bottomnav a[data-path]').forEach((a) => a.addEventListener('click', closeSidebar));
+  app.querySelector('[data-menu]').onclick = (e) => { e.preventDefault(); sidebar.classList.add('open'); scrim.classList.add('show'); };
+  document.getElementById('userchip').onclick = openAccountMenu;
+
+  updateNet();
+}
+
+function openAccountMenu() {
+  __requireAsync("ui").then(({ modal }) => {
+    const u = currentUser();
+    modal({
+      title: 'Akun',
+      body: `<div class="flex center gap-12" style="margin-bottom:12px">
+          <div class="avatar" style="width:46px;height:46px;font-size:17px">${esc(initials(u.nama))}</div>
+          <div><div class="bold">${esc(u.nama)}</div><div class="small muted">${esc(roleLabel(u.role))} · ${esc(u.unit)}</div>
+          <div class="small muted">NIP ${esc(u.nip)}</div></div></div>
+        <p class="small muted">Mode demo: data tersimpan lokal di perangkat ini (offline-first). Anda dapat berganti peran untuk mencoba seluruh alur persetujuan.</p>`,
+      footer: `<button class="btn" data-switch>Ganti Peran / Akun</button><button class="btn btn-danger" data-out>Keluar</button>`,
+      onMount: (root, close) => {
+        root.querySelector('[data-out]').onclick = () => { close(); doLogout(); };
+        root.querySelector('[data-switch]').onclick = () => { close(); doLogout(); };
+      },
+    });
+  });
+}
+
+function doLogout() { logout(); renderApp(); toast('Anda telah keluar.'); }
+
+/* ----- Routing ----- */
+function handleRoute(path, parts) {
+  const user = currentUser();
+  if (!user) { renderApp(); return; }
+  if (!contentEl) buildShell(user);
+
+  const route = ROUTES.find((r) => r.path === parts[0]) || ROUTES[0];
+  if (!roleAllowed(route, user)) {
+    contentEl.innerHTML = `<div class="empty"><div class="big">🔒</div><h3>Akses dibatasi</h3>
+      <p class="muted">Menu ini tidak tersedia untuk peran <b>${esc(roleLabel(user.role))}</b>.</p>
+      <a class="btn btn-primary" href="#/dashboard">Ke Dashboard</a></div>`;
+    setActive('dashboard'); document.getElementById('page-title').textContent = 'Akses dibatasi';
+    return;
+  }
+
+  document.getElementById('page-title').textContent = route.title;
+  setActive(route.path);
+  window.scrollTo(0, 0);
+  try {
+    route.render(contentEl, parts);
+  } catch (e) {
+    console.error(e);
+    contentEl.innerHTML = `<div class="empty"><div class="big">⚠️</div><h3>Terjadi kesalahan</h3><p class="muted">${esc(e.message)}</p></div>`;
+  }
+  refreshBadges(user);
+}
+
+function setActive(path) {
+  document.querySelectorAll('[data-path]').forEach((a) =>
+    a.classList.toggle('active', a.getAttribute('data-path') === path));
+}
+
+function refreshBadges(user = currentUser()) {
+  if (!user) return;
+  ROUTES.filter((r) => r.nav && r.badge).forEach((r) => {
+    const c = badgeCount(r, user);
+    document.querySelectorAll(`.nav a[data-path="${r.path}"]`).forEach((a) => {
+      let pill = a.querySelector('.pill');
+      if (c) { if (!pill) { pill = document.createElement('span'); pill.className = 'pill'; a.appendChild(pill); } pill.textContent = c; }
+      else if (pill) pill.remove();
+    });
+  });
+}
+
+/* Navigasi terprogram dari view. */
+function navigate(path) { go(path); }
+
+/* ----- Status jaringan ----- */
+function updateNet() {
+  const pill = document.getElementById('net-pill');
+  if (!pill) return;
+  pill.innerHTML = navigator.onLine ? '' : '<span class="badge badge-amber" title="Mode luring">● Offline</span>';
+}
+window.addEventListener('online', () => { updateNet(); toast('Kembali daring.', 'ok'); });
+window.addEventListener('offline', () => { updateNet(); toast('Mode offline aktif — data tetap tersimpan lokal.', 'warn'); });
+
+/* ----- Tampilkan login atau shell ----- */
+function renderApp() {
+  const user = currentUser();
+  contentEl = null;
+  if (!user) {
+    renderLogin(document.getElementById('app'), () => { renderApp(); go('/dashboard'); });
+    return;
+  }
+  buildShell(user);
+  handleRoute(currentPath(), currentPath().split('/').filter(Boolean));
+}
+
+/* ----- Service Worker ----- */
+function registerSW() {
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').then((reg) => {
+      reg.addEventListener('updatefound', () => {
+        const nw = reg.installing;
+        nw && nw.addEventListener('statechange', () => {
+          if (nw.state === 'installed' && navigator.serviceWorker.controller) showUpdateBanner(reg);
+        });
+      });
+    }).catch((e) => console.warn('SW gagal:', e));
+  });
+}
+
+function showUpdateBanner(reg) {
+  const b = document.createElement('div');
+  b.className = 'update-banner';
+  b.innerHTML = `<span>Versi baru tersedia.</span><button class="btn btn-gold btn-sm">Muat ulang</button>`;
+  b.querySelector('button').onclick = () => { reg.waiting?.postMessage('SKIP_WAITING'); location.reload(); };
+  document.body.appendChild(b);
+  navigator.serviceWorker.addEventListener('controllerchange', () => location.reload());
+}
+
+/* Penyegaran badge navigasi setelah ada perubahan data dari view. */
+window.addEventListener('sppd:changed', () => refreshBadges());
+
+/* ----- Bootstrap ----- */
+seedIfEmpty();
+  /* Service Worker dinonaktifkan pada versi file-tunggal */
+startRouter(handleRoute);
+renderApp();
+
+return { refreshBadges, navigate };
+};
+
+__modules["auth"] = function(){
+/* ===========================================================================
+   auth.js — Sesi pengguna & peran (role-based access).
+   Demo: login dengan memilih akun pegawai. Kata sandi bersifat opsional
+   (lingkungan demo). Sesi disimpan di localStorage.
+   ========================================================================= */
+
+const { store } = __require("store");
+
+const ROLES = {
+  pegawai:   { label: 'Pegawai Pemohon',     short: 'Pegawai',   desc: 'Mengajukan perjalanan dinas & SPJ' },
+  atasan:    { label: 'Atasan Langsung',     short: 'Atasan',    desc: 'Verifikasi kebutuhan tugas' },
+  keuangan:  { label: 'Kasubbag Keuangan',   short: 'Keuangan',  desc: 'Verifikasi ketersediaan anggaran' },
+  ppk:       { label: 'PPK',                 short: 'PPK',       desc: 'Persetujuan teknis & administrasi' },
+  kpa:       { label: 'KPA / Sekretaris',    short: 'KPA',       desc: 'Pengesahan akhir & penerbitan dokumen' },
+  bendahara: { label: 'Bendahara Pengeluaran', short: 'Bendahara', desc: 'Verifikasi bukti & pembayaran' },
+  auditor:   { label: 'Auditor / Inspektorat', short: 'Auditor', desc: 'Monitoring & audit trail' },
+};
+
+function roleLabel(role) { return ROLES[role]?.label || role; }
+
+let _current = null;
+
+function currentUser() {
+  if (_current) return _current;
+  const id = store.pref('sessionUserId');
+  if (!id) return null;
+  _current = store.find('pegawai', id);
+  return _current;
+}
+
+function login(userId) {
+  const u = store.find('pegawai', userId);
+  if (!u) return null;
+  store.pref('sessionUserId', userId);
+  _current = u;
+  return u;
+}
+
+function logout() {
+  store.pref('sessionUserId', null);
+  _current = null;
+}
+
+function hasRole(...roles) {
+  const u = currentUser();
+  return !!u && roles.includes(u.role);
+}
+
+return { ROLES, roleLabel, currentUser, login, logout, hasRole };
+};
+
+__modules["domain"] = function(){
+/* ===========================================================================
+   domain.js — Aturan bisnis SPPD: mesin status alur persetujuan, perhitungan
+   biaya berbasis SBM, penerbitan dokumen + QR, SPJ, pembayaran, audit trail,
+   ringkasan anggaran (DIPA), dan deteksi duplikasi klaim.
+   ========================================================================= */
+
+const { store, uid, nextNumber } = __require("store");
+const { currentUser } = __require("auth");
+
+/* ----- Definisi status & badge ----- */
+const STATUS = {
+  DRAFT:                 { label: 'Draf',                 badge: 'badge-gray',  group: 'draft' },
+  MENUNGGU_ATASAN:       { label: 'Menunggu Atasan',      badge: 'badge-amber', group: 'pengajuan', role: 'atasan' },
+  MENUNGGU_KEUANGAN:     { label: 'Verifikasi Keuangan',  badge: 'badge-amber', group: 'pengajuan', role: 'keuangan' },
+  MENUNGGU_PPK:          { label: 'Persetujuan PPK',      badge: 'badge-amber', group: 'pengajuan', role: 'ppk' },
+  MENUNGGU_KPA:          { label: 'Pengesahan KPA',       badge: 'badge-amber', group: 'pengajuan', role: 'kpa' },
+  REVISI:                { label: 'Perlu Revisi',         badge: 'badge-red',   group: 'pengajuan', role: null },
+  DITOLAK:               { label: 'Ditolak',              badge: 'badge-red',   group: 'selesai' },
+  TERBIT:                { label: 'Dokumen Terbit',       badge: 'badge-blue',  group: 'pelaksanaan' },
+  PELAKSANAAN:           { label: 'Pelaksanaan',          badge: 'badge-blue',  group: 'pelaksanaan' },
+  SPJ_MENUNGGU_BENDAHARA:{ label: 'SPJ — Verif Bendahara',badge: 'badge-amber', group: 'spj', role: 'bendahara' },
+  SPJ_MENUNGGU_PPK:      { label: 'SPJ — Persetujuan PPK', badge: 'badge-amber', group: 'spj', role: 'ppk' },
+  SPJ_MENUNGGU_KPA:      { label: 'SPJ — Pengesahan KPA', badge: 'badge-amber', group: 'spj', role: 'kpa' },
+  SPJ_REVISI:            { label: 'SPJ — Perlu Revisi',   badge: 'badge-red',   group: 'spj', role: null },
+  SPJ_DISETUJUI:         { label: 'SPJ Disetujui',        badge: 'badge-gold',  group: 'spj', role: 'bendahara' },
+  SELESAI:               { label: 'Selesai & Dibayar',    badge: 'badge-green', group: 'selesai' },
+};
+
+function statusInfo(s) { return STATUS[s] || { label: s, badge: 'badge-gray' }; }
+
+/* Peran yang harus bertindak pada status tertentu (null = tidak ada). */
+function pendingRole(status) { return STATUS[status]?.role || null; }
+
+/* Urutan langkah alur persetujuan pengajuan (untuk tampilan stepper). */
+const PENGAJUAN_FLOW = ['MENUNGGU_ATASAN', 'MENUNGGU_KEUANGAN', 'MENUNGGU_PPK', 'MENUNGGU_KPA', 'TERBIT'];
+const SPJ_FLOW = ['SPJ_MENUNGGU_BENDAHARA', 'SPJ_MENUNGGU_PPK', 'SPJ_MENUNGGU_KPA', 'SPJ_DISETUJUI', 'SELESAI'];
+
+const APPROVE_NEXT = {
+  MENUNGGU_ATASAN: 'MENUNGGU_KEUANGAN',
+  MENUNGGU_KEUANGAN: 'MENUNGGU_PPK',
+  MENUNGGU_PPK: 'MENUNGGU_KPA',
+  MENUNGGU_KPA: 'TERBIT',
+  SPJ_MENUNGGU_BENDAHARA: 'SPJ_MENUNGGU_PPK',
+  SPJ_MENUNGGU_PPK: 'SPJ_MENUNGGU_KPA',
+  SPJ_MENUNGGU_KPA: 'SPJ_DISETUJUI',
+};
+
+const APPROVE_ACTION = {
+  MENUNGGU_ATASAN: 'Menyetujui (atasan langsung)',
+  MENUNGGU_KEUANGAN: 'Memverifikasi ketersediaan anggaran',
+  MENUNGGU_PPK: 'Menyetujui (teknis & administrasi)',
+  MENUNGGU_KPA: 'Mengesahkan & menerbitkan dokumen',
+  SPJ_MENUNGGU_BENDAHARA: 'Memverifikasi bukti SPJ',
+  SPJ_MENUNGGU_PPK: 'Menyetujui SPJ',
+  SPJ_MENUNGGU_KPA: 'Mengesahkan SPJ',
+};
+
+/* ----- Data master & util ----- */
+function sbmFor(provinsi) {
+  return store.list('sbm').find((s) => s.provinsi === provinsi) || null;
+}
+
+function hitungLamaHari(berangkat, kembali) {
+  if (!berangkat || !kembali) return 1;
+  return Math.max(1, Math.round((new Date(kembali) - new Date(berangkat)) / 86400000) + 1);
+}
+
+function hitungBiaya(provinsi, lamaHari, transport = 0, lainnya = 0) {
+  const sbm = sbmFor(provinsi);
+  const uangHarian = (sbm ? sbm.uangHarian : 400000) * lamaHari;
+  const penginapan = (sbm ? sbm.penginapan : 700000) * Math.max(0, lamaHari - 1);
+  const rincian = { uangHarian, penginapan, transport: +transport || 0, lainnya: +lainnya || 0 };
+  const total = rincian.uangHarian + rincian.penginapan + rincian.transport + rincian.lainnya;
+  return { rincian, total };
+}
+
+/* ----- Audit ----- */
+function logAudit(action, sppd, note = '', actor = currentUser()) {
+  const audit = store.list('audit');
+  audit.unshift({
+    id: uid('log-'), ts: new Date().toISOString(),
+    actorId: actor?.id || 'system', role: actor?.role || 'system',
+    action, entity: 'SPPD', entityId: sppd?.id || '-',
+    detail: `${sppd?.perihal || ''}${note ? ' — ' + note : ''}`,
+  });
+  store.set('audit', audit.slice(0, 500));
+}
+
+function pushHistory(sppd, action, status, note, actor) {
+  sppd.history = sppd.history || [];
+  sppd.history.push({ ts: new Date().toISOString(), actorId: actor.id, role: actor.role, action, status, note: note || '' });
+  sppd.updatedTs = Date.now();
+}
+
+function save(sppd) { store.upsert('sppd', sppd); return sppd; }
+
+/* ----- Aksi: pengajuan ----- */
+function submitPengajuan(sppd, actor = currentUser()) {
+  sppd.status = 'MENUNGGU_ATASAN';
+  pushHistory(sppd, 'Mengajukan perjalanan dinas', sppd.status, '', actor);
+  logAudit('Mengajukan perjalanan dinas', sppd, '', actor);
+  return save(sppd);
+}
+
+function approve(sppd, note = '', actor = currentUser()) {
+  const from = sppd.status;
+  const to = APPROVE_NEXT[from];
+  if (!to) throw new Error('Status tidak dapat disetujui: ' + from);
+  const action = APPROVE_ACTION[from] || 'Menyetujui';
+
+  if (to === 'TERBIT') issueDocuments(sppd, actor);
+  if (from === 'MENUNGGU_KEUANGAN') sppd.biayaDisetujui = sppd.totalBiaya; // kunci nilai disetujui
+  if (to === 'SPJ_DISETUJUI' && sppd.spj) sppd.spj.status = 'DISETUJUI';
+
+  sppd.status = to;
+  pushHistory(sppd, action, to, note, actor);
+  logAudit(action, sppd, note, actor);
+  return save(sppd);
+}
+
+function requestRevision(sppd, note, actor = currentUser()) {
+  const isSpj = sppd.status.startsWith('SPJ');
+  sppd.status = isSpj ? 'SPJ_REVISI' : 'REVISI';
+  if (isSpj && sppd.spj) sppd.spj.status = 'REVISI';
+  pushHistory(sppd, 'Meminta revisi', sppd.status, note, actor);
+  logAudit('Meminta revisi', sppd, note, actor);
+  return save(sppd);
+}
+
+function reject(sppd, note, actor = currentUser()) {
+  sppd.status = 'DITOLAK';
+  pushHistory(sppd, 'Menolak pengajuan', 'DITOLAK', note, actor);
+  logAudit('Menolak pengajuan', sppd, note, actor);
+  return save(sppd);
+}
+
+function resubmit(sppd, actor = currentUser()) {
+  const isSpj = sppd.status === 'SPJ_REVISI';
+  sppd.status = isSpj ? 'SPJ_MENUNGGU_BENDAHARA' : 'MENUNGGU_ATASAN';
+  if (isSpj && sppd.spj) sppd.spj.status = 'DIAJUKAN';
+  pushHistory(sppd, 'Mengirim ulang setelah revisi', sppd.status, '', actor);
+  logAudit('Mengirim ulang setelah revisi', sppd, '', actor);
+  return save(sppd);
+}
+
+/* ----- Penerbitan dokumen + QR ----- */
+function pad3(n) { return String(n).padStart(3, '0'); }
+
+function issueDocuments(sppd, actor = currentUser()) {
+  const st = nextNumber('ST');
+  const spd = nextNumber('SPD');
+  const rand = Math.random().toString(16).slice(2, 8).toUpperCase();
+  sppd.documents = {
+    suratTuganNo: `${pad3(st.seq)}/ST/PP.05-SD/32/${st.year}`,
+    sppdNo: `${pad3(spd.seq)}/SPD/PP.05-SD/32/${spd.year}`,
+    tglTerbit: new Date().toISOString(),
+    qrToken: `STKPUJABAR-${pad3(st.seq)}-${st.year}-${rand}`,
+  };
+  return sppd;
+}
+
+/* ----- Pelaksanaan ----- */
+function addCheckin(sppd, data, actor = currentUser()) {
+  sppd.pelaksanaan = sppd.pelaksanaan || { checkin: [], bukti: [], catatan: '' };
+  sppd.pelaksanaan.checkin.push({ ts: new Date().toISOString(), ...data });
+  if (sppd.status === 'TERBIT') sppd.status = 'PELAKSANAAN';
+  pushHistory(sppd, 'Check-in lokasi kegiatan', sppd.status, data.lokasi || '', actor);
+  logAudit('Check-in lokasi kegiatan', sppd, data.lokasi || '', actor);
+  return save(sppd);
+}
+
+/* ----- SPJ ----- */
+function submitSPJ(sppd, spjData, actor = currentUser()) {
+  sppd.spj = { ...spjData, status: 'DIAJUKAN', diajukanTs: new Date().toISOString() };
+  sppd.status = 'SPJ_MENUNGGU_BENDAHARA';
+  pushHistory(sppd, 'Mengajukan pertanggungjawaban (SPJ)', sppd.status, '', actor);
+  logAudit('Mengajukan pertanggungjawaban (SPJ)', sppd, '', actor);
+  return save(sppd);
+}
+
+/* ----- Pembayaran ----- */
+function recordPayment(sppd, payment, actor = currentUser()) {
+  sppd.pembayaran = { ...payment, tgl: new Date().toISOString() };
+  sppd.status = 'SELESAI';
+  if (sppd.spj) sppd.spj.status = 'DIBAYAR';
+  pushHistory(sppd, 'Mencairkan pembayaran', 'SELESAI', payment.buktiNo || '', actor);
+  logAudit('Mencairkan pembayaran', sppd, payment.buktiNo || '', actor);
+  return save(sppd);
+}
+
+/* ----- Kuasa akses ----- */
+function canAct(sppd, user = currentUser()) {
+  if (!user) return false;
+  const need = pendingRole(sppd.status);
+  if (!need) return false;
+  if (need !== user.role) return false;
+  // Atasan langsung idealnya hanya atasan dari pemohon; dilonggarkan untuk demo.
+  return true;
+}
+
+/* Kotak masuk (item yang menunggu tindakan pengguna). */
+function inboxFor(user = currentUser()) {
+  if (!user) return [];
+  return store.list('sppd').filter((s) => canAct(s, user))
+    .sort((a, b) => new Date(a.tanggalBerangkat) - new Date(b.tanggalBerangkat));
+}
+
+/* SPPD milik pengguna (sebagai pemohon). */
+function mySppd(user = currentUser()) {
+  if (!user) return [];
+  return store.list('sppd').filter((s) => s.pemohonId === user.id)
+    .sort((a, b) => b.updatedTs - a.updatedTs);
+}
+
+/* ----- Ringkasan anggaran (DIPA) ----- */
+function anggaranSummary() {
+  const akun = store.list('anggaran');
+  const sppd = store.list('sppd');
+  return akun.map((a) => {
+    const realisasiSppd = sppd
+      .filter((s) => s.akun === a.kode && (s.status === 'SELESAI'))
+      .reduce((t, s) => t + (s.pembayaran?.nominal || s.biayaDisetujui || s.totalBiaya || 0), 0);
+    const komitmen = sppd
+      .filter((s) => s.akun === a.kode && ['TERBIT', 'PELAKSANAAN', 'SPJ_MENUNGGU_BENDAHARA', 'SPJ_MENUNGGU_PPK', 'SPJ_MENUNGGU_KPA', 'SPJ_DISETUJUI', 'SPJ_REVISI'].includes(s.status))
+      .reduce((t, s) => t + (s.biayaDisetujui || s.totalBiaya || 0), 0);
+    const realisasi = a.realisasiAwal + realisasiSppd;
+    return { ...a, realisasi, komitmen, sisa: a.pagu - realisasi - komitmen, persen: a.pagu ? Math.round((realisasi / a.pagu) * 100) : 0 };
+  });
+}
+
+/* Cek ketersediaan anggaran untuk sebuah nilai pada akun tertentu. */
+function cekAnggaran(kodeAkun, nilai) {
+  const a = anggaranSummary().find((x) => x.kode === kodeAkun);
+  if (!a) return { ok: false, alasan: 'Akun tidak ditemukan', sisa: 0 };
+  return { ok: a.sisa >= nilai, sisa: a.sisa, akun: a };
+}
+
+/* ----- Deteksi duplikasi klaim ----- */
+function detectDuplicate(sppd) {
+  const others = store.list('sppd').filter((s) => s.id !== sppd.id && s.pemohonId === sppd.pemohonId && s.status !== 'DITOLAK');
+  const aStart = new Date(sppd.tanggalBerangkat), aEnd = new Date(sppd.tanggalKembali);
+  return others.filter((s) => {
+    const bStart = new Date(s.tanggalBerangkat), bEnd = new Date(s.tanggalKembali);
+    return aStart <= bEnd && bStart <= aEnd; // tanggal beririsan
+  });
+}
+
+/* ----- Statistik untuk dashboard ----- */
+function globalStats() {
+  const all = store.list('sppd');
+  const isPengajuan = (s) => ['MENUNGGU_ATASAN', 'MENUNGGU_KEUANGAN', 'MENUNGGU_PPK', 'MENUNGGU_KPA', 'REVISI'].includes(s.status);
+  const isPelaksanaan = (s) => ['TERBIT', 'PELAKSANAAN'].includes(s.status);
+  const isSpj = (s) => s.status.startsWith('SPJ');
+  return {
+    total: all.length,
+    pengajuan: all.filter(isPengajuan).length,
+    pelaksanaan: all.filter(isPelaksanaan).length,
+    spj: all.filter(isSpj).length,
+    selesai: all.filter((s) => s.status === 'SELESAI').length,
+    ditolak: all.filter((s) => s.status === 'DITOLAK').length,
+    nilaiSelesai: all.filter((s) => s.status === 'SELESAI').reduce((t, s) => t + (s.pembayaran?.nominal || 0), 0),
+  };
+}
+
+return { STATUS, statusInfo, pendingRole, PENGAJUAN_FLOW, SPJ_FLOW, sbmFor, hitungLamaHari, hitungBiaya, logAudit, submitPengajuan, approve, requestRevision, reject, resubmit, issueDocuments, addCheckin, submitSPJ, recordPayment, canAct, inboxFor, mySppd, anggaranSummary, cekAnggaran, detectDuplicate, globalStats };
+};
+
+__modules["qr"] = function(){
+/* ===========================================================================
+   qr.js — Render QR Code untuk validasi dokumen.
+   Memuat pustaka 'qrcode' dari CDN (di-cache Service Worker untuk dukungan
+   offline setelah kunjungan pertama). Jika gagal/ offline pada kunjungan
+   pertama, menampilkan token validasi sebagai teks (graceful fallback).
+   Untuk deployment air-gapped, vendor berkas qrcode.min.js ke folder /js.
+   ========================================================================= */
+
+const CDN = 'https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js';
+let loader = null;
+
+function loadLib() {
+  if (window.QRCode) return Promise.resolve(window.QRCode);
+  if (loader) return loader;
+  loader = new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = CDN; s.async = true;
+    s.onload = () => resolve(window.QRCode);
+    s.onerror = () => reject(new Error('Gagal memuat pustaka QR'));
+    document.head.appendChild(s);
+  });
+  return loader;
+}
+
+/* Render QR ke dalam container (mengganti isinya). */
+async function renderQR(container, text, size = 96) {
+  if (!container) return;
+  try {
+    const QR = await loadLib();
+    const canvas = document.createElement('canvas');
+    container.innerHTML = '';
+    container.appendChild(canvas);
+    await QR.toCanvas(canvas, text, { width: size, margin: 1, color: { dark: '#0b2447', light: '#ffffff' } });
+  } catch (e) {
+    container.innerHTML = `<div class="qr-fallback">QR tidak tersedia offline.<br><b>${text}</b></div>`;
+  }
+}
+
+return { renderQR };
+};
+
+__modules["router"] = function(){
+/* ===========================================================================
+   router.js — Router hash sederhana untuk SPA (cocok untuk hosting statis /
+   GitHub Pages). app.js menyediakan fungsi resolve(path, parts).
+   ========================================================================= */
+
+let resolver = null;
+
+function startRouter(resolve) {
+  resolver = resolve;
+  window.addEventListener('hashchange', dispatch);
+  dispatch();
+}
+
+function dispatch() {
+  const hash = location.hash.replace(/^#/, '') || '/dashboard';
+  const parts = hash.split('/').filter(Boolean); // ['sppd','id']
+  if (resolver) resolver('/' + parts.join('/'), parts);
+}
+
+function go(path) {
+  if (location.hash === '#' + path) dispatchManual(path);
+  else location.hash = path;
+}
+
+function dispatchManual(path) {
+  const parts = path.split('/').filter(Boolean);
+  if (resolver) resolver('/' + parts.join('/'), parts);
+}
+
+function currentPath() {
+  return (location.hash.replace(/^#/, '') || '/dashboard');
+}
+
+return { startRouter, go, currentPath };
+};
+
+__modules["seed"] = function(){
+/* ===========================================================================
+   seed.js — Data awal (demo) yang ditanam sekali saat aplikasi pertama dibuka.
+   Berisi profil instansi, master pegawai (sekaligus akun login per peran),
+   Standar Biaya Masukan (SBM), pagu anggaran (DIPA), dan beberapa contoh SPPD.
+   ========================================================================= */
+
+const { store, uid } = __require("store");
+
+const ORG = {
+  instansi: 'KOMISI PEMILIHAN UMUM',
+  satker: 'KPU PROVINSI JAWA BARAT',
+  alamat: 'Jl. Garut No. 11, Kota Bandung, Jawa Barat 40271',
+  telp: '(022) 7273750',
+  email: 'jabar@kpu.go.id',
+  tahunAnggaran: 2026,
+  provinsiAsal: 'Jawa Barat',
+  kotaAsal: 'Bandung',
+};
+
+/* Standar Biaya Masukan — tarif uang harian & batas penginapan per provinsi
+   tujuan (angka representatif untuk demo, mengacu pola Permenkeu SBM). */
+const SBM = [
+  { id: 'sbm-jabar', provinsi: 'Jawa Barat', uangHarian: 430000, penginapan: 730000 },
+  { id: 'sbm-dki', provinsi: 'DKI Jakarta', uangHarian: 530000, penginapan: 1490000 },
+  { id: 'sbm-jateng', provinsi: 'Jawa Tengah', uangHarian: 370000, penginapan: 750000 },
+  { id: 'sbm-jatim', provinsi: 'Jawa Timur', uangHarian: 410000, penginapan: 910000 },
+  { id: 'sbm-banten', provinsi: 'Banten', uangHarian: 370000, penginapan: 718000 },
+  { id: 'sbm-yogya', provinsi: 'DI Yogyakarta', uangHarian: 420000, penginapan: 845000 },
+  { id: 'sbm-bali', provinsi: 'Bali', uangHarian: 480000, penginapan: 1230000 },
+  { id: 'sbm-sumut', provinsi: 'Sumatera Utara', uangHarian: 430000, penginapan: 1100000 },
+  { id: 'sbm-sulsel', provinsi: 'Sulawesi Selatan', uangHarian: 460000, penginapan: 1100000 },
+  { id: 'sbm-kaltim', provinsi: 'Kalimantan Timur', uangHarian: 430000, penginapan: 1100000 },
+];
+
+/* Akun belanja perjalanan dinas (DIPA) beserta pagu tahun anggaran. */
+const ANGGARAN = [
+  { id: 'akun-524111', kode: '524111', nama: 'Belanja Perjalanan Dinas Biasa', pagu: 1850000000, realisasiAwal: 612400000 },
+  { id: 'akun-524113', kode: '524113', nama: 'Belanja Perjalanan Dinas Dalam Kota', pagu: 420000000, realisasiAwal: 98750000 },
+  { id: 'akun-524114', kode: '524114', nama: 'Belanja Perjalanan Dinas Paket Meeting Dalam Kota', pagu: 560000000, realisasiAwal: 175300000 },
+  { id: 'akun-524119', kode: '524119', nama: 'Belanja Perjalanan Dinas Paket Meeting Luar Kota', pagu: 980000000, realisasiAwal: 322100000 },
+];
+
+/* Master pegawai. Setiap entri juga merupakan akun login (sesuai peran). */
+const PEGAWAI = [
+  { id: 'peg-kpa',  nip: '197505102000031001', nama: 'Drs. Hendra Wijaya, M.Si.', jabatan: 'Sekretaris / Kuasa Pengguna Anggaran (KPA)', eselon: 'III', golongan: 'IV/b', unit: 'Sekretariat', role: 'kpa',       atasanId: null },
+  { id: 'peg-ppk',  nip: '198008152006041002', nama: 'Bambang Susanto, S.E., M.M.', jabatan: 'Pejabat Pembuat Komitmen (PPK)',           eselon: 'IV', golongan: 'III/d', unit: 'Sekretariat', role: 'ppk',       atasanId: 'peg-kpa' },
+  { id: 'peg-keu',  nip: '198203202008012003', nama: 'Rudi Hartono, S.E.',          jabatan: 'Kasubbag Keuangan, Umum & Logistik',         eselon: 'IV', golongan: 'III/d', unit: 'Subbag Keuangan', role: 'keuangan', atasanId: 'peg-kpa' },
+  { id: 'peg-ben',  nip: '198611252010012004', nama: 'Siti Aminah, S.Ak.',          jabatan: 'Bendahara Pengeluaran',                     eselon: '-',  golongan: 'III/b', unit: 'Subbag Keuangan', role: 'bendahara', atasanId: 'peg-keu' },
+  { id: 'peg-ata',  nip: '198404102009012005', nama: 'Dewi Lestari, S.IP., M.A.',   jabatan: 'Kasubbag Teknis & Hupmas',                  eselon: 'IV', golongan: 'III/d', unit: 'Subbag Teknis', role: 'atasan',  atasanId: 'peg-kpa' },
+  { id: 'peg-aud',  nip: '198709012011012006', nama: 'Maya Sari, S.H.',             jabatan: 'Pengawas Internal / Inspektorat',           eselon: '-',  golongan: 'III/c', unit: 'Inspektorat', role: 'auditor',  atasanId: 'peg-kpa' },
+  { id: 'peg-and',  nip: '199203152015031007', nama: 'Andi Nugraha, S.Kom.',        jabatan: 'Pranata Komputer Ahli Pertama',             eselon: '-',  golongan: 'III/b', unit: 'Subbag Teknis', role: 'pegawai',  atasanId: 'peg-ata' },
+  { id: 'peg-rin',  nip: '199407222019022008', nama: 'Rina Marlina, S.Sos.',        jabatan: 'Analis Hukum',                              eselon: '-',  golongan: 'III/a', unit: 'Subbag Teknis', role: 'pegawai',  atasanId: 'peg-ata' },
+  { id: 'peg-faj',  nip: '199001052014031009', nama: 'Fajar Ramadhan, A.Md.',       jabatan: 'Pengelola Data Pemilih',                    eselon: '-',  golongan: 'II/c',  unit: 'Subbag Teknis', role: 'pegawai',  atasanId: 'peg-ata' },
+];
+
+function daysBetween(a, b) {
+  return Math.max(1, Math.round((new Date(b) - new Date(a)) / 86400000) + 1);
+}
+function iso(d) { return new Date(d).toISOString(); }
+function plusDays(base, n) { const d = new Date(base); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); }
+
+/* Bangun satu record SPPD lengkap untuk data contoh. */
+function buildSppd(o) {
+  const sbm = SBM.find((s) => s.provinsi === o.provinsi);
+  const lama = daysBetween(o.berangkat, o.kembali);
+  const uangHarian = (sbm ? sbm.uangHarian : 400000) * lama;
+  const penginapan = (sbm ? sbm.penginapan : 700000) * Math.max(0, lama - 1);
+  const rincian = { uangHarian, penginapan, transport: o.transport ?? 1200000, lainnya: o.lainnya ?? 0 };
+  const total = rincian.uangHarian + rincian.penginapan + rincian.transport + rincian.lainnya;
+  const now = Date.now();
+  return {
+    id: uid('sppd-'),
+    pemohonId: o.pemohonId,
+    perihal: o.perihal,
+    kegiatan: o.kegiatan,
+    lokasiKota: o.kota,
+    lokasiProvinsi: o.provinsi,
+    tanggalBerangkat: o.berangkat,
+    tanggalKembali: o.kembali,
+    lamaHari: lama,
+    alatAngkut: o.alatAngkut || 'Pesawat / Kendaraan Dinas',
+    akun: o.akun || '524111',
+    pengikut: o.pengikut || [],
+    rincianBiaya: rincian,
+    totalBiaya: total,
+    biayaDisetujui: o.status === 'SELESAI' || o.status?.startsWith('SPJ') ? total : total,
+    lampiran: [{ nama: 'Undangan/TOR-kegiatan.pdf', tipe: 'application/pdf', size: 184320, dataUrl: null }],
+    status: o.status,
+    history: o.history || [],
+    documents: o.documents || null,
+    pelaksanaan: o.pelaksanaan || { checkin: [], bukti: [], catatan: '' },
+    spj: o.spj || null,
+    pembayaran: o.pembayaran || null,
+    createdTs: o.createdTs || (now - (o.ageDays || 1) * 86400000),
+    updatedTs: now - (o.ageHours || 1) * 3600000,
+  };
+}
+
+function seedIfEmpty() {
+  if (store.pref('seeded')) return;
+
+  store.set('org', ORG);
+  store.set('sbm', SBM);
+  store.set('anggaran', ANGGARAN);
+  store.set('pegawai', PEGAWAI);
+
+  const today = new Date();
+  const mk = (n) => plusDays(today, n);
+
+  const samples = [
+    buildSppd({
+      pemohonId: 'peg-and', perihal: 'Rapat Koordinasi Pemutakhiran Data Pemilih Berkelanjutan',
+      kegiatan: 'Mengikuti Rakor PDPB tingkat nasional bersama KPU RI.',
+      kota: 'Jakarta Pusat', provinsi: 'DKI Jakarta', berangkat: mk(7), kembali: mk(9),
+      akun: '524111', status: 'MENUNGGU_ATASAN', ageDays: 1, ageHours: 4,
+      history: [{ ts: iso(today) , actorId: 'peg-and', role: 'pegawai', action: 'Mengajukan', status: 'MENUNGGU_ATASAN', note: '' }],
+    }),
+    buildSppd({
+      pemohonId: 'peg-rin', perihal: 'Bimbingan Teknis Penanganan Pelanggaran Pemilu',
+      kegiatan: 'Bimtek penanganan pelanggaran dan sengketa proses.',
+      kota: 'Surabaya', provinsi: 'Jawa Timur', berangkat: mk(10), kembali: mk(12),
+      akun: '524119', status: 'MENUNGGU_KEUANGAN', ageDays: 3, ageHours: 20,
+      history: [
+        { ts: iso(plusDays(today, -2)), actorId: 'peg-rin', role: 'pegawai', action: 'Mengajukan', status: 'MENUNGGU_ATASAN', note: '' },
+        { ts: iso(plusDays(today, -1)), actorId: 'peg-ata', role: 'atasan', action: 'Menyetujui', status: 'MENUNGGU_KEUANGAN', note: 'Sesuai kebutuhan tugas.' },
+      ],
+    }),
+    buildSppd({
+      pemohonId: 'peg-faj', perihal: 'Supervisi Logistik Pemilu ke KPU Kabupaten',
+      kegiatan: 'Supervisi kesiapan gudang dan distribusi logistik.',
+      kota: 'Cirebon', provinsi: 'Jawa Barat', berangkat: mk(4), kembali: mk(5), transport: 600000,
+      akun: '524113', status: 'MENUNGGU_PPK', ageDays: 4, ageHours: 30,
+      history: [
+        { ts: iso(plusDays(today, -3)), actorId: 'peg-faj', role: 'pegawai', action: 'Mengajukan', status: 'MENUNGGU_ATASAN', note: '' },
+        { ts: iso(plusDays(today, -2)), actorId: 'peg-ata', role: 'atasan', action: 'Menyetujui', status: 'MENUNGGU_KEUANGAN', note: '' },
+        { ts: iso(plusDays(today, -1)), actorId: 'peg-keu', role: 'keuangan', action: 'Memverifikasi anggaran', status: 'MENUNGGU_PPK', note: 'Pagu mencukupi, akun sesuai.' },
+      ],
+    }),
+    buildSppd({
+      pemohonId: 'peg-and', perihal: 'Konsinyering Penyusunan Laporan Tahapan Pemilu',
+      kegiatan: 'Konsinyering penyusunan laporan evaluasi tahapan.',
+      kota: 'Bandung', provinsi: 'Jawa Barat', berangkat: mk(-3), kembali: mk(-1), transport: 0,
+      akun: '524114', status: 'TERBIT', ageDays: 8, ageHours: 50,
+      documents: { suratTuganNo: '094/ST/PP.05-SD/32/2026', sppdNo: '094/SPD/PP.05-SD/32/2026', tglTerbit: iso(plusDays(today, -5)), qrToken: 'STKPUJABAR-094-2026-7F3A21' },
+      history: [
+        { ts: iso(plusDays(today, -7)), actorId: 'peg-and', role: 'pegawai', action: 'Mengajukan', status: 'MENUNGGU_ATASAN', note: '' },
+        { ts: iso(plusDays(today, -7)), actorId: 'peg-ata', role: 'atasan', action: 'Menyetujui', status: 'MENUNGGU_KEUANGAN', note: '' },
+        { ts: iso(plusDays(today, -6)), actorId: 'peg-keu', role: 'keuangan', action: 'Memverifikasi anggaran', status: 'MENUNGGU_PPK', note: '' },
+        { ts: iso(plusDays(today, -6)), actorId: 'peg-ppk', role: 'ppk', action: 'Menyetujui (teknis & administrasi)', status: 'MENUNGGU_KPA', note: '' },
+        { ts: iso(plusDays(today, -5)), actorId: 'peg-kpa', role: 'kpa', action: 'Mengesahkan & menerbitkan dokumen', status: 'TERBIT', note: 'Surat Tugas & SPPD terbit.' },
+      ],
+    }),
+    buildSppd({
+      pemohonId: 'peg-rin', perihal: 'Sosialisasi Peraturan KPU kepada Stakeholder',
+      kegiatan: 'Sosialisasi PKPU terbaru kepada partai politik & media.',
+      kota: 'Yogyakarta', provinsi: 'DI Yogyakarta', berangkat: mk(-12), kembali: mk(-10),
+      akun: '524111', status: 'SPJ_MENUNGGU_BENDAHARA', ageDays: 16, ageHours: 28,
+      documents: { suratTuganNo: '081/ST/PP.05-SD/32/2026', sppdNo: '081/SPD/PP.05-SD/32/2026', tglTerbit: iso(plusDays(today, -14)), qrToken: 'STKPUJABAR-081-2026-A19C03' },
+      pelaksanaan: { checkin: [{ ts: iso(plusDays(today, -12)), lokasi: 'Hotel Grand Yogya', lat: -7.7956, lng: 110.3695, note: 'Tiba di lokasi kegiatan.' }], bukti: [], catatan: 'Kegiatan terlaksana penuh 3 hari.' },
+      spj: {
+        status: 'DIAJUKAN', laporan: 'Kegiatan sosialisasi berjalan lancar, dihadiri 48 peserta. Seluruh agenda tercapai.',
+        realisasi: { uangHarian: 420000 * 3, penginapan: 845000 * 2, transport: 1100000, lainnya: 0 },
+        totalRealisasi: 420000 * 3 + 845000 * 2 + 1100000,
+        bukti: [
+          { kategori: 'Tiket/Boarding Pass', nama: 'boarding-pass.jpg', nominal: 1100000, dataUrl: null },
+          { kategori: 'Invoice Hotel', nama: 'invoice-hotel.pdf', nominal: 845000 * 2, dataUrl: null },
+          { kategori: 'Daftar Hadir', nama: 'daftar-hadir.pdf', nominal: 0, dataUrl: null },
+        ],
+        diajukanTs: iso(plusDays(today, -1)),
+      },
+      history: [
+        { ts: iso(plusDays(today, -16)), actorId: 'peg-rin', role: 'pegawai', action: 'Mengajukan', status: 'MENUNGGU_ATASAN', note: '' },
+        { ts: iso(plusDays(today, -16)), actorId: 'peg-ata', role: 'atasan', action: 'Menyetujui', status: 'MENUNGGU_KEUANGAN', note: '' },
+        { ts: iso(plusDays(today, -15)), actorId: 'peg-keu', role: 'keuangan', action: 'Memverifikasi anggaran', status: 'MENUNGGU_PPK', note: '' },
+        { ts: iso(plusDays(today, -15)), actorId: 'peg-ppk', role: 'ppk', action: 'Menyetujui', status: 'MENUNGGU_KPA', note: '' },
+        { ts: iso(plusDays(today, -14)), actorId: 'peg-kpa', role: 'kpa', action: 'Menerbitkan dokumen', status: 'TERBIT', note: '' },
+        { ts: iso(plusDays(today, -1)), actorId: 'peg-rin', role: 'pegawai', action: 'Mengajukan SPJ', status: 'SPJ_MENUNGGU_BENDAHARA', note: '' },
+      ],
+    }),
+    buildSppd({
+      pemohonId: 'peg-faj', perihal: 'Rapat Evaluasi Anggaran Triwulan bersama KPU RI',
+      kegiatan: 'Evaluasi serapan anggaran triwulan.',
+      kota: 'Jakarta Selatan', provinsi: 'DKI Jakarta', berangkat: mk(-25), kembali: mk(-23),
+      akun: '524111', status: 'SELESAI', ageDays: 30, ageHours: 120,
+      documents: { suratTuganNo: '067/ST/PP.05-SD/32/2026', sppdNo: '067/SPD/PP.05-SD/32/2026', tglTerbit: iso(plusDays(today, -27)), qrToken: 'STKPUJABAR-067-2026-5D8E44' },
+      pelaksanaan: { checkin: [{ ts: iso(plusDays(today, -25)), lokasi: 'Kantor KPU RI', lat: -6.2297, lng: 106.8253, note: '' }], bukti: [], catatan: '' },
+      spj: {
+        status: 'DISETUJUI', laporan: 'Rapat evaluasi selesai, rekomendasi percepatan serapan ditindaklanjuti.',
+        realisasi: { uangHarian: 530000 * 3, penginapan: 1490000 * 2, transport: 1450000, lainnya: 0 },
+        totalRealisasi: 530000 * 3 + 1490000 * 2 + 1450000,
+        bukti: [{ kategori: 'Tiket/Boarding Pass', nama: 'tiket-pp.pdf', nominal: 1450000, dataUrl: null }],
+        diajukanTs: iso(plusDays(today, -22)),
+      },
+      pembayaran: { metode: 'Transfer Bank (LS/GU)', tgl: iso(plusDays(today, -20)), nominal: 530000 * 3 + 1490000 * 2 + 1450000, buktiNo: 'SP2D-2026-0451' },
+      history: [
+        { ts: iso(plusDays(today, -30)), actorId: 'peg-faj', role: 'pegawai', action: 'Mengajukan', status: 'MENUNGGU_ATASAN', note: '' },
+        { ts: iso(plusDays(today, -29)), actorId: 'peg-ata', role: 'atasan', action: 'Menyetujui', status: 'MENUNGGU_KEUANGAN', note: '' },
+        { ts: iso(plusDays(today, -29)), actorId: 'peg-keu', role: 'keuangan', action: 'Memverifikasi anggaran', status: 'MENUNGGU_PPK', note: '' },
+        { ts: iso(plusDays(today, -28)), actorId: 'peg-ppk', role: 'ppk', action: 'Menyetujui', status: 'MENUNGGU_KPA', note: '' },
+        { ts: iso(plusDays(today, -27)), actorId: 'peg-kpa', role: 'kpa', action: 'Menerbitkan dokumen', status: 'TERBIT', note: '' },
+        { ts: iso(plusDays(today, -22)), actorId: 'peg-faj', role: 'pegawai', action: 'Mengajukan SPJ', status: 'SPJ_MENUNGGU_BENDAHARA', note: '' },
+        { ts: iso(plusDays(today, -21)), actorId: 'peg-ben', role: 'bendahara', action: 'Verifikasi bukti SPJ', status: 'SPJ_MENUNGGU_PPK', note: 'Bukti lengkap & sesuai.' },
+        { ts: iso(plusDays(today, -21)), actorId: 'peg-ppk', role: 'ppk', action: 'Menyetujui SPJ', status: 'SPJ_MENUNGGU_KPA', note: '' },
+        { ts: iso(plusDays(today, -20)), actorId: 'peg-kpa', role: 'kpa', action: 'Mengesahkan SPJ', status: 'SPJ_DISETUJUI', note: '' },
+        { ts: iso(plusDays(today, -20)), actorId: 'peg-ben', role: 'bendahara', action: 'Pembayaran', status: 'SELESAI', note: 'SP2D-2026-0451 terbit.' },
+      ],
+    }),
+  ];
+
+  store.set('sppd', samples);
+
+  // Audit log gabungan dari history seluruh SPPD contoh.
+  const audit = [];
+  samples.forEach((s) => (s.history || []).forEach((h) =>
+    audit.push({ id: uid('log-'), ts: h.ts, actorId: h.actorId, role: h.role, action: h.action, entity: 'SPPD', entityId: s.id, detail: `${s.perihal}${h.note ? ' — ' + h.note : ''}` })
+  ));
+  audit.sort((a, b) => new Date(b.ts) - new Date(a.ts));
+  store.set('audit', audit);
+
+  store.pref('seeded', true);
+}
+
+return { ORG, seedIfEmpty };
+};
+
+__modules["store"] = function(){
+/* ===========================================================================
+   store.js — Lapisan data berbasis localStorage.
+   Semua data aplikasi disimpan lokal di perangkat (offline-first, gratis,
+   tanpa backend). Cocok untuk MVP/demo. Untuk produksi multi-user, lapisan
+   ini dapat diganti dengan API tanpa mengubah pemanggilnya.
+   ========================================================================= */
+
+const NS = 'sppd_kpujabar';
+const KEY = (c) => `${NS}:${c}`;
+
+function read(collection, fallback) {
+  try {
+    const raw = localStorage.getItem(KEY(collection));
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (e) {
+    console.warn('Gagal membaca koleksi', collection, e);
+    return fallback;
+  }
+}
+
+function write(collection, value) {
+  try {
+    localStorage.setItem(KEY(collection), JSON.stringify(value));
+    return true;
+  } catch (e) {
+    console.error('Gagal menyimpan (mungkin kuota localStorage penuh)', e);
+    return false;
+  }
+}
+
+const store = {
+  get: (c, fallback = []) => read(c, fallback),
+  set: (c, v) => write(c, v),
+
+  list(c) { return read(c, []); },
+  find(c, id) { return read(c, []).find((x) => x.id === id) || null; },
+
+  upsert(c, record) {
+    const items = read(c, []);
+    const i = items.findIndex((x) => x.id === record.id);
+    if (i >= 0) items[i] = record; else items.push(record);
+    write(c, items);
+    return record;
+  },
+
+  remove(c, id) {
+    const items = read(c, []).filter((x) => x.id !== id);
+    write(c, items);
+  },
+
+  // Preferensi sederhana (key/value).
+  pref(key, value) {
+    const prefs = read('prefs', {});
+    if (value === undefined) return prefs[key];
+    prefs[key] = value; write('prefs', prefs); return value;
+  },
+
+  meta() {
+    let total = 0;
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(NS)) total += (localStorage.getItem(k) || '').length;
+    }
+    return { bytes: total * 2 }; // perkiraan (UTF-16)
+  },
+
+  reset() {
+    const toDelete = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith(NS)) toDelete.push(k);
+    }
+    toDelete.forEach((k) => localStorage.removeItem(k));
+  },
+};
+
+/* ID unik ringkas. */
+function uid(prefix = '') {
+  return prefix + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+/* Nomor surat berurutan per jenis & tahun (mis. ST, SPPD). */
+function nextNumber(kind) {
+  const counters = store.get('counters', {});
+  const year = new Date().getFullYear();
+  const k = `${kind}-${year}`;
+  counters[k] = (counters[k] || 0) + 1;
+  store.set('counters', counters);
+  return { seq: counters[k], year };
+}
+
+return { store, uid, nextNumber };
+};
+
+__modules["ui"] = function(){
+/* ===========================================================================
+   ui.js — Utilitas tampilan: pembuat elemen, format (rupiah/tanggal), badge,
+   toast, modal/konfirmasi, dan pembaca berkas → data URL.
+   ========================================================================= */
+
+const { statusInfo } = __require("domain");
+
+/* Escape teks agar aman dimasukkan ke innerHTML. */
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+/* Tag template ringan: html`...` mengembalikan string (auto-escape ${}). */
+function html(strings, ...values) {
+  return strings.reduce((out, s, i) => out + s + (i < values.length ? escVal(values[i]) : ''), '');
+}
+function escVal(v) {
+  if (v == null) return '';
+  if (v && v.__raw) return v.html;       // tandai aman via raw()
+  if (Array.isArray(v)) return v.map(escVal).join('');
+  return esc(v);
+}
+function raw(htmlStr) { return { __raw: true, html: htmlStr }; }
+
+/* Buat elemen dari HTML string. */
+function elFromHTML(htmlStr) {
+  const t = document.createElement('template');
+  t.innerHTML = htmlStr.trim();
+  return t.content.firstElementChild;
+}
+
+/* ----- Format ----- */
+const rupiah = (n) =>
+  'Rp ' + (Math.round(+n || 0)).toLocaleString('id-ID');
+const rupiahShort = (n) => {
+  n = +n || 0;
+  if (Math.abs(n) >= 1e9) return 'Rp ' + (n / 1e9).toFixed(2).replace(/\.00$/, '') + ' M';
+  if (Math.abs(n) >= 1e6) return 'Rp ' + (n / 1e6).toFixed(1).replace(/\.0$/, '') + ' jt';
+  return rupiah(n);
+};
+
+const BULAN = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+const BULAN_FULL = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+function tanggal(d, full = false) {
+  if (!d) return '-';
+  const x = new Date(d);
+  if (isNaN(x)) return '-';
+  return `${x.getDate()} ${(full ? BULAN_FULL : BULAN)[x.getMonth()]} ${x.getFullYear()}`;
+}
+function tanggalJam(d) {
+  if (!d) return '-';
+  const x = new Date(d);
+  return `${tanggal(d)} ${String(x.getHours()).padStart(2, '0')}.${String(x.getMinutes()).padStart(2, '0')}`;
+}
+function rentangTanggal(a, b) {
+  const x = new Date(a), y = new Date(b);
+  if (x.getMonth() === y.getMonth() && x.getFullYear() === y.getFullYear())
+    return `${x.getDate()}–${y.getDate()} ${BULAN[y.getMonth()]} ${y.getFullYear()}`;
+  return `${tanggal(a)} – ${tanggal(b)}`;
+}
+function relatif(d) {
+  const diff = Date.now() - new Date(d).getTime();
+  const m = Math.round(diff / 60000);
+  if (m < 1) return 'baru saja';
+  if (m < 60) return `${m} mnt lalu`;
+  const h = Math.round(m / 60);
+  if (h < 24) return `${h} jam lalu`;
+  const hr = Math.round(h / 24);
+  if (hr < 30) return `${hr} hari lalu`;
+  return tanggal(d);
+}
+
+function initials(nama) {
+  const parts = String(nama || '').replace(/[^A-Za-z. ]/g, '').split(' ').filter((p) => p && !p.endsWith('.'));
+  return ((parts[0]?.[0] || '') + (parts[1]?.[0] || '')).toUpperCase() || 'U';
+}
+
+function statusBadge(status) {
+  const s = statusInfo(status);
+  return `<span class="badge ${s.badge}"><span class="dot"></span>${esc(s.label)}</span>`;
+}
+
+/* ----- Toast ----- */
+function toast(msg, type = '') {
+  const host = document.getElementById('toast-host');
+  const t = elFromHTML(`<div class="toast ${type}">${esc(msg)}</div>`);
+  host.appendChild(t);
+  setTimeout(() => { t.style.opacity = '0'; t.style.transition = 'opacity .3s'; setTimeout(() => t.remove(), 300); }, 3200);
+}
+
+/* ----- Modal ----- */
+function modal({ title, body, footer, onMount, size }) {
+  const host = document.getElementById('modal-host');
+  host.innerHTML = `
+    <div class="modal" style="${size === 'lg' ? 'max-width:760px' : ''}" role="dialog" aria-modal="true">
+      <div class="modal-head"><h3>${esc(title)}</h3><button class="x" aria-label="Tutup">&times;</button></div>
+      <div class="modal-body">${body}</div>
+      ${footer ? `<div class="modal-foot">${footer}</div>` : ''}
+    </div>`;
+  host.hidden = false;
+  const close = () => { host.hidden = true; host.innerHTML = ''; };
+  host.querySelector('.x').onclick = close;
+  host.onclick = (e) => { if (e.target === host) close(); };
+  if (onMount) onMount(host.querySelector('.modal'), close);
+  return close;
+}
+
+function confirmDialog({ title, message, confirmText = 'Ya, lanjutkan', danger = false }) {
+  return new Promise((resolve) => {
+    const close = modal({
+      title,
+      body: `<p style="margin:0">${esc(message)}</p>`,
+      footer: `<button class="btn" data-no>Batal</button>
+               <button class="btn ${danger ? 'btn-danger' : 'btn-primary'}" data-yes>${esc(confirmText)}</button>`,
+      onMount: (root, c) => {
+        root.querySelector('[data-no]').onclick = () => { c(); resolve(false); };
+        root.querySelector('[data-yes]').onclick = () => { c(); resolve(true); };
+      },
+    });
+  });
+}
+
+/* Modal dengan kolom catatan (untuk approve/revisi/tolak). */
+function notePrompt({ title, label = 'Catatan', placeholder = '', required = false, confirmText = 'Kirim', danger = false }) {
+  return new Promise((resolve) => {
+    modal({
+      title,
+      body: `<div class="field"><label class="lbl">${esc(label)}${required ? ' <span class="req">*</span>' : ''}</label>
+             <textarea class="textarea" id="np-note" placeholder="${esc(placeholder)}"></textarea>
+             <span class="field-error" id="np-err" hidden>Wajib diisi.</span></div>`,
+      footer: `<button class="btn" data-no>Batal</button>
+               <button class="btn ${danger ? 'btn-danger' : 'btn-primary'}" data-yes>${esc(confirmText)}</button>`,
+      onMount: (root, c) => {
+        root.querySelector('[data-no]').onclick = () => { c(); resolve(null); };
+        root.querySelector('[data-yes]').onclick = () => {
+          const v = root.querySelector('#np-note').value.trim();
+          if (required && !v) { root.querySelector('#np-err').hidden = false; return; }
+          c(); resolve(v);
+        };
+      },
+    });
+  });
+}
+
+/* Baca File → data URL (untuk simpan lampiran/foto di localStorage). */
+function fileToDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(r.result);
+    r.onerror = reject;
+    r.readAsDataURL(file);
+  });
+}
+
+const fmtBytes = (b) => b < 1024 ? b + ' B' : b < 1048576 ? (b / 1024).toFixed(0) + ' KB' : (b / 1048576).toFixed(1) + ' MB';
+
+function debounce(fn, ms = 250) {
+  let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
+}
+
+return { esc, html, raw, elFromHTML, rupiah, rupiahShort, tanggal, tanggalJam, rentangTanggal, relatif, initials, statusBadge, toast, modal, confirmDialog, notePrompt, fileToDataUrl, fmtBytes, debounce };
+};
+
+__modules["views/anggaran"] = function(){
+/* ===========================================================================
+   views/anggaran.js — Monitoring serapan anggaran perjalanan dinas (DIPA).
+   ========================================================================= */
+
+const { store } = __require("store");
+const { anggaranSummary } = __require("domain");
+const { ORG } = __require("seed");
+const { esc, rupiah, rupiahShort } = __require("ui");
+
+function renderAnggaran(root) {
+  const data = anggaranSummary();
+  const sppd = store.list('sppd');
+  const totalPagu = data.reduce((t, a) => t + a.pagu, 0);
+  const totalReal = data.reduce((t, a) => t + a.realisasi, 0);
+  const totalKom = data.reduce((t, a) => t + a.komitmen, 0);
+  const persen = totalPagu ? Math.round((totalReal / totalPagu) * 100) : 0;
+
+  root.innerHTML = `
+  <div class="page-head"><div><h1>Anggaran Perjalanan Dinas (DIPA)</h1>
+    <p class="desc">${esc(ORG.satker)} · Tahun Anggaran ${ORG.tahunAnggaran}</p></div></div>
+
+  <div class="grid grid-4">
+    <div class="stat accent-navy"><span class="ico">📁</span><div class="label">Total Pagu</div><div class="value sm">${rupiahShort(totalPagu)}</div></div>
+    <div class="stat accent-green"><span class="ico">✅</span><div class="label">Realisasi</div><div class="value sm">${rupiahShort(totalReal)}</div><div class="delta muted">${persen}% terserap</div></div>
+    <div class="stat accent-gold"><span class="ico">🔒</span><div class="label">Komitmen (proses)</div><div class="value sm">${rupiahShort(totalKom)}</div></div>
+    <div class="stat accent-red"><span class="ico">💼</span><div class="label">Sisa Pagu</div><div class="value sm">${rupiahShort(totalPagu - totalReal - totalKom)}</div></div>
+  </div>
+
+  <div class="card card-pad mt-16">
+    <div class="card-title" style="margin-bottom:6px"><span class="ico">📊</span> Realisasi Keseluruhan</div>
+    <div class="flex between small"><span class="muted">${rupiah(totalReal)} dari ${rupiah(totalPagu)}</span><b>${persen}%</b></div>
+    <div class="progress mt-8"><span style="width:${Math.min(100, persen)}%"></span></div>
+  </div>
+
+  <div class="table-wrap mt-16"><table class="tbl">
+    <thead><tr><th>Akun</th><th>Uraian</th><th class="num">Pagu</th><th class="num">Realisasi</th><th class="num">Komitmen</th><th class="num">Sisa</th><th>Serapan</th></tr></thead>
+    <tbody>${data.map((a) => `<tr>
+      <td><span class="tag-akun">${esc(a.kode)}</span></td>
+      <td>${esc(a.nama)}</td>
+      <td class="num">${rupiah(a.pagu)}</td>
+      <td class="num">${rupiah(a.realisasi)}</td>
+      <td class="num muted">${rupiah(a.komitmen)}</td>
+      <td class="num">${rupiah(a.sisa)}</td>
+      <td style="min-width:140px"><div class="flex center gap-8"><div class="progress" style="flex:1"><span style="width:${Math.min(100, a.persen)}%"></span></div><b class="small">${a.persen}%</b></div></td>
+    </tr>`).join('')}</tbody>
+  </table></div>
+
+  <p class="muted small mt-12">Realisasi dihitung dari pembayaran SPPD berstatus <b>Selesai</b> ditambah realisasi awal DIPA; komitmen mencakup SPPD yang dokumennya telah terbit namun belum dibayar.</p>`;
+}
+
+return { renderAnggaran };
+};
+
+__modules["views/approval"] = function(){
+/* ===========================================================================
+   views/approval.js — Kotak masuk persetujuan/verifikasi sesuai peran.
+   ========================================================================= */
+
+const { currentUser, roleLabel } = __require("auth");
+const { inboxFor } = __require("domain");
+const { esc, rentangTanggal } = __require("ui");
+const { renderSppdList, emptyState } = __require("views/shared");
+
+function renderApproval(root) {
+  const u = currentUser();
+  const inbox = inboxFor(u);
+
+  root.innerHTML = `
+  <div class="page-head">
+    <div><h1>Kotak Persetujuan</h1><p class="desc">Item yang menunggu tindakan Anda sebagai <b>${esc(roleLabel(u.role))}</b>.</p></div>
+  </div>
+  <div class="card card-pad" style="margin-bottom:14px;border-left:4px solid var(--gold)">
+    <b>${inbox.length}</b> perjalanan dinas menunggu ${u.role === 'bendahara' ? 'verifikasi/pembayaran' : 'persetujuan'} Anda.
+  </div>
+  <div id="list"></div>`;
+
+  const listEl = root.querySelector('#list');
+  if (!inbox.length) {
+    listEl.innerHTML = emptyState('🎉', 'Antrean kosong', 'Tidak ada item yang menunggu tindakan Anda. Kerja bagus!');
+    return;
+  }
+  renderSppdList(listEl, inbox, { showPemohon: true });
+}
+
+return { renderApproval };
+};
+
+__modules["views/arsip"] = function(){
+/* ===========================================================================
+   views/arsip.js — Arsip digital perjalanan dinas yang telah selesai/ditolak
+   (kebutuhan audit BPK & Inspektorat).
+   ========================================================================= */
+
+const { store } = __require("store");
+const { esc, rupiah, tanggal, debounce, statusBadge } = __require("ui");
+const { renderSppdList, emptyState, pegawaiName } = __require("views/shared");
+
+function renderArsip(root) {
+  let q = '';
+  const all = () => store.list('sppd')
+    .filter((s) => ['SELESAI', 'DITOLAK'].includes(s.status))
+    .sort((a, b) => b.updatedTs - a.updatedTs);
+
+  root.innerHTML = `
+  <div class="page-head"><div><h1>Arsip Digital</h1>
+    <p class="desc">Dokumen perjalanan dinas terarsip permanen — siap untuk audit BPK & Inspektorat.</p></div></div>
+  <div class="toolbar"><input class="input search" id="q" placeholder="🔍 Cari perihal, pemohon, nomor dokumen, SP2D…"></div>
+  <div id="list"></div>`;
+
+  const listEl = root.querySelector('#list');
+  function apply() {
+    let data = all();
+    if (q) {
+      const k = q.toLowerCase();
+      data = data.filter((s) => (s.perihal + ' ' + pegawaiName(s.pemohonId) + ' ' + (s.documents?.suratTuganNo || '') + ' ' + (s.documents?.sppdNo || '') + ' ' + (s.pembayaran?.buktiNo || '')).toLowerCase().includes(k));
+    }
+    if (!data.length) { listEl.innerHTML = emptyState('🗄️', 'Arsip kosong', 'Belum ada dokumen yang diarsipkan.'); return; }
+    listEl.innerHTML = `<div class="table-wrap"><table class="tbl">
+      <thead><tr><th>No. SPPD</th><th>Perihal</th><th>Pemohon</th><th>Tanggal</th><th>Status</th><th class="num">Nilai</th></tr></thead>
+      <tbody>${data.map((s) => `<tr class="clickable" data-go="/sppd/${s.id}">
+        <td class="nowrap">${esc(s.documents?.sppdNo || '—')}</td>
+        <td>${esc(s.perihal)}</td>
+        <td>${esc((pegawaiName(s.pemohonId) || '').split(',')[0])}</td>
+        <td class="nowrap">${tanggal(s.tanggalBerangkat)}</td>
+        <td>${statusBadge(s.status)}</td>
+        <td class="num">${rupiah(s.pembayaran?.nominal || s.totalBiaya)}</td></tr>`).join('')}</tbody>
+    </table></div>`;
+    listEl.querySelectorAll('[data-go]').forEach((el) => el.onclick = () => location.hash = el.getAttribute('data-go'));
+  }
+  root.querySelector('#q').addEventListener('input', debounce((e) => { q = e.target.value; apply(); }, 200));
+  apply();
+}
+
+return { renderArsip };
+};
+
+__modules["views/audit"] = function(){
+/* ===========================================================================
+   views/audit.js — Jejak audit (audit trail) seluruh aktivitas sistem.
+   ========================================================================= */
+
+const { store } = __require("store");
+const { roleLabel } = __require("auth");
+const { esc, tanggalJam, debounce } = __require("ui");
+const { pegawaiName } = __require("views/shared");
+
+function renderAudit(root) {
+  let q = '';
+  const log = store.list('audit');
+
+  root.innerHTML = `
+  <div class="page-head"><div><h1>Audit Trail</h1>
+    <p class="desc">Catatan tak-terhapus seluruh tindakan: pengajuan, persetujuan, SPJ, hingga pembayaran.</p></div></div>
+  <div class="toolbar"><input class="input search" id="q" placeholder="🔍 Cari aksi, pelaku, atau perihal…">
+    <span class="badge badge-blue">${log.length} entri</span></div>
+  <div id="list"></div>`;
+
+  const listEl = root.querySelector('#list');
+  function apply() {
+    let data = log;
+    if (q) {
+      const k = q.toLowerCase();
+      data = data.filter((a) => (a.action + ' ' + pegawaiName(a.actorId) + ' ' + a.detail + ' ' + roleLabel(a.role)).toLowerCase().includes(k));
+    }
+    if (!data.length) { listEl.innerHTML = `<div class="empty"><div class="big">🛡️</div><h3>Tidak ada entri</h3></div>`; return; }
+    listEl.innerHTML = `<div class="table-wrap"><table class="tbl">
+      <thead><tr><th>Waktu</th><th>Pelaku</th><th>Peran</th><th>Aksi</th><th>Keterangan</th></tr></thead>
+      <tbody>${data.map((a) => `<tr class="clickable" data-go="/sppd/${a.entityId}">
+        <td class="nowrap">${tanggalJam(a.ts)}</td>
+        <td>${esc((pegawaiName(a.actorId) || a.actorId).split(',')[0])}</td>
+        <td class="nowrap">${esc(roleLabel(a.role))}</td>
+        <td>${esc(a.action)}</td>
+        <td class="muted">${esc(a.detail)}</td></tr>`).join('')}</tbody>
+    </table></div>`;
+    listEl.querySelectorAll('[data-go]').forEach((el) => el.onclick = () => { if (el.getAttribute('data-go') !== '/sppd/-') location.hash = el.getAttribute('data-go'); });
+  }
+  root.querySelector('#q').addEventListener('input', debounce((e) => { q = e.target.value; apply(); }, 200));
+  apply();
+}
+
+return { renderAudit };
+};
+
+__modules["views/daftar"] = function(){
+/* ===========================================================================
+   views/daftar.js — Daftar seluruh perjalanan dinas (cari, filter, status).
+   ========================================================================= */
+
+const { store } = __require("store");
+const { currentUser } = __require("auth");
+const { statusInfo } = __require("domain");
+const { esc, debounce } = __require("ui");
+const { renderSppdList, pegawaiName } = __require("views/shared");
+
+const GROUPS = {
+  all: () => true,
+  pengajuan: (s) => statusInfo(s.status).group === 'pengajuan',
+  pelaksanaan: (s) => statusInfo(s.status).group === 'pelaksanaan',
+  spj: (s) => statusInfo(s.status).group === 'spj',
+  selesai: (s) => statusInfo(s.status).group === 'selesai',
+};
+
+function renderDaftar(root) {
+  const u = currentUser();
+  let filter = { q: '', group: 'all', mine: u.role === 'pegawai' };
+
+  root.innerHTML = `
+  <div class="page-head">
+    <div><h1>Perjalanan Dinas</h1><p class="desc">Lacak status seluruh pengajuan dari awal hingga pembayaran.</p></div>
+    <div class="actions">${u.role === 'pegawai' ? `<a class="btn btn-primary" href="#/pengajuan">➕ Ajukan</a>` : ''}</div>
+  </div>
+
+  <div class="toolbar">
+    <input class="input search" id="q" placeholder="🔍 Cari perihal, kota, pemohon, nomor dokumen…">
+    <div class="seg" id="grp">
+      <button data-g="all" class="active">Semua</button>
+      <button data-g="pengajuan">Pengajuan</button>
+      <button data-g="pelaksanaan">Pelaksanaan</button>
+      <button data-g="spj">SPJ</button>
+      <button data-g="selesai">Selesai</button>
+    </div>
+    <label class="btn btn-sm" style="gap:8px"><input type="checkbox" id="mine" ${filter.mine ? 'checked' : ''}> Hanya milik saya</label>
+  </div>
+  <div id="list"></div>`;
+
+  const listEl = root.querySelector('#list');
+
+  function apply() {
+    let data = store.list('sppd');
+    if (filter.mine) data = data.filter((s) => s.pemohonId === u.id);
+    data = data.filter(GROUPS[filter.group]);
+    if (filter.q) {
+      const q = filter.q.toLowerCase();
+      data = data.filter((s) =>
+        (s.perihal + ' ' + s.lokasiKota + ' ' + s.lokasiProvinsi + ' ' + pegawaiName(s.pemohonId) + ' ' +
+         (s.documents?.suratTuganNo || '') + ' ' + (s.documents?.sppdNo || '')).toLowerCase().includes(q));
+    }
+    data.sort((a, b) => b.updatedTs - a.updatedTs);
+    renderSppdList(listEl, data, { showPemohon: !filter.mine, emptyDesc: 'Tidak ada perjalanan dinas yang cocok dengan filter.' });
+  }
+
+  root.querySelector('#q').addEventListener('input', debounce((e) => { filter.q = e.target.value; apply(); }, 200));
+  root.querySelectorAll('#grp button').forEach((b) => b.onclick = () => {
+    root.querySelectorAll('#grp button').forEach((x) => x.classList.remove('active'));
+    b.classList.add('active'); filter.group = b.dataset.g; apply();
+  });
+  root.querySelector('#mine').onchange = (e) => { filter.mine = e.target.checked; apply(); };
+
+  apply();
+}
+
+return { renderDaftar };
+};
+
+__modules["views/dashboard"] = function(){
+/* ===========================================================================
+   views/dashboard.js — Ringkasan & monitoring sesuai peran pengguna.
+   ========================================================================= */
+
+const { currentUser, roleLabel } = __require("auth");
+const { globalStats, anggaranSummary, inboxFor, mySppd } = __require("domain");
+const { store } = __require("store");
+const { esc, rupiah, rupiahShort, tanggalJam, relatif } = __require("ui");
+const { sppdCard, wireGo, pegawaiName, emptyState } = __require("views/shared");
+
+function renderDashboard(root) {
+  const u = currentUser();
+  const st = globalStats();
+  const inbox = inboxFor(u);
+  const mine = mySppd(u);
+  const anggaran = anggaranSummary();
+  const totalPagu = anggaran.reduce((t, a) => t + a.pagu, 0);
+  const totalReal = anggaran.reduce((t, a) => t + a.realisasi, 0);
+  const persenReal = totalPagu ? Math.round((totalReal / totalPagu) * 100) : 0;
+  const audit = store.list('audit').slice(0, 8);
+
+  const greeting = (() => { const h = new Date().getHours(); return h < 11 ? 'Selamat pagi' : h < 15 ? 'Selamat siang' : h < 19 ? 'Selamat sore' : 'Selamat malam'; })();
+
+  root.innerHTML = `
+  <div class="page-head">
+    <div>
+      <h1>${greeting}, ${esc(u.nama.split(',')[0])} 👋</h1>
+      <p class="desc">Anda masuk sebagai <b>${esc(roleLabel(u.role))}</b> · ${esc(u.unit)}</p>
+    </div>
+    <div class="actions">
+      ${u.role === 'pegawai' ? `<a class="btn btn-primary" href="#/pengajuan">➕ Ajukan Perjalanan Dinas</a>` : ''}
+      ${inbox.length ? `<a class="btn btn-gold" href="#/approval">✅ ${inbox.length} menunggu tindakan Anda</a>` : ''}
+    </div>
+  </div>
+
+  <div class="grid grid-4">
+    <div class="stat accent-navy"><span class="ico">🧳</span><div class="label">Total Perjalanan Dinas</div><div class="value">${st.total}</div><div class="delta muted">tahun anggaran berjalan</div></div>
+    <div class="stat accent-gold"><span class="ico">⏳</span><div class="label">Dalam Proses Pengajuan</div><div class="value">${st.pengajuan}</div><div class="delta muted">menunggu persetujuan</div></div>
+    <div class="stat accent-green"><span class="ico">✅</span><div class="label">Selesai & Dibayar</div><div class="value">${st.selesai}</div><div class="delta muted">${rupiahShort(st.nilaiSelesai)} tersalurkan</div></div>
+    <div class="stat accent-red"><span class="ico">🧾</span><div class="label">Tahap SPJ</div><div class="value">${st.spj}</div><div class="delta muted">pertanggungjawaban</div></div>
+  </div>
+
+  <div class="grid grid-2 mt-16" style="grid-template-columns: 1.4fr 1fr">
+    <div class="card card-pad">
+      <div class="flex between center" style="margin-bottom:10px">
+        <div class="card-title"><span class="ico">📁</span> Serapan Anggaran Perjalanan Dinas (DIPA)</div>
+        <a class="small" href="#/anggaran">Lihat detail →</a>
+      </div>
+      <div class="flex between center" style="margin-bottom:6px">
+        <span class="muted small">Realisasi keseluruhan</span>
+        <span class="bold">${rupiahShort(totalReal)} / ${rupiahShort(totalPagu)} (${persenReal}%)</span>
+      </div>
+      <div class="progress" style="margin-bottom:14px"><span style="width:${Math.min(100, persenReal)}%"></span></div>
+      ${anggaran.map((a) => `
+        <div style="margin-bottom:11px">
+          <div class="flex between small"><span><span class="tag-akun">${esc(a.kode)}</span> ${esc(a.nama)}</span><span class="bold">${a.persen}%</span></div>
+          <div class="progress" style="margin-top:4px"><span style="width:${Math.min(100, a.persen)}%"></span></div>
+        </div>`).join('')}
+    </div>
+
+    <div class="card card-pad">
+      <div class="card-title" style="margin-bottom:10px"><span class="ico">🔔</span> Perlu Tindakan Anda</div>
+      <div id="inboxMini"></div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt-16" style="grid-template-columns: 1fr 1fr">
+    <div class="card card-pad">
+      <div class="flex between center" style="margin-bottom:10px">
+        <div class="card-title"><span class="ico">🧳</span> ${u.role === 'pegawai' ? 'Perjalanan Dinas Saya' : 'Perjalanan Dinas Terbaru'}</div>
+        <a class="small" href="#/daftar">Semua →</a>
+      </div>
+      <div id="recentList"></div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="flex between center" style="margin-bottom:10px">
+        <div class="card-title"><span class="ico">🛡️</span> Aktivitas Terbaru (Audit Trail)</div>
+        ${['kpa', 'auditor'].includes(u.role) ? `<a class="small" href="#/audit">Semua →</a>` : ''}
+      </div>
+      ${audit.length ? `<ul class="timeline">${audit.map((a) => `
+        <li><span class="tl-dot done"></span>
+          <div class="tl-title">${esc(a.action)}</div>
+          <div class="tl-meta">${esc((pegawaiName(a.actorId) || '').split(',')[0])} · ${relatif(a.ts)}</div>
+        </li>`).join('')}</ul>` : `<p class="muted small">Belum ada aktivitas.</p>`}
+    </div>
+  </div>`;
+
+  // Inbox mini
+  const inboxMini = root.querySelector('#inboxMini');
+  if (inbox.length) {
+    inboxMini.innerHTML = `<div class="list">${inbox.slice(0, 4).map((s) => sppdCard(s)).join('')}</div>` +
+      (inbox.length > 4 ? `<a class="btn btn-block btn-sm mt-12" href="#/approval">Lihat semua (${inbox.length})</a>` : '');
+    wireGo(inboxMini);
+  } else {
+    inboxMini.innerHTML = emptyState('🎉', 'Tidak ada antrean', 'Tidak ada item yang menunggu tindakan Anda saat ini.');
+  }
+
+  // Recent list
+  const recent = root.querySelector('#recentList');
+  const recentData = (u.role === 'pegawai' ? mine : store.list('sppd').sort((a, b) => b.updatedTs - a.updatedTs)).slice(0, 4);
+  if (recentData.length) {
+    recent.innerHTML = `<div class="list">${recentData.map((s) => sppdCard(s, { showPemohon: u.role !== 'pegawai' })).join('')}</div>`;
+    wireGo(recent);
+  } else {
+    recent.innerHTML = emptyState('🗂️', 'Belum ada data', u.role === 'pegawai' ? 'Anda belum mengajukan perjalanan dinas.' : 'Belum ada perjalanan dinas.');
+  }
+}
+
+return { renderDashboard };
+};
+
+__modules["views/detail"] = function(){
+/* ===========================================================================
+   views/detail.js — Detail satu SPPD: ringkasan, dokumen (Surat Tugas/SPPD +
+   QR), pelaksanaan (check-in/geotag/bukti), SPJ, riwayat (audit), serta aksi
+   persetujuan/penolakan/revisi/pembayaran sesuai peran & status.
+   ========================================================================= */
+
+const { store, uid } = __require("store");
+const { currentUser, roleLabel } = __require("auth");
+const { ORG } = __require("seed");
+const { statusInfo, canAct, approve, requestRevision, reject, recordPayment, addCheckin, submitSPJ, PENGAJUAN_FLOW, SPJ_FLOW, hitungBiaya, cekAnggaran } = __require("domain");
+const { esc, rupiah, tanggal, tanggalJam, rentangTanggal, statusBadge, toast, notePrompt, confirmDialog, modal, fileToDataUrl, fmtBytes } = __require("ui");
+const { go } = __require("router");
+const { renderQR } = __require("qr");
+const { pegawai, pegawaiName } = __require("views/shared");
+
+function renderDetail(root, parts) {
+  const id = parts[1];
+  const u = currentUser();
+  let tab = 'ringkasan';
+
+  function get() { return store.find('sppd', id); }
+
+  function render() {
+    const s = get();
+    if (!s) { root.innerHTML = `<div class="empty"><div class="big">🔍</div><h3>Data tidak ditemukan</h3><a class="btn btn-primary" href="#/daftar">Ke Daftar</a></div>`; return; }
+    const p = pegawai(s.pemohonId);
+    const isOwner = s.pemohonId === u.id;
+    const actable = canAct(s, u);
+    const hasDoc = !!s.documents;
+    const tabs = [
+      ['ringkasan', '📋 Ringkasan'],
+      ...(hasDoc ? [['dokumen', '📄 Dokumen & QR']] : []),
+      ['pelaksanaan', '📍 Pelaksanaan'],
+      ['spj', '🧾 SPJ'],
+      ['riwayat', '🕘 Riwayat'],
+    ];
+
+    root.innerHTML = `
+    <div class="page-head">
+      <div>
+        <a class="small muted" href="#/daftar">← Daftar Perjalanan Dinas</a>
+        <h1 style="margin-top:4px">${esc(s.perihal)}</h1>
+        <p class="desc">${statusBadge(s.status)} &nbsp; 👤 ${esc(p?.nama || '')} · ${esc(p?.jabatan || '')}</p>
+      </div>
+      <div class="actions" id="actionBar"></div>
+    </div>
+
+    ${renderStepper(s)}
+
+    <div class="tabs" id="tabs">${tabs.map(([k, l]) => `<button data-tab="${k}" class="${tab === k ? 'active' : ''}">${l}</button>`).join('')}</div>
+    <div id="tabBody"></div>`;
+
+    renderActions(root.querySelector('#actionBar'), s, { isOwner, actable });
+    root.querySelectorAll('#tabs button').forEach((b) => b.onclick = () => { tab = b.dataset.tab; render(); });
+    renderTab(root.querySelector('#tabBody'), s, tab, { isOwner });
+  }
+
+  // ---- Stepper alur ----
+  function renderStepper(s) {
+    const idxP = PENGAJUAN_FLOW.indexOf(s.status);
+    const reachedTerbit = idxP >= 0 || ['PELAKSANAAN', ...SPJ_FLOW].includes(s.status) || s.documents;
+    const flow = reachedTerbit && (s.status.startsWith('SPJ') || ['PELAKSANAAN', 'SELESAI'].includes(s.status))
+      ? SPJ_FLOW : PENGAJUAN_FLOW;
+    const labels = flow === PENGAJUAN_FLOW
+      ? ['Atasan', 'Keuangan', 'PPK', 'KPA', 'Terbit']
+      : ['Verif Bendahara', 'Persetujuan PPK', 'Pengesahan KPA', 'Disetujui', 'Dibayar'];
+    let cur = flow.indexOf(s.status);
+    if (s.status === 'SELESAI') cur = flow.length - 1;
+    if (['TERBIT'].includes(s.status)) cur = PENGAJUAN_FLOW.length - 1;
+    const rejected = s.status === 'DITOLAK';
+    return `<div class="card card-pad" style="overflow-x:auto">
+      <div style="display:flex;gap:6px;min-width:520px">
+        ${flow.map((st, i) => {
+          const done = i < cur || s.status === 'SELESAI';
+          const isCur = i === cur;
+          const color = rejected ? 'var(--red)' : done ? 'var(--green)' : isCur ? 'var(--gold)' : 'var(--line)';
+          return `<div style="flex:1;text-align:center">
+            <div style="height:6px;border-radius:6px;background:${color}"></div>
+            <div class="small" style="margin-top:6px;font-weight:${isCur ? 800 : 600};color:${isCur ? 'var(--navy)' : 'var(--muted)'}">${labels[i]}</div>
+          </div>`;
+        }).join('')}
+      </div></div>`;
+  }
+
+  // ---- Action bar ----
+  function renderActions(bar, s, { isOwner, actable }) {
+    const btns = [];
+    if (isOwner && (s.status === 'DRAFT' || s.status === 'REVISI')) {
+      btns.push(`<button class="btn btn-primary" data-act="edit">✏️ ${s.status === 'REVISI' ? 'Perbaiki & Kirim Ulang' : 'Lengkapi Draf'}</button>`);
+    }
+    if (actable) {
+      const isSpj = s.status.startsWith('SPJ');
+      const approveLabel = s.status === 'MENUNGGU_KPA' ? '✅ Sahkan & Terbitkan Dokumen'
+        : s.status === 'SPJ_DISETUJUI' ? '💳 Catat Pembayaran' : '✅ Setujui';
+      if (s.status === 'SPJ_DISETUJUI') {
+        btns.push(`<button class="btn btn-success" data-act="pay">${approveLabel}</button>`);
+      } else {
+        btns.push(`<button class="btn btn-success" data-act="approve">${approveLabel}</button>`);
+        btns.push(`<button class="btn btn-gold" data-act="revisi">↩️ Minta Revisi</button>`);
+        if (!isSpj) btns.push(`<button class="btn btn-danger" data-act="tolak">✕ Tolak</button>`);
+      }
+    }
+    if (isOwner && ['TERBIT', 'PELAKSANAAN'].includes(s.status)) {
+      btns.push(`<button class="btn btn-primary" data-act="checkin">📍 Check-in Lokasi</button>`);
+      btns.push(`<button class="btn btn-gold" data-act="spjform">🧾 Isi SPJ</button>`);
+    }
+    if (isOwner && s.status === 'SPJ_REVISI') {
+      btns.push(`<button class="btn btn-primary" data-act="spjform">🧾 Perbaiki SPJ</button>`);
+    }
+    bar.innerHTML = btns.join('');
+
+    bar.querySelector('[data-act=edit]') && (bar.querySelector('[data-act=edit]').onclick = () => go('/pengajuan/' + s.id));
+    bar.querySelector('[data-act=approve]') && (bar.querySelector('[data-act=approve]').onclick = () => doApprove(s));
+    bar.querySelector('[data-act=revisi]') && (bar.querySelector('[data-act=revisi]').onclick = () => doRevisi(s));
+    bar.querySelector('[data-act=tolak]') && (bar.querySelector('[data-act=tolak]').onclick = () => doTolak(s));
+    bar.querySelector('[data-act=pay]') && (bar.querySelector('[data-act=pay]').onclick = () => doPay(s));
+    bar.querySelector('[data-act=checkin]') && (bar.querySelector('[data-act=checkin]').onclick = () => doCheckin(s));
+    bar.querySelector('[data-act=spjform]') && (bar.querySelector('[data-act=spjform]').onclick = () => { tab = 'spj'; render(); });
+  }
+
+  // ---- Aksi ----
+  async function doApprove(s) {
+    if (s.status === 'MENUNGGU_KEUANGAN') {
+      const cek = cekAnggaran(s.akun, s.totalBiaya);
+      if (!cek.ok && !(await confirmDialog({ title: 'Pagu tidak mencukupi', message: `Sisa pagu akun ${s.akun} hanya ${rupiah(cek.sisa)}, sedangkan kebutuhan ${rupiah(s.totalBiaya)}. Tetap setujui?`, danger: true, confirmText: 'Tetap Setujui' }))) return;
+    }
+    const note = await notePrompt({ title: 'Persetujuan', label: 'Catatan (opsional)', placeholder: 'mis. Sesuai kebutuhan tugas / pagu mencukupi', confirmText: 'Setujui' });
+    if (note === null) return;
+    approve(s, note);
+    window.dispatchEvent(new Event('sppd:changed'));
+    toast(s.status === 'MENUNGGU_KPA' ? 'Dokumen diterbitkan.' : 'Berhasil disetujui.', 'ok');
+    render();
+  }
+  async function doRevisi(s) {
+    const note = await notePrompt({ title: 'Minta Revisi', label: 'Catatan revisi', placeholder: 'Jelaskan yang perlu diperbaiki…', required: true, confirmText: 'Kirim Revisi', danger: true });
+    if (!note) return;
+    requestRevision(s, note); window.dispatchEvent(new Event('sppd:changed')); toast('Permintaan revisi dikirim.', 'warn'); render();
+  }
+  async function doTolak(s) {
+    const note = await notePrompt({ title: 'Tolak Pengajuan', label: 'Alasan penolakan', required: true, confirmText: 'Tolak', danger: true });
+    if (!note) return;
+    reject(s, note); window.dispatchEvent(new Event('sppd:changed')); toast('Pengajuan ditolak.', 'err'); render();
+  }
+  function doPay(s) {
+    const nominal = s.spj?.totalRealisasi || s.biayaDisetujui || s.totalBiaya;
+    modal({
+      title: 'Catat Pembayaran / Pencairan',
+      body: `<div class="form-grid">
+        <div class="field col-2"><label class="lbl">Metode</label>
+          <select class="select" id="pm">${['Transfer Bank (LS)', 'Transfer Bank (GU)', 'Uang Persediaan (UP)', 'Tunai'].map((m) => `<option>${m}</option>`).join('')}</select></div>
+        <div class="field"><label class="lbl">Nominal (Rp)</label><input class="input" id="pn" type="number" value="${nominal}"></div>
+        <div class="field"><label class="lbl">No. Bukti / SP2D</label><input class="input" id="pb" placeholder="SP2D-2026-XXXX"></div>
+      </div>`,
+      footer: `<button class="btn" data-no>Batal</button><button class="btn btn-success" data-yes>Cairkan</button>`,
+      onMount: (r, close) => {
+        r.querySelector('[data-no]').onclick = close;
+        r.querySelector('[data-yes]').onclick = () => {
+          recordPayment(s, { metode: r.querySelector('#pm').value, nominal: +r.querySelector('#pn').value, buktiNo: r.querySelector('#pb').value || ('SP2D-' + uid('').toUpperCase().slice(0, 8)) });
+          close(); window.dispatchEvent(new Event('sppd:changed')); toast('Pembayaran tercatat. Perjalanan dinas selesai.', 'ok'); render();
+        };
+      },
+    });
+  }
+  function doCheckin(s) {
+    modal({
+      title: 'Check-in Lokasi Kegiatan',
+      body: `<div class="field"><label class="lbl">Nama Lokasi</label><input class="input" id="ciLok" placeholder="mis. Hotel / Kantor tujuan"></div>
+        <div class="field mt-12"><label class="lbl">Catatan</label><input class="input" id="ciNote" placeholder="opsional"></div>
+        <div class="field mt-12"><button class="btn btn-sm" id="ciGeo">📍 Ambil Lokasi GPS (Geotagging)</button><div class="small muted mt-8" id="ciGeoOut">Koordinat belum diambil.</div></div>`,
+      footer: `<button class="btn" data-no>Batal</button><button class="btn btn-primary" data-yes>Check-in</button>`,
+      onMount: (r, close) => {
+        let coords = null;
+        r.querySelector('#ciGeo').onclick = () => {
+          if (!navigator.geolocation) { r.querySelector('#ciGeoOut').textContent = 'Geolokasi tidak didukung peramban.'; return; }
+          r.querySelector('#ciGeoOut').textContent = 'Mengambil lokasi…';
+          navigator.geolocation.getCurrentPosition(
+            (pos) => { coords = { lat: pos.coords.latitude, lng: pos.coords.longitude }; r.querySelector('#ciGeoOut').innerHTML = `✓ ${coords.lat.toFixed(5)}, ${coords.lng.toFixed(5)}`; },
+            () => { r.querySelector('#ciGeoOut').textContent = 'Gagal mengambil lokasi (izin ditolak).'; });
+        };
+        r.querySelector('[data-no]').onclick = close;
+        r.querySelector('[data-yes]').onclick = () => {
+          addCheckin(s, { lokasi: r.querySelector('#ciLok').value || 'Lokasi kegiatan', note: r.querySelector('#ciNote').value, lat: coords?.lat, lng: coords?.lng });
+          close(); window.dispatchEvent(new Event('sppd:changed')); toast('Check-in tercatat.', 'ok'); tab = 'pelaksanaan'; render();
+        };
+      },
+    });
+  }
+
+  // ---- Tabs ----
+  function renderTab(body, s, which, { isOwner }) {
+    if (which === 'ringkasan') body.innerHTML = tabRingkasan(s);
+    else if (which === 'dokumen') { body.innerHTML = tabDokumen(s); mountDocs(body, s); }
+    else if (which === 'pelaksanaan') tabPelaksanaan(body, s, isOwner);
+    else if (which === 'spj') tabSPJ(body, s, isOwner);
+    else if (which === 'riwayat') body.innerHTML = tabRiwayat(s);
+  }
+
+  function tabRingkasan(s) {
+    const r = s.rincianBiaya;
+    const pengikut = (s.pengikut || []).map((id) => pegawaiName(id)).filter(Boolean);
+    return `<div class="grid grid-2" style="grid-template-columns:1.5fr 1fr;align-items:start">
+      <div class="card card-pad">
+        <div class="card-title" style="margin-bottom:12px"><span class="ico">📋</span> Informasi Perjalanan Dinas</div>
+        <dl class="dl">
+          <dt>Perihal</dt><dd>${esc(s.perihal)}</dd>
+          <dt>Uraian Kegiatan</dt><dd>${esc(s.kegiatan)}</dd>
+          <dt>Tujuan</dt><dd>${esc(s.lokasiKota)}, ${esc(s.lokasiProvinsi)}</dd>
+          <dt>Tanggal</dt><dd>${rentangTanggal(s.tanggalBerangkat, s.tanggalKembali)} <span class="muted">(${s.lamaHari} hari)</span></dd>
+          <dt>Alat Angkut</dt><dd>${esc(s.alatAngkut || '-')}</dd>
+          <dt>Akun Belanja</dt><dd><span class="tag-akun">${esc(s.akun)}</span></dd>
+          ${pengikut.length ? `<dt>Pengikut</dt><dd>${pengikut.map(esc).join(', ')}</dd>` : ''}
+          <dt>Lampiran</dt><dd>${(s.lampiran || []).length ? (s.lampiran).map((l) => `📄 ${esc(l.nama)}`).join('<br>') : '<span class="muted">—</span>'}</dd>
+        </dl>
+      </div>
+      <div class="card card-pad">
+        <div class="card-title" style="margin-bottom:10px"><span class="ico">🧮</span> Rincian Biaya</div>
+        <table class="tbl" style="min-width:auto"><tbody>
+          <tr><td>Uang Harian</td><td class="num">${rupiah(r.uangHarian)}</td></tr>
+          <tr><td>Penginapan</td><td class="num">${rupiah(r.penginapan)}</td></tr>
+          <tr><td>Transport</td><td class="num">${rupiah(r.transport)}</td></tr>
+          <tr><td>Lain-lain</td><td class="num">${rupiah(r.lainnya)}</td></tr>
+          <tr style="font-weight:800;border-top:2px solid var(--navy)"><td>Total</td><td class="num">${rupiah(s.totalBiaya)}</td></tr>
+        </tbody></table>
+      </div>
+    </div>`;
+  }
+
+  function tabDokumen(s) {
+    const d = s.documents;
+    return `<div class="doc-actions"><button class="btn btn-sm" onclick="window.print()">🖨️ Cetak / Simpan PDF</button></div>
+      ${suratTugasHTML(s)}<div style="height:18px"></div>${sppdHTML(s)}`;
+  }
+  function mountDocs(body, s) {
+    body.querySelectorAll('[data-qr]').forEach((el) => renderQR(el, s.documents.qrToken, 96));
+  }
+
+  function tabPelaksanaan(body, s, isOwner) {
+    const pel = s.pelaksanaan || { checkin: [], bukti: [], catatan: '' };
+    body.innerHTML = `
+      <div class="grid grid-2" style="grid-template-columns:1fr 1fr;align-items:start">
+        <div class="card card-pad">
+          <div class="card-title" style="margin-bottom:10px"><span class="ico">📍</span> Riwayat Check-in & Geotagging</div>
+          ${pel.checkin.length ? `<ul class="timeline">${pel.checkin.map((c) => `
+            <li><span class="tl-dot done"></span>
+              <div class="tl-title">${esc(c.lokasi)}</div>
+              <div class="tl-meta">${tanggalJam(c.ts)}${c.lat ? ` · 📍 ${c.lat.toFixed(4)}, ${c.lng.toFixed(4)} <a href="https://maps.google.com/?q=${c.lat},${c.lng}" target="_blank" rel="noopener">peta</a>` : ''}</div>
+              ${c.note ? `<div class="tl-note">${esc(c.note)}</div>` : ''}
+            </li>`).join('')}</ul>` : `<p class="muted small">Belum ada check-in. ${isOwner ? 'Gunakan tombol “Check-in Lokasi”.' : ''}</p>`}
+        </div>
+        <div class="card card-pad">
+          <div class="card-title" style="margin-bottom:10px"><span class="ico">📷</span> Dokumentasi Kegiatan</div>
+          <div class="thumbs" id="bukti">${(pel.bukti || []).map((b) => b.dataUrl ? `<img class="thumb" src="${b.dataUrl}" alt="${esc(b.nama)}">` : `<div class="file-chip">📄 ${esc(b.nama)}</div>`).join('') || '<p class="muted small">Belum ada dokumentasi.</p>'}</div>
+          ${isOwner && ['TERBIT', 'PELAKSANAAN'].includes(s.status) ? `<div class="dropzone mt-12" id="dropBukti"><div class="big">📷</div>Unggah foto dokumentasi</div><input type="file" id="fileBukti" accept="image/*" multiple hidden>` : ''}
+          ${pel.catatan ? `<div class="divider"></div><b class="small">Catatan:</b><p class="small mb-0">${esc(pel.catatan)}</p>` : ''}
+        </div>
+      </div>`;
+    const drop = body.querySelector('#dropBukti');
+    if (drop) {
+      const fi = body.querySelector('#fileBukti');
+      drop.onclick = () => fi.click();
+      fi.onchange = async (e) => {
+        const cur = get();
+        cur.pelaksanaan = cur.pelaksanaan || { checkin: [], bukti: [], catatan: '' };
+        for (const f of e.target.files) {
+          if (f.size > 2_500_000) { toast(`"${f.name}" terlalu besar.`, 'warn'); continue; }
+          cur.pelaksanaan.bukti.push({ nama: f.name, dataUrl: await fileToDataUrl(f) });
+        }
+        store.upsert('sppd', cur); toast('Dokumentasi tersimpan.', 'ok'); tab = 'pelaksanaan'; render();
+      };
+    }
+  }
+
+  function tabSPJ(body, s, isOwner) {
+    const editable = isOwner && ['TERBIT', 'PELAKSANAAN', 'SPJ_REVISI'].includes(s.status);
+    if (editable) { renderSPJForm(body, s); return; }
+    if (!s.spj) { body.innerHTML = `<div class="empty"><div class="big">🧾</div><h3>SPJ belum diisi</h3><p class="muted">Pertanggungjawaban diisi pemohon setelah perjalanan dinas dilaksanakan.</p></div>`; return; }
+    const spj = s.spj;
+    body.innerHTML = `<div class="card card-pad">
+      <div class="card-title" style="margin-bottom:10px"><span class="ico">🧾</span> Laporan & Pertanggungjawaban (SPJ)</div>
+      <dl class="dl"><dt>Status SPJ</dt><dd>${statusBadge(s.status)}</dd>
+        <dt>Laporan</dt><dd>${esc(spj.laporan || '-')}</dd></dl>
+      <div class="divider"></div>
+      <table class="tbl" style="min-width:auto"><thead><tr><th>Komponen</th><th class="num">Estimasi</th><th class="num">Realisasi</th></tr></thead><tbody>
+        ${['uangHarian', 'penginapan', 'transport', 'lainnya'].map((k) => `<tr><td>${labelKomp(k)}</td><td class="num muted">${rupiah(s.rincianBiaya[k])}</td><td class="num">${rupiah(spj.realisasi?.[k] || 0)}</td></tr>`).join('')}
+        <tr style="font-weight:800;border-top:2px solid var(--navy)"><td>Total</td><td class="num muted">${rupiah(s.totalBiaya)}</td><td class="num">${rupiah(spj.totalRealisasi || 0)}</td></tr>
+      </tbody></table>
+      <div class="divider"></div>
+      <b class="small">Bukti Pendukung</b>
+      <div class="mt-8">${(spj.bukti || []).map((b) => `<div class="file-chip">📎 <b>${esc(b.kategori)}</b> — ${esc(b.nama)} <span class="muted" style="margin-left:auto">${b.nominal ? rupiah(b.nominal) : ''}</span></div>`).join('') || '<span class="muted small">—</span>'}</div>
+    </div>`;
+  }
+
+  function renderSPJForm(body, s) {
+    const r = s.rincianBiaya;
+    const prev = s.spj || {};
+    let bukti = (prev.bukti || []).slice();
+    body.innerHTML = `<div class="card card-pad">
+      <div class="card-title" style="margin-bottom:6px"><span class="ico">🧾</span> ${prev.laporan ? 'Perbaiki' : 'Isi'} Pertanggungjawaban (SPJ)</div>
+      <p class="muted small">Lengkapi laporan, realisasi biaya riil, dan unggah bukti (boarding pass, tiket, invoice hotel, daftar hadir, dll).</p>
+      <div class="field mt-12"><label class="lbl">Laporan Hasil Perjalanan Dinas <span class="req">*</span></label>
+        <textarea class="textarea" id="lap" placeholder="Ringkasan hasil & capaian kegiatan…">${esc(prev.laporan || '')}</textarea></div>
+      <div class="divider"></div>
+      <b class="small">Realisasi Biaya (Rp)</b>
+      <div class="form-grid mt-8">
+        ${['uangHarian', 'penginapan', 'transport', 'lainnya'].map((k) => `<div class="field"><label class="lbl">${labelKomp(k)} <span class="muted">(est. ${rupiah(r[k])})</span></label>
+          <input class="input" type="number" data-r="${k}" value="${prev.realisasi?.[k] ?? r[k]}"></div>`).join('')}
+      </div>
+      <div class="flex between mt-12"><b>Total Realisasi</b><b id="totR">${rupiah(prev.totalRealisasi || s.totalBiaya)}</b></div>
+      <div class="divider"></div>
+      <b class="small">Bukti Pendukung</b>
+      <div class="form-grid mt-8" style="grid-template-columns:1.2fr .8fr auto">
+        <div class="field"><select class="select" id="bKat">${['Tiket/Boarding Pass', 'Invoice Hotel', 'Bukti Transportasi', 'Daftar Hadir', 'Laporan/Notulen', 'Dokumentasi Foto', 'Lainnya'].map((k) => `<option>${k}</option>`).join('')}</select></div>
+        <div class="field"><input class="input" id="bNom" type="number" placeholder="Nominal (Rp)"></div>
+        <div class="field"><button class="btn" id="bAdd">📎 Tambah Berkas</button></div>
+      </div>
+      <input type="file" id="bFile" accept="application/pdf,image/*" hidden>
+      <div id="buktiList" class="mt-8"></div>
+      <div class="divider"></div>
+      <button class="btn btn-primary btn-block" id="spjSubmit">🚀 Ajukan SPJ untuk Verifikasi</button>
+    </div>`;
+
+    const totR = body.querySelector('#totR');
+    function recalc() {
+      const t = ['uangHarian', 'penginapan', 'transport', 'lainnya'].reduce((sum, k) => sum + (+body.querySelector(`[data-r="${k}"]`).value || 0), 0);
+      totR.textContent = rupiah(t); return t;
+    }
+    function renderBukti() {
+      body.querySelector('#buktiList').innerHTML = bukti.map((b, i) => `<div class="file-chip">📎 <b>${esc(b.kategori)}</b> — ${esc(b.nama)} <span class="muted">${b.nominal ? rupiah(b.nominal) : ''}</span><span class="x" data-i="${i}">✕</span></div>`).join('');
+      body.querySelectorAll('#buktiList .x').forEach((x) => x.onclick = () => { bukti.splice(+x.dataset.i, 1); renderBukti(); });
+    }
+    body.querySelectorAll('[data-r]').forEach((inp) => inp.oninput = recalc);
+    const bFile = body.querySelector('#bFile');
+    body.querySelector('#bAdd').onclick = () => bFile.click();
+    bFile.onchange = async (e) => {
+      const f = e.target.files[0]; if (!f) return;
+      const item = { kategori: body.querySelector('#bKat').value, nominal: +body.querySelector('#bNom').value || 0, nama: f.name, dataUrl: f.size < 2_500_000 ? await fileToDataUrl(f) : null };
+      bukti.push(item); body.querySelector('#bNom').value = ''; bFile.value = ''; renderBukti();
+    };
+    body.querySelector('#spjSubmit').onclick = async () => {
+      const lap = body.querySelector('#lap').value.trim();
+      if (!lap) { toast('Laporan wajib diisi.', 'err'); return; }
+      const realisasi = {}; ['uangHarian', 'penginapan', 'transport', 'lainnya'].forEach((k) => realisasi[k] = +body.querySelector(`[data-r="${k}"]`).value || 0);
+      const totalRealisasi = realisasi.uangHarian + realisasi.penginapan + realisasi.transport + realisasi.lainnya;
+      if (!await confirmDialog({ title: 'Ajukan SPJ', message: `Total realisasi ${rupiah(totalRealisasi)} akan diajukan untuk verifikasi Bendahara. Lanjutkan?` })) return;
+      submitSPJ(s, { laporan: lap, realisasi, totalRealisasi, bukti });
+      window.dispatchEvent(new Event('sppd:changed')); toast('SPJ diajukan untuk verifikasi.', 'ok'); tab = 'spj'; render();
+    };
+    renderBukti(); recalc();
+  }
+
+  function tabRiwayat(s) {
+    const h = [...(s.history || [])].reverse();
+    return `<div class="card card-pad">
+      <div class="card-title" style="margin-bottom:14px"><span class="ico">🕘</span> Riwayat & Jejak Audit</div>
+      ${h.length ? `<ul class="timeline">${h.map((x, i) => {
+        const cls = x.action.includes('Menolak') ? 'reject' : (i === 0 ? 'current' : 'done');
+        return `<li><span class="tl-dot ${cls}"></span>
+          <div class="tl-title">${esc(x.action)} ${statusBadge(x.status)}</div>
+          <div class="tl-meta">${esc((pegawaiName(x.actorId) || '').split(',')[0])} (${esc(roleLabel(x.role))}) · ${tanggalJam(x.ts)}</div>
+          ${x.note ? `<div class="tl-note">${esc(x.note)}</div>` : ''}</li>`;
+      }).join('')}</ul>` : '<p class="muted small">Belum ada riwayat.</p>'}
+    </div>`;
+  }
+
+  render();
+}
+
+function labelKomp(k) { return { uangHarian: 'Uang Harian', penginapan: 'Penginapan', transport: 'Transport', lainnya: 'Lain-lain' }[k] || k; }
+
+/* ---- Template dokumen resmi ---- */
+function kop() {
+  return `<div class="kop"><div class="garuda"></div><div class="kop-txt">
+    <div class="l1">${esc(ORG.instansi)}</div><div class="l2">${esc(ORG.satker)}</div>
+    <div class="l3">${esc(ORG.alamat)} · Telp. ${esc(ORG.telp)} · ${esc(ORG.email)}</div></div></div>`;
+}
+function suratTugasHTML(s) {
+  const p = pegawai(s.pemohonId); const d = s.documents;
+  const pengikut = (s.pengikut || []).map((id) => pegawai(id)).filter(Boolean);
+  return `<div class="doc">${kop()}
+    <h2 class="doc-title">SURAT TUGAS</h2>
+    <div class="doc-no">Nomor: ${esc(d.suratTuganNo)}</div>
+    <p>Dasar: Pelaksanaan kegiatan ${esc(s.perihal)}.</p>
+    <p>Sekretaris selaku Kuasa Pengguna Anggaran ${esc(ORG.satker)} dengan ini menugaskan:</p>
+    <table class="doc-tbl">
+      <tr><td style="width:130px">Nama</td><td>: ${esc(p?.nama || '')}</td></tr>
+      <tr><td>NIP</td><td>: ${esc(p?.nip || '')}</td></tr>
+      <tr><td>Jabatan</td><td>: ${esc(p?.jabatan || '')}</td></tr>
+      ${pengikut.map((pg) => `<tr><td>Pengikut</td><td>: ${esc(pg.nama)} (${esc(pg.jabatan)})</td></tr>`).join('')}
+    </table>
+    <p style="margin-top:8px">Untuk melaksanakan: <b>${esc(s.kegiatan)}</b> di <b>${esc(s.lokasiKota)}, ${esc(s.lokasiProvinsi)}</b>
+       pada tanggal <b>${rentangTanggal(s.tanggalBerangkat, s.tanggalKembali)}</b> (${s.lamaHari} hari) menggunakan ${esc(s.alatAngkut || 'kendaraan')}.</p>
+    <p>Biaya perjalanan dinas dibebankan pada DIPA ${esc(ORG.satker)} TA ${ORG.tahunAnggaran}, akun belanja ${esc(s.akun)}.</p>
+    <div class="qr-box"><div data-qr></div><div class="small">Validasi dokumen elektronik.<br>Token: <b>${esc(d.qrToken)}</b><br>Pindai QR untuk verifikasi keaslian.</div></div>
+    <div class="ttd-grid"><div class="ttd">
+      ${esc(ORG.kotaAsal)}, ${tanggal(d.tglTerbit)}<br>Kuasa Pengguna Anggaran,<br><br>
+      <span class="badge badge-green" style="font-family:var(--font)">✓ Ditandatangani elektronik (BSrE)</span><br><br>
+      <b>${esc(pegawai('peg-kpa')?.nama || '')}</b><br>NIP ${esc(pegawai('peg-kpa')?.nip || '')}
+    </div></div>
+  </div>`;
+}
+function sppdHTML(s) {
+  const p = pegawai(s.pemohonId); const d = s.documents;
+  return `<div class="doc">${kop()}
+    <h2 class="doc-title">SURAT PERJALANAN DINAS (SPPD)</h2>
+    <div class="doc-no">Nomor: ${esc(d.sppdNo)}</div>
+    <table class="doc-tbl">
+      <tr><td style="width:36px">1.</td><td style="width:230px">Pejabat yang memberi perintah</td><td>: Kuasa Pengguna Anggaran</td></tr>
+      <tr><td>2.</td><td>Nama pegawai yang diperintah</td><td>: ${esc(p?.nama || '')}</td></tr>
+      <tr><td>3.</td><td>NIP / Pangkat / Golongan</td><td>: ${esc(p?.nip || '')} / ${esc(p?.golongan || '')}</td></tr>
+      <tr><td>4.</td><td>Jabatan</td><td>: ${esc(p?.jabatan || '')}</td></tr>
+      <tr><td>5.</td><td>Maksud perjalanan dinas</td><td>: ${esc(s.perihal)}</td></tr>
+      <tr><td>6.</td><td>Alat angkut</td><td>: ${esc(s.alatAngkut || '-')}</td></tr>
+      <tr><td>7.</td><td>Tempat tujuan</td><td>: ${esc(s.lokasiKota)}, ${esc(s.lokasiProvinsi)}</td></tr>
+      <tr><td>8.</td><td>Lama / tanggal perjalanan</td><td>: ${s.lamaHari} hari, ${rentangTanggal(s.tanggalBerangkat, s.tanggalKembali)}</td></tr>
+      <tr><td>9.</td><td>Pembebanan anggaran (akun)</td><td>: DIPA ${esc(ORG.satker)} — ${esc(s.akun)}</td></tr>
+      <tr><td>10.</td><td>Estimasi biaya</td><td>: ${rupiah(s.totalBiaya)}</td></tr>
+    </table>
+    <div class="qr-box"><div data-qr></div><div class="small">Dikeluarkan di ${esc(ORG.kotaAsal)} pada ${tanggal(d.tglTerbit)}.<br>Token validasi: <b>${esc(d.qrToken)}</b></div></div>
+    <div class="ttd-grid"><div class="ttd">Pejabat Pembuat Komitmen,<br><br>
+      <span class="badge badge-green" style="font-family:var(--font)">✓ TTE BSrE</span><br><br>
+      <b>${esc(pegawai('peg-ppk')?.nama || '')}</b><br>NIP ${esc(pegawai('peg-ppk')?.nip || '')}</div></div>
+  </div>`;
+}
+
+return { renderDetail };
+};
+
+__modules["views/login"] = function(){
+/* ===========================================================================
+   views/login.js — Halaman masuk. Demo: pilih peran/akun untuk masuk.
+   ========================================================================= */
+
+const { store } = __require("store");
+const { login, ROLES } = __require("auth");
+const { ORG } = __require("seed");
+const { esc, initials, toast } = __require("ui");
+
+function renderLogin(app, onDone) {
+  app.removeAttribute('aria-busy');
+  const pegawai = store.list('pegawai');
+  const roleKeys = Object.keys(ROLES);
+  const defaultByRole = (r) => pegawai.find((p) => p.role === r);
+
+  app.innerHTML = `
+  <div class="auth">
+    <div class="auth-hero">
+      <div class="badge-line"><span>★</span> SISTEM INFORMASI PERJALANAN DINAS</div>
+      <h1>SISFO SPPD<br>${esc(ORG.satker)}</h1>
+      <p style="color:#cdd9ee;max-width:46ch">Pengajuan & pertanggungjawaban perjalanan dinas yang
+        <b style="color:#fff">paperless, mobile-first, dan akuntabel</b> — selaras prinsip akuntabilitas keuangan negara.</p>
+      <ul>
+        <li><span class="c">✓</span> Alur persetujuan berjenjang (atasan → keuangan → PPK → KPA)</li>
+        <li><span class="c">✓</span> Surat Tugas & SPPD elektronik + QR Code validasi</li>
+        <li><span class="c">✓</span> SPJ digital, deteksi duplikasi klaim, & arsip permanen</li>
+        <li><span class="c">✓</span> Dashboard realtime serapan anggaran (DIPA)</li>
+        <li><span class="c">✓</span> Bekerja offline (PWA) — dapat di-install di ponsel</li>
+      </ul>
+    </div>
+    <div class="auth-card">
+      <div class="auth-inner">
+        <div class="brand" style="padding:0 0 6px"><div class="mark"></div>
+          <div><div class="name" style="color:var(--navy)">SISFO SPPD</div><div class="sub" style="color:var(--muted)">KPU Jawa Barat</div></div></div>
+        <h2>Masuk</h2>
+        <p class="muted small">Mode demo — pilih peran untuk mencoba seluruh alur. Tidak perlu kata sandi.</p>
+
+        <div class="role-grid" id="roleGrid">
+          ${roleKeys.map((r) => {
+            const acc = defaultByRole(r);
+            return `<button class="role-pick" data-role="${r}">
+              <div class="r-name">${esc(ROLES[r].short)}</div>
+              <div class="r-sub">${esc(ROLES[r].desc)}</div>
+            </button>`;
+          }).join('')}
+        </div>
+
+        <div class="field mt-16">
+          <label class="lbl">Atau pilih akun spesifik</label>
+          <select class="select" id="accSelect">
+            ${pegawai.map((p) => `<option value="${p.id}">${esc(p.nama)} — ${esc(ROLES[p.role].label)}</option>`).join('')}
+          </select>
+        </div>
+
+        <button class="btn btn-primary btn-block mt-16" id="loginBtn">Masuk →</button>
+        <p class="muted small text-center mt-12">© ${new Date().getFullYear()} ${esc(ORG.satker)} · v1.0.0</p>
+      </div>
+    </div>
+  </div>`;
+
+  let selected = pegawai[0].id;
+  const accSelect = app.querySelector('#accSelect');
+  accSelect.value = selected;
+
+  app.querySelectorAll('.role-pick').forEach((btn) => {
+    btn.onclick = () => {
+      app.querySelectorAll('.role-pick').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const acc = defaultByRole(btn.dataset.role);
+      if (acc) { selected = acc.id; accSelect.value = acc.id; }
+    };
+  });
+  accSelect.onchange = () => {
+    selected = accSelect.value;
+    app.querySelectorAll('.role-pick').forEach((b) => b.classList.remove('active'));
+  };
+
+  app.querySelector('#loginBtn').onclick = () => {
+    const u = login(selected);
+    if (!u) { toast('Akun tidak ditemukan.', 'err'); return; }
+    toast(`Selamat datang, ${u.nama.split(',')[0]}.`, 'ok');
+    onDone();
+  };
+}
+
+return { renderLogin };
+};
+
+__modules["views/masterdata"] = function(){
+/* ===========================================================================
+   views/masterdata.js — Master data: Pegawai, SBM, Akun Anggaran (DIPA),
+   serta info penyimpanan & reset data demo.
+   ========================================================================= */
+
+const { store } = __require("store");
+const { roleLabel, ROLES } = __require("auth");
+const { esc, rupiah, toast, modal, confirmDialog, fmtBytes } = __require("ui");
+
+function renderMasterData(root) {
+  let tab = 'pegawai';
+
+  function render() {
+    root.innerHTML = `
+    <div class="page-head"><div><h1>Master Data</h1><p class="desc">Kelola data referensi sistem.</p></div></div>
+    <div class="tabs">
+      <button data-t="pegawai" class="${tab === 'pegawai' ? 'active' : ''}">👤 Pegawai</button>
+      <button data-t="sbm" class="${tab === 'sbm' ? 'active' : ''}">💰 Standar Biaya (SBM)</button>
+      <button data-t="anggaran" class="${tab === 'anggaran' ? 'active' : ''}">📁 Akun Anggaran</button>
+      <button data-t="sistem" class="${tab === 'sistem' ? 'active' : ''}">⚙️ Sistem</button>
+    </div>
+    <div id="body"></div>`;
+    root.querySelectorAll('.tabs button').forEach((b) => b.onclick = () => { tab = b.dataset.t; render(); });
+    const body = root.querySelector('#body');
+    if (tab === 'pegawai') body.innerHTML = pegawaiTbl();
+    else if (tab === 'sbm') { body.innerHTML = sbmTbl(); wireSbm(body); }
+    else if (tab === 'anggaran') { body.innerHTML = anggaranTbl(); wireAnggaran(body); }
+    else sistem(body);
+  }
+
+  function pegawaiTbl() {
+    const list = store.list('pegawai');
+    return `<div class="table-wrap"><table class="tbl">
+      <thead><tr><th>Nama</th><th>NIP</th><th>Jabatan</th><th>Gol.</th><th>Unit</th><th>Peran Sistem</th></tr></thead>
+      <tbody>${list.map((p) => `<tr>
+        <td>${esc(p.nama)}</td><td class="nowrap">${esc(p.nip)}</td><td>${esc(p.jabatan)}</td>
+        <td>${esc(p.golongan)}</td><td>${esc(p.unit)}</td>
+        <td><span class="badge badge-blue">${esc(roleLabel(p.role))}</span></td></tr>`).join('')}</tbody>
+    </table></div>`;
+  }
+
+  function sbmTbl() {
+    const list = store.list('sbm');
+    return `<p class="muted small">Tarif uang harian & batas tertinggi penginapan per provinsi tujuan. Klik untuk mengubah.</p>
+    <div class="table-wrap"><table class="tbl">
+      <thead><tr><th>Provinsi</th><th class="num">Uang Harian / hari</th><th class="num">Penginapan / malam</th><th></th></tr></thead>
+      <tbody>${list.map((s) => `<tr>
+        <td>${esc(s.provinsi)}</td><td class="num">${rupiah(s.uangHarian)}</td><td class="num">${rupiah(s.penginapan)}</td>
+        <td class="num"><button class="btn btn-sm" data-edit="${s.id}">✏️</button></td></tr>`).join('')}</tbody>
+    </table></div>`;
+  }
+  function wireSbm(body) {
+    body.querySelectorAll('[data-edit]').forEach((b) => b.onclick = () => {
+      const s = store.find('sbm', b.dataset.edit);
+      modal({ title: `Ubah SBM — ${s.provinsi}`,
+        body: `<div class="field"><label class="lbl">Uang Harian (Rp/hari)</label><input class="input" id="uh" type="number" value="${s.uangHarian}"></div>
+               <div class="field mt-12"><label class="lbl">Penginapan (Rp/malam)</label><input class="input" id="pg" type="number" value="${s.penginapan}"></div>`,
+        footer: `<button class="btn" data-no>Batal</button><button class="btn btn-primary" data-yes>Simpan</button>`,
+        onMount: (r, close) => {
+          r.querySelector('[data-no]').onclick = close;
+          r.querySelector('[data-yes]').onclick = () => { s.uangHarian = +r.querySelector('#uh').value; s.penginapan = +r.querySelector('#pg').value; store.upsert('sbm', s); close(); toast('SBM diperbarui.', 'ok'); render(); };
+        } });
+    });
+  }
+
+  function anggaranTbl() {
+    const list = store.list('anggaran');
+    return `<p class="muted small">Pagu anggaran per akun belanja perjalanan dinas (DIPA). Klik untuk mengubah pagu.</p>
+    <div class="table-wrap"><table class="tbl">
+      <thead><tr><th>Kode</th><th>Uraian</th><th class="num">Pagu</th><th></th></tr></thead>
+      <tbody>${list.map((a) => `<tr>
+        <td><span class="tag-akun">${esc(a.kode)}</span></td><td>${esc(a.nama)}</td><td class="num">${rupiah(a.pagu)}</td>
+        <td class="num"><button class="btn btn-sm" data-edit="${a.id}">✏️</button></td></tr>`).join('')}</tbody>
+    </table></div>`;
+  }
+  function wireAnggaran(body) {
+    body.querySelectorAll('[data-edit]').forEach((b) => b.onclick = () => {
+      const a = store.find('anggaran', b.dataset.edit);
+      modal({ title: `Ubah Pagu — ${a.kode}`,
+        body: `<p class="small muted">${esc(a.nama)}</p><div class="field"><label class="lbl">Pagu (Rp)</label><input class="input" id="pg" type="number" value="${a.pagu}"></div>`,
+        footer: `<button class="btn" data-no>Batal</button><button class="btn btn-primary" data-yes>Simpan</button>`,
+        onMount: (r, close) => {
+          r.querySelector('[data-no]').onclick = close;
+          r.querySelector('[data-yes]').onclick = () => { a.pagu = +r.querySelector('#pg').value; store.upsert('anggaran', a); close(); toast('Pagu diperbarui.', 'ok'); render(); };
+        } });
+    });
+  }
+
+  function sistem(body) {
+    const meta = store.meta();
+    body.innerHTML = `
+    <div class="card card-pad">
+      <div class="card-title" style="margin-bottom:10px"><span class="ico">💾</span> Penyimpanan Lokal</div>
+      <dl class="dl">
+        <dt>Mode</dt><dd>Offline-first (localStorage) — data tersimpan di perangkat ini.</dd>
+        <dt>Perkiraan terpakai</dt><dd>${fmtBytes(meta.bytes)}</dd>
+        <dt>Jumlah SPPD</dt><dd>${store.list('sppd').length}</dd>
+        <dt>Entri Audit</dt><dd>${store.list('audit').length}</dd>
+      </dl>
+      <div class="divider"></div>
+      <button class="btn btn-danger" id="reset">🗑️ Reset Data Demo</button>
+      <p class="hint mt-8">Menghapus seluruh data lokal dan memuat ulang data contoh awal.</p>
+    </div>`;
+    body.querySelector('#reset').onclick = async () => {
+      if (await confirmDialog({ title: 'Reset Data Demo', message: 'Seluruh data lokal akan dihapus dan diganti data contoh. Lanjutkan?', danger: true, confirmText: 'Ya, Reset' })) {
+        store.reset(); toast('Data direset. Memuat ulang…', 'ok'); setTimeout(() => location.reload(), 700);
+      }
+    };
+  }
+
+  render();
+}
+
+return { renderMasterData };
+};
+
+__modules["views/pembayaran"] = function(){
+/* ===========================================================================
+   views/pembayaran.js — Daftar pencairan (Bendahara): siap bayar & riwayat.
+   ========================================================================= */
+
+const { store } = __require("store");
+const { esc, rupiah, rupiahShort, tanggal } = __require("ui");
+const { renderSppdList, emptyState, pegawaiName } = __require("views/shared");
+
+function renderPembayaran(root) {
+  const all = store.list('sppd');
+  const siap = all.filter((s) => s.status === 'SPJ_DISETUJUI').sort((a, b) => b.updatedTs - a.updatedTs);
+  const dibayar = all.filter((s) => s.status === 'SELESAI').sort((a, b) => new Date(b.pembayaran?.tgl || 0) - new Date(a.pembayaran?.tgl || 0));
+  const totalDibayar = dibayar.reduce((t, s) => t + (s.pembayaran?.nominal || 0), 0);
+  const totalSiap = siap.reduce((t, s) => t + (s.spj?.totalRealisasi || s.totalBiaya), 0);
+
+  root.innerHTML = `
+  <div class="page-head"><div><h1>Pembayaran & Pencairan</h1>
+    <p class="desc">Cairkan uang harian/reimbursement atas SPJ yang telah disahkan.</p></div></div>
+
+  <div class="grid grid-3">
+    <div class="stat accent-gold"><span class="ico">⏳</span><div class="label">Siap Dibayar</div><div class="value">${siap.length}</div><div class="delta muted">${rupiahShort(totalSiap)}</div></div>
+    <div class="stat accent-green"><span class="ico">✅</span><div class="label">Telah Dibayar</div><div class="value">${dibayar.length}</div><div class="delta muted">tahun berjalan</div></div>
+    <div class="stat accent-navy"><span class="ico">💰</span><div class="label">Total Tersalurkan</div><div class="value sm">${rupiahShort(totalDibayar)}</div></div>
+  </div>
+
+  <h3 class="card-title" style="margin:20px 0 10px"><span class="ico">💳</span> Siap Dibayar</h3>
+  <div id="siap"></div>
+
+  <h3 class="card-title" style="margin:22px 0 10px"><span class="ico">🧾</span> Riwayat Pembayaran</h3>
+  <div id="riwayat"></div>`;
+
+  const siapEl = root.querySelector('#siap');
+  if (siap.length) renderSppdList(siapEl, siap, { showPemohon: true });
+  else siapEl.innerHTML = emptyState('🎉', 'Tidak ada antrean', 'Tidak ada SPJ yang menunggu pencairan.');
+
+  const rw = root.querySelector('#riwayat');
+  rw.innerHTML = dibayar.length ? `<div class="table-wrap"><table class="tbl">
+    <thead><tr><th>Tanggal</th><th>No. SP2D/Bukti</th><th>Pemohon</th><th>Perihal</th><th>Metode</th><th class="num">Nominal</th></tr></thead>
+    <tbody>${dibayar.map((s) => `<tr class="clickable" data-go="/sppd/${s.id}">
+      <td class="nowrap">${tanggal(s.pembayaran?.tgl)}</td>
+      <td class="nowrap">${esc(s.pembayaran?.buktiNo || '-')}</td>
+      <td>${esc((pegawaiName(s.pemohonId) || '').split(',')[0])}</td>
+      <td>${esc(s.perihal)}</td>
+      <td class="nowrap">${esc(s.pembayaran?.metode || '-')}</td>
+      <td class="num">${rupiah(s.pembayaran?.nominal || 0)}</td></tr>`).join('')}</tbody></table></div>`
+    : emptyState('🗂️', 'Belum ada pembayaran', 'Riwayat pencairan akan tampil di sini.');
+
+  root.querySelectorAll('[data-go]').forEach((el) => el.onclick = () => location.hash = el.getAttribute('data-go'));
+}
+
+return { renderPembayaran };
+};
+
+__modules["views/pengajuan"] = function(){
+/* ===========================================================================
+   views/pengajuan.js — Formulir pengajuan perjalanan dinas.
+   Menghitung biaya otomatis dari SBM, mengecek anggaran, mendeteksi duplikasi
+   klaim, mengunggah lampiran (undangan/TOR), lalu mengajukan ke alur approval.
+   ========================================================================= */
+
+const { store, uid } = __require("store");
+const { currentUser } = __require("auth");
+const { ORG } = __require("seed");
+const { hitungLamaHari, hitungBiaya, detectDuplicate, cekAnggaran, submitPengajuan, resubmit } = __require("domain");
+const { esc, rupiah, fileToDataUrl, fmtBytes, toast } = __require("ui");
+const { go } = __require("router");
+const { pegawai } = __require("views/shared");
+
+function renderPengajuan(root, parts) {
+  const u = currentUser();
+  const editId = parts[1];
+  const editing = editId ? store.find('sppd', editId) : null;
+  const isRevisi = editing && (editing.status === 'REVISI');
+  const sbm = store.list('sbm');
+  const anggaran = store.list('anggaran');
+  const rekan = store.list('pegawai').filter((p) => p.id !== u.id);
+
+  // Lampiran sementara (data URL).
+  let lampiran = editing?.lampiran ? editing.lampiran.filter((l) => l.dataUrl) : [];
+
+  const v = editing || {};
+  const today = new Date().toISOString().slice(0, 10);
+
+  root.innerHTML = `
+  <div class="page-head">
+    <div>
+      <h1>${isRevisi ? 'Revisi' : 'Ajukan'} Perjalanan Dinas</h1>
+      <p class="desc">Pemohon: <b>${esc(u.nama)}</b> · ${esc(u.jabatan)}</p>
+    </div>
+    <div class="actions"><a class="btn" href="#/daftar">← Kembali</a></div>
+  </div>
+
+  ${isRevisi ? `<div class="card card-pad" style="border-left:4px solid var(--red);margin-bottom:14px">
+    <b class="muted">⚠️ Catatan revisi dari verifikator:</b>
+    <p style="margin:6px 0 0">${esc(lastRevisiNote(editing))}</p></div>` : ''}
+
+  <div class="grid grid-2" style="grid-template-columns: 1.6fr 1fr; align-items:start">
+    <div class="card card-pad">
+      <form id="frm" novalidate>
+        <div class="form-grid">
+          <div class="field col-2">
+            <label class="lbl">Maksud / Perihal Perjalanan Dinas <span class="req">*</span></label>
+            <input class="input" name="perihal" value="${esc(v.perihal || '')}" placeholder="mis. Rapat Koordinasi Pemutakhiran Data Pemilih" required>
+          </div>
+          <div class="field col-2">
+            <label class="lbl">Uraian Kegiatan <span class="req">*</span></label>
+            <textarea class="textarea" name="kegiatan" placeholder="Jelaskan kegiatan yang akan diikuti…" required>${esc(v.kegiatan || '')}</textarea>
+          </div>
+          <div class="field">
+            <label class="lbl">Kota/Kabupaten Tujuan <span class="req">*</span></label>
+            <input class="input" name="lokasiKota" value="${esc(v.lokasiKota || '')}" placeholder="mis. Jakarta Pusat" required>
+          </div>
+          <div class="field">
+            <label class="lbl">Provinsi Tujuan <span class="req">*</span></label>
+            <select class="select" name="lokasiProvinsi" required>
+              <option value="">— pilih provinsi —</option>
+              ${sbm.map((s) => `<option value="${esc(s.provinsi)}" ${v.lokasiProvinsi === s.provinsi ? 'selected' : ''}>${esc(s.provinsi)}</option>`).join('')}
+            </select>
+            <span class="hint">Menentukan tarif uang harian & batas penginapan (SBM).</span>
+          </div>
+          <div class="field">
+            <label class="lbl">Tanggal Berangkat <span class="req">*</span></label>
+            <input class="input" type="date" name="tanggalBerangkat" value="${esc(v.tanggalBerangkat || '')}" min="${today}" required>
+          </div>
+          <div class="field">
+            <label class="lbl">Tanggal Kembali <span class="req">*</span></label>
+            <input class="input" type="date" name="tanggalKembali" value="${esc(v.tanggalKembali || '')}" min="${today}" required>
+          </div>
+          <div class="field">
+            <label class="lbl">Alat Angkut</label>
+            <select class="select" name="alatAngkut">
+              ${['Pesawat', 'Kereta Api', 'Kendaraan Dinas', 'Kendaraan Umum / Travel', 'Kapal Laut'].map((a) =>
+                `<option ${v.alatAngkut === a ? 'selected' : ''}>${a}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label class="lbl">Akun Belanja (DIPA) <span class="req">*</span></label>
+            <select class="select" name="akun" required>
+              ${anggaran.map((a) => `<option value="${a.kode}" ${v.akun === a.kode ? 'selected' : ''}>${a.kode} — ${esc(a.nama)}</option>`).join('')}
+            </select>
+          </div>
+          <div class="field">
+            <label class="lbl">Estimasi Biaya Transport (Rp)</label>
+            <input class="input" type="number" name="transport" min="0" step="1000" value="${v.rincianBiaya?.transport ?? 0}">
+            <span class="hint">Tiket PP / BBM / tol (sesuai bukti riil saat SPJ).</span>
+          </div>
+          <div class="field">
+            <label class="lbl">Biaya Lain-lain (Rp)</label>
+            <input class="input" type="number" name="lainnya" min="0" step="1000" value="${v.rincianBiaya?.lainnya ?? 0}">
+          </div>
+          <div class="field col-2">
+            <label class="lbl">Pengikut (opsional)</label>
+            <select class="select" name="pengikut" multiple size="3">
+              ${rekan.map((p) => `<option value="${p.id}" ${(v.pengikut || []).includes(p.id) ? 'selected' : ''}>${esc(p.nama)}</option>`).join('')}
+            </select>
+            <span class="hint">Tahan Ctrl/Cmd untuk memilih lebih dari satu.</span>
+          </div>
+          <div class="field col-2">
+            <label class="lbl">Lampiran (Undangan / TOR / Surat Permintaan)</label>
+            <div class="dropzone" id="drop"><div class="big">📎</div>Klik untuk unggah berkas (PDF/gambar)</div>
+            <input type="file" id="file" accept="application/pdf,image/*" multiple hidden>
+            <div id="fileList"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <div class="card card-pad">
+        <div class="card-title" style="margin-bottom:10px"><span class="ico">🧮</span> Estimasi Biaya</div>
+        <div id="biaya"></div>
+      </div>
+      <div id="warnDup"></div>
+      <div class="card card-pad mt-12">
+        <button class="btn btn-primary btn-block" id="btnSubmit">${isRevisi ? '🔁 Kirim Ulang' : '🚀 Ajukan untuk Persetujuan'}</button>
+        ${!isRevisi ? `<button class="btn btn-block mt-12" id="btnDraft">💾 Simpan sebagai Draf</button>` : ''}
+      </div>
+    </div>
+  </div>`;
+
+  const frm = root.querySelector('#frm');
+  const biayaEl = root.querySelector('#biaya');
+  const warnEl = root.querySelector('#warnDup');
+  const fileList = root.querySelector('#fileList');
+
+  function readForm() {
+    const fd = new FormData(frm);
+    const provinsi = fd.get('lokasiProvinsi');
+    const berangkat = fd.get('tanggalBerangkat');
+    const kembali = fd.get('tanggalKembali');
+    const lama = (berangkat && kembali) ? hitungLamaHari(berangkat, kembali) : 1;
+    const { rincian, total } = hitungBiaya(provinsi, lama, fd.get('transport'), fd.get('lainnya'));
+    const pengikut = Array.from(frm.querySelector('[name=pengikut]').selectedOptions).map((o) => o.value);
+    return {
+      perihal: fd.get('perihal')?.trim(), kegiatan: fd.get('kegiatan')?.trim(),
+      lokasiKota: fd.get('lokasiKota')?.trim(), lokasiProvinsi: provinsi,
+      tanggalBerangkat: berangkat, tanggalKembali: kembali, lamaHari: lama,
+      alatAngkut: fd.get('alatAngkut'), akun: fd.get('akun'), pengikut,
+      rincianBiaya: rincian, totalBiaya: total,
+    };
+  }
+
+  function recompute() {
+    const d = readForm();
+    biayaEl.innerHTML = `
+      <table class="tbl" style="min-width:auto"><tbody>
+        <tr><td>Uang Harian <span class="muted">(${d.lamaHari} hari)</span></td><td class="num">${rupiah(d.rincianBiaya.uangHarian)}</td></tr>
+        <tr><td>Penginapan <span class="muted">(${Math.max(0, d.lamaHari - 1)} mlm)</span></td><td class="num">${rupiah(d.rincianBiaya.penginapan)}</td></tr>
+        <tr><td>Transport</td><td class="num">${rupiah(d.rincianBiaya.transport)}</td></tr>
+        <tr><td>Lain-lain</td><td class="num">${rupiah(d.rincianBiaya.lainnya)}</td></tr>
+        <tr style="font-weight:800;border-top:2px solid var(--navy)"><td>Total Estimasi</td><td class="num">${rupiah(d.totalBiaya)}</td></tr>
+      </tbody></table>`;
+
+    // Cek anggaran
+    if (d.akun && d.totalBiaya) {
+      const cek = cekAnggaran(d.akun, d.totalBiaya);
+      biayaEl.insertAdjacentHTML('beforeend',
+        `<div class="badge ${cek.ok ? 'badge-green' : 'badge-red'}" style="margin-top:8px">
+          ${cek.ok ? '✓ Pagu anggaran mencukupi' : '✕ Pagu tidak mencukupi'} · sisa ${rupiah(cek.sisa)}</div>`);
+    }
+
+    // Deteksi duplikasi
+    if (d.tanggalBerangkat && d.tanggalKembali) {
+      const dups = detectDuplicate({ id: editId || '_new', pemohonId: u.id, tanggalBerangkat: d.tanggalBerangkat, tanggalKembali: d.tanggalKembali });
+      warnEl.innerHTML = dups.length ? `<div class="card card-pad mt-12" style="border-left:4px solid var(--orange)">
+        <b style="color:var(--orange)">⚠️ Potensi duplikasi klaim</b>
+        <p class="small mt-8 mb-0">Tanggal beririsan dengan ${dups.length} perjalanan dinas Anda lainnya:
+        ${dups.map((x) => `<br>• ${esc(x.perihal)}`).join('')}</p></div>` : '';
+    }
+  }
+
+  function renderFiles() {
+    fileList.innerHTML = lampiran.map((f, i) => `<div class="file-chip">📄 ${esc(f.nama)} <span class="muted">${fmtBytes(f.size)}</span><span class="x" data-i="${i}">✕</span></div>`).join('');
+    fileList.querySelectorAll('.x').forEach((x) => x.onclick = () => { lampiran.splice(+x.dataset.i, 1); renderFiles(); });
+  }
+
+  // Events
+  frm.addEventListener('input', recompute);
+  frm.addEventListener('change', recompute);
+  root.querySelector('#drop').onclick = () => root.querySelector('#file').click();
+  root.querySelector('#file').onchange = async (e) => {
+    for (const file of e.target.files) {
+      if (file.size > 2_500_000) { toast(`"${file.name}" terlalu besar (maks ~2.5MB untuk demo).`, 'warn'); continue; }
+      const dataUrl = await fileToDataUrl(file);
+      lampiran.push({ nama: file.name, tipe: file.type, size: file.size, dataUrl });
+    }
+    renderFiles();
+  };
+
+  function validate() {
+    let ok = true;
+    frm.querySelectorAll('[required]').forEach((f) => {
+      const bad = !f.value.trim();
+      f.classList.toggle('invalid', bad);
+      if (bad) ok = false;
+    });
+    const d = readForm();
+    if (d.tanggalBerangkat && d.tanggalKembali && new Date(d.tanggalKembali) < new Date(d.tanggalBerangkat)) {
+      frm.querySelector('[name=tanggalKembali]').classList.add('invalid');
+      toast('Tanggal kembali tidak boleh sebelum tanggal berangkat.', 'err'); ok = false;
+    }
+    if (!ok) toast('Mohon lengkapi isian yang wajib.', 'err');
+    return ok;
+  }
+
+  function buildRecord(status) {
+    const d = readForm();
+    const base = editing || { id: uid('sppd-'), pemohonId: u.id, createdTs: Date.now(), history: [], pelaksanaan: { checkin: [], bukti: [], catatan: '' }, spj: null, pembayaran: null, documents: null };
+    return { ...base, ...d, lampiran, biayaDisetujui: d.totalBiaya, status: status || base.status || 'DRAFT', updatedTs: Date.now() };
+  }
+
+  root.querySelector('#btnSubmit').onclick = () => {
+    if (!validate()) return;
+    const rec = buildRecord('DRAFT');
+    store.upsert('sppd', rec);
+    if (isRevisi) resubmit(store.find('sppd', rec.id));
+    else submitPengajuan(store.find('sppd', rec.id));
+    window.dispatchEvent(new Event('sppd:changed'));
+    toast('Pengajuan terkirim untuk persetujuan atasan.', 'ok');
+    go('/sppd/' + rec.id);
+  };
+
+  const btnDraft = root.querySelector('#btnDraft');
+  if (btnDraft) btnDraft.onclick = () => {
+    const rec = buildRecord('DRAFT');
+    store.upsert('sppd', rec);
+    toast('Tersimpan sebagai draf.', 'ok');
+    go('/sppd/' + rec.id);
+  };
+
+  renderFiles();
+  recompute();
+}
+
+function lastRevisiNote(s) {
+  const h = [...(s.history || [])].reverse().find((x) => x.action === 'Meminta revisi');
+  return h?.note || 'Mohon perbaiki sesuai catatan verifikator.';
+}
+
+return { renderPengajuan };
+};
+
+__modules["views/shared"] = function(){
+/* ===========================================================================
+   views/shared.js — Komponen tampilan yang dipakai banyak halaman.
+   ========================================================================= */
+
+const { store } = __require("store");
+const { statusBadge, rentangTanggal, rupiah, rupiahShort, esc, relatif } = __require("ui");
+const { roleLabel } = __require("auth");
+
+function pegawai(id) { return store.find('pegawai', id); }
+function pegawaiName(id) { return pegawai(id)?.nama || '—'; }
+
+function emptyState(icon, title, desc, actionHTML = '') {
+  return `<div class="empty"><div class="big">${icon}</div><h3>${esc(title)}</h3>
+    <p class="muted">${esc(desc)}</p>${actionHTML}</div>`;
+}
+
+/* Kartu ringkas satu SPPD (klik → detail). */
+function sppdCard(s, { showPemohon = true } = {}) {
+  const p = pegawai(s.pemohonId);
+  return `<div class="list-item" data-go="/sppd/${s.id}">
+    <div class="li-top">
+      <div>
+        <div class="li-title">${esc(s.perihal)}</div>
+        <div class="li-meta">${esc(s.lokasiKota)}, ${esc(s.lokasiProvinsi)} · ${rentangTanggal(s.tanggalBerangkat, s.tanggalKembali)} · ${s.lamaHari} hari</div>
+      </div>
+      ${statusBadge(s.status)}
+    </div>
+    <div class="li-foot">
+      ${showPemohon ? `<span class="muted">👤 ${esc((p?.nama || '').split(',')[0])}</span>` : ''}
+      <span class="tag-akun">${esc(s.akun)}</span>
+      <span class="bold" style="margin-left:auto">${rupiah(s.totalBiaya)}</span>
+    </div>
+  </div>`;
+}
+
+/* Daftar kartu + delegasi klik ke detail. */
+function renderSppdList(container, list, opts) {
+  if (!list.length) {
+    container.innerHTML = emptyState('🗂️', 'Belum ada data', opts?.emptyDesc || 'Tidak ada perjalanan dinas pada kategori ini.');
+    return;
+  }
+  container.innerHTML = `<div class="list">${list.map((s) => sppdCard(s, opts)).join('')}</div>`;
+  wireGo(container);
+}
+
+/* Aktifkan navigasi untuk elemen ber-atribut data-go. */
+function wireGo(root) {
+  root.querySelectorAll('[data-go]').forEach((elm) => {
+    elm.style.cursor = 'pointer';
+    elm.addEventListener('click', () => { location.hash = elm.getAttribute('data-go'); });
+  });
+}
+
+
+
+return { rupiah, rupiahShort, esc, rentangTanggal, relatif, roleLabel, statusBadge, pegawai, pegawaiName, emptyState, sppdCard, renderSppdList, wireGo };
+};
+
+__modules["views/spj"] = function(){
+/* ===========================================================================
+   views/spj.js — Daftar SPJ milik pemohon: perlu diisi & sedang diproses.
+   ========================================================================= */
+
+const { currentUser } = __require("auth");
+const { mySppd } = __require("domain");
+const { renderSppdList, emptyState } = __require("views/shared");
+
+function renderSpj(root) {
+  const u = currentUser();
+  const mine = mySppd(u);
+  const perlu = mine.filter((s) => ['TERBIT', 'PELAKSANAAN', 'SPJ_REVISI'].includes(s.status));
+  const proses = mine.filter((s) => ['SPJ_MENUNGGU_BENDAHARA', 'SPJ_MENUNGGU_PPK', 'SPJ_MENUNGGU_KPA', 'SPJ_DISETUJUI'].includes(s.status));
+  const selesai = mine.filter((s) => s.status === 'SELESAI');
+
+  root.innerHTML = `
+  <div class="page-head"><div><h1>Pertanggungjawaban (SPJ)</h1>
+    <p class="desc">Lengkapi laporan & bukti perjalanan dinas yang telah dilaksanakan.</p></div></div>
+
+  <h3 class="card-title" style="margin:6px 0 10px"><span class="ico">📝</span> Perlu Disusun / Diperbaiki (${perlu.length})</h3>
+  <div id="perlu"></div>
+  <h3 class="card-title" style="margin:22px 0 10px"><span class="ico">⏳</span> Dalam Proses Verifikasi (${proses.length})</h3>
+  <div id="proses"></div>
+  <h3 class="card-title" style="margin:22px 0 10px"><span class="ico">✅</span> Selesai (${selesai.length})</h3>
+  <div id="selesai"></div>`;
+
+  const wrap = (sel, data, empty) => {
+    const el = root.querySelector(sel);
+    if (!data.length) { el.innerHTML = emptyState('🗂️', 'Tidak ada', empty); return; }
+    renderSppdList(el, data, { showPemohon: false });
+  };
+  wrap('#perlu', perlu, 'Tidak ada SPPD yang menunggu SPJ.');
+  wrap('#proses', proses, 'Tidak ada SPJ dalam verifikasi.');
+  wrap('#selesai', selesai, 'Belum ada SPJ yang selesai.');
+}
+
+return { renderSpj };
+};
+  __require('app');
+})();
+
+</script>
 </body>
 </html>
